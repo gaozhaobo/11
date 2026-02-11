@@ -6,6 +6,10 @@
 [Bb]uilds/
 [Ll]ogs/
 [Uu]ser[Ss]ettings/
+.utmp/
+
+# Burst debug info
+*_BurstDebugInformation_DoNotShip/
 
 # Memory captures
 MemoryCaptures/

@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flask Data Server</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; }
+        .section { margin-bottom: 30px; }
+        label { font-weight: bold; }
+        input[type=text] { padding: 5px; font-size: 1em; }
+        button { padding: 7px 15px; font-size: 1em; margin-left: 10px; cursor: pointer; }
+        button:hover { background-color: #e0e0e0; }
+        ul { list-style-type: none; padding: 0; }
+        li { margin-bottom: 5px; }
+        .disabled { opacity: 0.5; pointer-events: none; }
+        .file-list { margin-top: 10px; }
+        .data-list { margin-top: 10px; }
+        .flex-row { display: flex; align-items: center; gap: 10px; }
+        .flex-row > h2 { margin: 0; }
+        .stream-section { background: #f5f5f5; padding: 15px; border-radius: 8px; margin-top: 10px; }
+        .stream-item { display: flex; align-items: center; gap: 10px; margin: 5px 0; }
+        .stream-item .label { min-width: 120px; font-weight: bold; }
+        .stream-item .size { color: #666; font-size: 0.9em; }
+        .no-data { color: #999; font-style: italic; }
+        .status-indicator { display: inline-block; width: 10px; height: 10px; border-radius: 50%; margin-right: 5px; }
+        .status-on { background-color: #4CAF50; }
+        .status-off { background-color: #f44336; }
+    </style>
+</head>
+<body>
+    <h1>ACHIEVE Bias Data Server</h1>
+    
+    <div class="section">
+        <label for="filenamePrefix">Filename Prefix:</label>
+        <input type="text" id="filenamePrefix" placeholder="Enter prefix...">
+        <button id="startStopBtn">Start Server</button>
+        <span id="serverStatus"></span>
+    </div>
+    
+    <div class="section">
+        <div class="flex-row">
+            <h2>Events Data</h2>
+            <button id="downloadBtn" class="disabled">Download Events CSV</button>
+        </div>
+        <ul id="dataList" class="data-list"></ul>
+    </div>
+    
+    <div class="section">
+        <h2>Live Streaming Data</h2>
+        <p style="color: #666; font-size: 0.9em; margin-top: 0;">Real-time tracking data streamed from Quest 3</p>
+        <div class="stream-section">
+            <div class="stream-item">
+                <span class="label">Head Position:</span>
+                <button id="downloadHeadBtn" class="disabled">Download CSV</button>
+                <span id="headStatus" class="no-data">No data yet</span>
+            </div>
+            <div class="stream-item">
+                <span class="label">Left Hand:</span>
+                <button id="downloadLeftHandBtn" class="disabled">Download CSV</button>
+                <span id="leftHandStatus" class="no-data">No data yet</span>
+            </div>
+            <div class="stream-item">
+                <span class="label">Right Hand:</span>
+                <button id="downloadRightHandBtn" class="disabled">Download CSV</button>
+                <span id="rightHandStatus" class="no-data">No data yet</span>
+            </div>
+        </div>
+    </div>
+    
+    <div class="section">
+        <h2>Quest 3 Recorded Files</h2>
+        <p style="color: #666; font-size: 0.9em; margin-top: 0;">CSV files recorded locally on Quest and uploaded to server</p>
+        <ul id="uploadedList" class="file-list"></ul>
+    </div>
+    
+    <script>
+        let serverStarted = false;
+        let uploadedFiles = [];
+        let currentFilename = null;
+
+        function formatSize(bytes) {
+            if (bytes < 1024) return bytes + ' B';
+            if (bytes < 1024 * 1024) return (bytes / 1024).toFixed(1) + ' KB';
+            return (bytes / (1024 * 1024)).toFixed(1) + ' MB';
+        }
+
+        function updateUI(state) {
+            serverStarted = state.server_started;
+            uploadedFiles = state.uploaded_files || [];
+            currentFilename = state.filename;
+            
+            // Server status
+            const statusEl = document.getElementById('serverStatus');
+            if (serverStarted) {
+                statusEl.innerHTML = '<span class="status-indicator status-on"></span>Recording';
+            } else {
+                statusEl.innerHTML = '<span class="status-indicator status-off"></span>Stopped';
+            }
+            
+            // Button states
+            const startStopBtn = document.getElementById('startStopBtn');
+            const downloadBtn = document.getElementById('downloadBtn');
+            if (serverStarted) {
+                startStopBtn.textContent = 'Stop Server';
+                downloadBtn.classList.remove('disabled');
+            } else {
+                startStopBtn.textContent = 'Start Server';
+                downloadBtn.classList.add('disabled');
+            }
+            
+            // Data list
+            const dataList = document.getElementById('dataList');
+            dataList.innerHTML = '';
+            const data = state.data || [];
+            if (data.length === 0) {
+                dataList.innerHTML = '<li class="no-data">No events recorded yet</li>';
+            } else {
+                // Show last 10 items
+                data.slice(-10).forEach(item => {
+                    const li = document.createElement('li');
+                    li.textContent = `[${item.timestamp}] ${item.string}`;
+                    dataList.appendChild(li);
+                });
+                if (data.length > 10) {
+                    const li = document.createElement('li');
+                    li.className = 'no-data';
+                    li.textContent = `... and ${data.length - 10} more events`;
+                    dataList.insertBefore(li, dataList.firstChild);
+                }
+            }
+            
+            // Uploaded files list
+            const uploadedList = document.getElementById('uploadedList');
+            uploadedList.innerHTML = '';
+            if (uploadedFiles.length === 0) {
+                uploadedList.innerHTML = '<li class="no-data">No files uploaded from Quest yet</li>';
+            } else {
+                uploadedFiles.forEach(filename => {
+                    const li = document.createElement('li');
+                    const btn = document.createElement('button');
+                    btn.textContent = 'Download';
+                    btn.onclick = () => downloadUploaded(filename);
+                    li.textContent = filename + ' ';
+                    li.appendChild(btn);
+                    uploadedList.appendChild(li);
+                });
+            }
+        }
+
+        function updateStreamStatus() {
+            if (!serverStarted) {
+                document.getElementById('downloadHeadBtn').classList.add('disabled');
+                document.getElementById('downloadLeftHandBtn').classList.add('disabled');
+                document.getElementById('downloadRightHandBtn').classList.add('disabled');
+                document.getElementById('headStatus').textContent = 'Server not running';
+                document.getElementById('leftHandStatus').textContent = 'Server not running';
+                document.getElementById('rightHandStatus').textContent = 'Server not running';
+                return;
+            }
+            
+            fetch('/api/download?type=all_streams')
+                .then(r => r.json())
+                .then(data => {
+                    if (data.status === 'ok') {
+                        const files = data.files;
+                        
+                        // Head
+                        if (files.head) {
+                            document.getElementById('downloadHeadBtn').classList.remove('disabled');
+                            document.getElementById('headStatus').textContent = formatSize(files.head.size);
+                            document.getElementById('headStatus').className = 'size';
+                        } else {
+                            document.getElementById('downloadHeadBtn').classList.add('disabled');
+                            document.getElementById('headStatus').textContent = 'No data yet';
+                            document.getElementById('headStatus').className = 'no-data';
+                        }
+                        
+                        // Left hand
+                        if (files.left_hand) {
+                            document.getElementById('downloadLeftHandBtn').classList.remove('disabled');
+                            document.getElementById('leftHandStatus').textContent = formatSize(files.left_hand.size);
+                            document.getElementById('leftHandStatus').className = 'size';
+                        } else {
+                            document.getElementById('downloadLeftHandBtn').classList.add('disabled');
+                            document.getElementById('leftHandStatus').textContent = 'No data yet';
+                            document.getElementById('leftHandStatus').className = 'no-data';
+                        }
+                        
+                        // Right hand
+                        if (files.right_hand) {
+                            document.getElementById('downloadRightHandBtn').classList.remove('disabled');
+                            document.getElementById('rightHandStatus').textContent = formatSize(files.right_hand.size);
+                            document.getElementById('rightHandStatus').className = 'size';
+                        } else {
+                            document.getElementById('downloadRightHandBtn').classList.add('disabled');
+                            document.getElementById('rightHandStatus').textContent = 'No data yet';
+                            document.getElementById('rightHandStatus').className = 'no-data';
+                        }
+                    }
+                })
+                .catch(() => {});
+        }
+
+        function pollData() {
+            fetch('/api/data').then(r => r.json()).then(state => {
+                updateUI(state);
+                updateStreamStatus();
+            });
+        }
+
+        function startServer() {
+            const prefix = document.getElementById('filenamePrefix').value;
+            fetch('/api/start', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ filename_prefix: prefix })
+            }).then(() => pollData());
+        }
+
+        function stopServer() {
+            fetch('/api/stop', { method: 'POST' }).then(() => pollData());
+        }
+
+        function downloadData() {
+            if (!serverStarted) return;
+            window.location = '/api/download?type=data';
+        }
+
+        function downloadUploaded(filename) {
+            window.location = '/api/download?type=uploaded&filename=' + encodeURIComponent(filename);
+        }
+
+        function downloadHeadStream() {
+            if (!serverStarted) return;
+            window.location = '/api/download?type=head_stream';
+        }
+
+        function downloadLeftHandStream() {
+            if (!serverStarted) return;
+            window.location = '/api/download?type=left_hand_stream';
+        }
+
+        function downloadRightHandStream() {
+            if (!serverStarted) return;
+            window.location = '/api/download?type=right_hand_stream';
+        }
+
+        document.getElementById('startStopBtn').onclick = function() {
+            if (serverStarted) {
+                stopServer();
+            } else {
+                startServer();
+            }
+        };
+        document.getElementById('downloadBtn').onclick = downloadData;
+        document.getElementById('downloadHeadBtn').onclick = downloadHeadStream;
+        document.getElementById('downloadLeftHandBtn').onclick = downloadLeftHandStream;
+        document.getElementById('downloadRightHandBtn').onclick = downloadRightHandStream;
+
+        // Poll every second
+        setInterval(pollData, 1000);
+        pollData();
+    </script>
+</body>
+</html>

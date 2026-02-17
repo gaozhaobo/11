@@ -15,8 +15,9 @@ from typing import Optional, Dict, List, Any
 # Configuration
 # =============================================================================
 
-DATA_DIR = 'data'
-UPLOADS_DIR = 'uploads'
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+DATA_DIR = os.path.join(BASE_DIR, 'data')
+UPLOADS_DIR = os.path.join(BASE_DIR, 'uploads')
 ALLOWED_EXTENSIONS = {'csv'}
 MAX_RECENT_EVENTS = 100
 DEFAULT_PORT = 5555

@@ -1,0 +1,91 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: MNET_4XMO_C_VC_Sample - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x404 /fo"Release/MNET_4XMO_C_VC_Sample.res" /d "NDEBUG" /d "_AFXDLL" "C:\Program Files\ADLINK\PCI-7856\Sample Program\VC\MNET_4XMO_C_VC_Sample.rc"" 
+Creating temporary file "C:\DOCUME~1\TERRY~1.CHE\LOCALS~1\Temp\RSP5B.tmp" with contents
+[
+/nologo /MD /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /Fp"Release/MNET_4XMO_C_VC_Sample.pch" /Yu"stdafx.h" /Fo"Release/" /Fd"Release/" /FD /c 
+"C:\Program Files\ADLINK\PCI-7856\Sample Program\VC\MNET_4XMO_C_VC_Sample.cpp"
+"C:\Program Files\ADLINK\PCI-7856\Sample Program\VC\MNET_4XMO_C_VC_SampleDlg.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\TERRY~1.CHE\LOCALS~1\Temp\RSP5B.tmp" 
+Creating temporary file "C:\DOCUME~1\TERRY~1.CHE\LOCALS~1\Temp\RSP5C.tmp" with contents
+[
+/nologo /MD /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /Fp"Release/MNET_4XMO_C_VC_Sample.pch" /Yc"stdafx.h" /Fo"Release/" /Fd"Release/" /FD /c 
+"C:\Program Files\ADLINK\PCI-7856\Sample Program\VC\StdAfx.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\TERRY~1.CHE\LOCALS~1\Temp\RSP5C.tmp" 
+Creating temporary file "C:\DOCUME~1\TERRY~1.CHE\LOCALS~1\Temp\RSP5D.tmp" with contents
+[
+..\\..\\Library\\APS168.lib /nologo /subsystem:windows /incremental:no /pdb:"Release/MNET_4XMO_C_VC_Sample.pdb" /machine:I386 /out:"Release/MNET_4XMO_C_VC_Sample.exe" 
+".\Release\MNET_4XMO_C_VC_Sample.obj"
+".\Release\MNET_4XMO_C_VC_SampleDlg.obj"
+".\Release\StdAfx.obj"
+".\Release\MNET_4XMO_C_VC_Sample.res"
+]
+Creating command line "link.exe @C:\DOCUME~1\TERRY~1.CHE\LOCALS~1\Temp\RSP5D.tmp"
+<h3>Output Window</h3>
+Compiling resources...
+Compiling...
+StdAfx.cpp
+Compiling...
+MNET_4XMO_C_VC_Sample.cpp
+MNET_4XMO_C_VC_SampleDlg.cpp
+Generating Code...
+Linking...
+LINK : fatal error LNK1181: cannot open input file "..\\..\\Library\\APS168.lib"
+Error executing link.exe.
+
+
+
+<h3>Results</h3>
+MNET_4XMO_C_VC_Sample.exe - 1 error(s), 0 warning(s)
+<h3>
+--------------------Configuration: MNET_4XMO_C_VC_Sample - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x404 /fo"Debug/MNET_4XMO_C_VC_Sample.res" /d "_DEBUG" /d "_AFXDLL" "C:\Program Files\ADLINK\PCI-7856\Sample Program\VC\MNET_4XMO_C_VC_Sample.rc"" 
+Creating temporary file "C:\DOCUME~1\TERRY~1.CHE\LOCALS~1\Temp\RSP5E.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /FR"Debug/" /Fp"Debug/MNET_4XMO_C_VC_Sample.pch" /Yu"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"C:\Program Files\ADLINK\PCI-7856\Sample Program\VC\MNET_4XMO_C_VC_Sample.cpp"
+"C:\Program Files\ADLINK\PCI-7856\Sample Program\VC\MNET_4XMO_C_VC_SampleDlg.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\TERRY~1.CHE\LOCALS~1\Temp\RSP5E.tmp" 
+Creating temporary file "C:\DOCUME~1\TERRY~1.CHE\LOCALS~1\Temp\RSP5F.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /FR"Debug/" /Fp"Debug/MNET_4XMO_C_VC_Sample.pch" /Yc"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"C:\Program Files\ADLINK\PCI-7856\Sample Program\VC\StdAfx.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\TERRY~1.CHE\LOCALS~1\Temp\RSP5F.tmp" 
+Creating temporary file "C:\DOCUME~1\TERRY~1.CHE\LOCALS~1\Temp\RSP60.tmp" with contents
+[
+..\\..\\..\\APSLibrary\\APS168.lib /nologo /subsystem:windows /incremental:yes /pdb:"Debug/MNET_4XMO_C_VC_Sample.pdb" /debug /machine:I386 /out:"Debug/MNET_4XMO_C_VC_Sample.exe" /pdbtype:sept 
+".\Debug\MNET_4XMO_C_VC_Sample.obj"
+".\Debug\MNET_4XMO_C_VC_SampleDlg.obj"
+".\Debug\StdAfx.obj"
+".\Debug\MNET_4XMO_C_VC_Sample.res"
+]
+Creating command line "link.exe @C:\DOCUME~1\TERRY~1.CHE\LOCALS~1\Temp\RSP60.tmp"
+<h3>Output Window</h3>
+Compiling resources...
+Compiling...
+StdAfx.cpp
+Compiling...
+MNET_4XMO_C_VC_Sample.cpp
+MNET_4XMO_C_VC_SampleDlg.cpp
+Generating Code...
+Linking...
+
+
+
+<h3>Results</h3>
+MNET_4XMO_C_VC_Sample.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

@@ -1,0 +1,254 @@
+[Version]
+Signature="$CHICAGO$"
+Class=MOTION
+ClassGuid={711793D1-2694-11d6-A79E-0030640107EA}
+Provider=%ADLINK%
+DriverVer=11/07/2017,17.11.07.0
+CatalogFile=ADLINKMOTIONx64.cat
+
+[ClassInstall32]
+AddReg = NuMotionClassAddReg
+
+[NuMotionClassAddReg]
+HKR,,,,"ADLINK Motion"
+HKR,,Installer32,,"SMClassInstaller.dll,ClassInstaller"
+HKR,,Icon,,"101"
+
+[SourceDisksNames]   
+1 = %%MotionInstall%%,,,     
+
+[SourceDisksFiles]
+pci8254_8x64.sys= 1   
+APS168x64.sys	= 1    
+MP_C154x64.sys	= 1
+Pci8102x64.sys	= 1
+PCI8154x64.sys	= 1
+PCI8158x64.sys	= 1
+PCIe8338x64.sys	= 1
+
+[Manufacturer]
+%ADLINK% = ADLINK_modelList, NTamd64
+
+[ADLINK_modelList.NTamd64]
+%String0%  	= 	DriverInstallx64_82548.NT,PCI\VEN_144A&DEV_8254
+%String0%  	= 	DriverInstallx64_82548.NT,PCI\VEN_144A&DEV_8254&SUBSYS_8254144A
+%String1%  	= 	DriverInstallx64_82548.NT,PCI\VEN_144A&DEV_8258
+%String1%  	= 	DriverInstallx64_82548.NT,PCI\VEN_144A&DEV_8258&SUBSYS_8258144A
+%String2%  	= 	DriverInstallx64_82548.NT,PCI\VEN_144A&DEV_204C
+%String2%  	= 	DriverInstallx64_82548.NT,PCI\VEN_144A&DEV_204C&SUBSYS_204C144A
+%String3%  	= 	DriverInstallx64_82548.NT,PCI\VEN_144A&DEV_208C
+%String3%  	=	DriverInstallx64_82548.NT,PCI\VEN_144A&DEV_208C&SUBSYS_208C144A
+%String4%	=	DriverInstallx64_APS168.NT,PCI\VEN_144A&DEV_8144
+%String4%	=	DriverInstallx64_APS168.NT,PCI\VEN_144A&DEV_8144&SUBSYS_8144144A
+%String5%	= 	DriverInstallx64_APS168.NT,PCI\VEN_144A&DEV_7856&SUBSYS_7856144A&REV_00
+%String6%	=	DriverInstallx64_C154.NT,PCI\VEN_144A&DEV_C154&SUBSYS_C154144A&REV_03
+%String6%	=	DriverInstallx64_C154.NT,PCI\VEN_144A&DEV_C154
+%String7%	=	DriverInstallx64_8102.NT,PCI\VEN_144A&DEV_8102&SUBSYS_8102144A
+%String7%	=	DriverInstallx64_8102.NT,PCI\VEN_144A&DEV_8102
+%String8%	=	DriverInstallx64_8154.NT,PCI\VEN_144A&DEV_8154&SUBSYS_51685168&REV_01
+%String9%	=	DriverInstallx64_8154.NT,PCI\VEN_144A&DEV_8154&SUBSYS_2000144A&REV_70
+%String10%	=	DriverInstallx64_8158.NT,PCI\VEN_144A&DEV_8158&SUBSYS_51685168&REV_01
+%String11%	=	DriverInstallx64_8158.NT,PCI\VEN_144A&DEV_8158&SUBSYS_2000144A&REV_70
+%String12% 	= 	DriverInstallx64_8338.NT,PCI\VEN_144A&DEV_8338
+%String12% 	= 	DriverInstallx64_8338.NT,PCI\VEN_144A&DEV_8338&SUBSYS_8338144A
+%String13% 	= 	DriverInstallx64_8338.NT,PCI\VEN_144A&DEV_8334
+%String13% 	= 	DriverInstallx64_8338.NT,PCI\VEN_144A&DEV_8334&SUBSYS_8334144A
+%String14% 	= 	DriverInstallx64_8338.NT,PCI\VEN_144A&DEV_8332
+%String14% 	= 	DriverInstallx64_8338.NT,PCI\VEN_144A&DEV_8332&SUBSYS_8332144A
+%String15% 	= 	DriverInstallx64_8338.NT,PCI\VEN_144A&DEV_8331
+%String15% 	= 	DriverInstallx64_8338.NT,PCI\VEN_144A&DEV_8331&SUBSYS_8331144A
+%String16%	=	DriverInstallx64_APS168.NT,PCI\VEN_144A&DEV_7856&SUBSYS_7856144A&REV_01
+
+[DestinationDirs]
+DriverInstallx64_82548.NT.Files = 12
+DriverInstallx64_APS168.NT.Files = 12
+DriverInstallx64_C154.NT.Files = 12
+DriverInstallx64_8102.NT.Files = 12
+DriverInstallx64_8154.NT.Files = 12
+DriverInstallx64_8158.NT.Files = 12
+DriverInstallx64_8338.NT.Files = 12
+;------------------------------------------------------------------------------
+;  Windows 64 Bit Edition
+;------------------------------------------------------------------------------
+
+[DriverInstallx64_82548.NT]
+CopyFiles=DriverInstallx64_82548.NT.Files
+[DriverInstallx64_82548.NT.Files]
+pci8254_8x64.sys        
+
+[DriverInstallx64_APS168.NT]
+CopyFiles=DriverInstallx64_APS168.NT.Files
+[DriverInstallx64_APS168.NT.Files]
+APS168x64.sys
+
+[DriverInstallx64_C154.NT]
+CopyFiles=DriverInstallx64_C154.NT.Files
+[DriverInstallx64_C154.NT.Files]
+MP_C154x64.sys            
+
+[DriverInstallx64_8102.NT]
+CopyFiles=DriverInstallx64_8102.NT.Files
+[DriverInstallx64_8102.NT.Files]
+Pci8102x64.sys
+
+[DriverInstallx64_8154.NT]
+CopyFiles=DriverInstallx64_8154.NT.Files
+[DriverInstallx64_8154.NT.Files]
+PCI8154x64.sys
+
+[DriverInstallx64_8158.NT]
+CopyFiles=DriverInstallx64_8158.NT.Files
+[DriverInstallx64_8158.NT.Files]
+PCI8158x64.sys
+
+[DriverInstallx64_8338.NT]
+CopyFiles=DriverInstallx64_8338.NT.Files
+[DriverInstallx64_8338.NT.Files]
+PCIe8338x64.sys
+;------------------------------------------------------------------------------
+;Product pci8254_8 service add
+;------------------------------------------------------------------------------
+[DriverInstallx64_82548.NT.Services]
+AddService=pci8254_8x64,2,DriverServicex64_pci8254_8
+
+[DriverServicex64_pci8254_8]
+ServiceType = 1
+StartType   = 3
+ErrorControl= 1
+ServiceBinary  = %12%\pci8254_8x64.sys
+LoadOrderGroup = Extended Base
+
+[DriverInstallx64_82548.nt.hw]
+AddReg=DriverHwAddRegx64_82548
+
+[DriverHwAddRegx64_82548]
+
+;------------------------------------------------------------------------------
+;Product PCI-7856 service add
+;------------------------------------------------------------------------------
+[DriverInstallx64_APS168.NT.Services]
+AddService=APS168x64,2,DriverServicex64_APS168
+
+[DriverServicex64_APS168]
+ServiceType = 1
+StartType   = 3
+ErrorControl= 1
+ServiceBinary  = %12%\APS168x64.sys
+LoadOrderGroup = Extended Base
+
+[DriverInstallx64_APS168.nt.hw]
+AddReg=DriverHwAddRegx64_APS168
+
+[DriverHwAddRegx64_APS168]
+
+;------------------------------------------------------------------------------
+;Product PCI-C154+ service add
+;------------------------------------------------------------------------------
+[DriverInstallx64_C154.NT.Services]
+AddService=MP_C154x64,2,DriverServicex64_C154
+
+[DriverServicex64_C154]
+ServiceType = 1
+StartType   = 3
+ErrorControl= 1
+ServiceBinary  = %12%\MP_C154x64.sys
+LoadOrderGroup = Extended Base
+
+[DriverInstallx64_C154.nt.hw]
+AddReg=DriverHwAddRegx64_C154
+
+[DriverHwAddRegx64_C154]
+
+;------------------------------------------------------------------------------
+;Product PCI-8102 service add
+;------------------------------------------------------------------------------
+[DriverInstallx64_8102.NT.Services]
+AddService=pci8102x64,2,DriverServicex64_8102
+
+[DriverServicex64_8102]
+ServiceType = 1
+StartType   = 3
+ErrorControl= 1
+ServiceBinary  = %12%\pci8102x64.sys
+LoadOrderGroup = Extended Base
+
+[DriverInstallx64_8102.nt.hw]
+AddReg=DriverHwAddRegx64_8102
+
+[DriverHwAddRegx64_8102]
+;------------------------------------------------------------------------------
+;Product PCI(e)-8154 service add
+;------------------------------------------------------------------------------
+[DriverInstallx64_8154.NT.Services]
+AddService=pci8154x64,2,DriverServicex64_8154
+
+[DriverServicex64_8154]
+ServiceType = 1
+StartType   = 3
+ErrorControl= 1
+ServiceBinary  = %12%\pci8154x64.sys
+LoadOrderGroup = Extended Base
+
+[DriverInstallx64_8154.nt.hw]
+AddReg=DriverHwAddRegx64_8154
+
+[DriverHwAddRegx64_8154]
+;------------------------------------------------------------------------------
+;Product PCI(e)-8158 service add
+;------------------------------------------------------------------------------
+[DriverInstallx64_8158.NT.Services]
+AddService=pci8158x64,2,DriverServicex64_8158
+
+[DriverServicex64_8158]
+ServiceType = 1
+StartType   = 3
+ErrorControl= 1
+ServiceBinary  = %12%\pci8158x64.sys
+LoadOrderGroup = Extended Base
+
+[DriverInstallx64_8158.nt.hw]
+AddReg=DriverHwAddRegx64_8158
+
+[DriverHwAddRegx64_8158]
+
+;------------------------------------------------------------------------------
+;Product PCI(e)-833X service add
+;------------------------------------------------------------------------------
+[DriverInstallx64_8338.NT.Services]
+AddService=PCIe8338x64,2,DriverServicex64_8338
+
+[DriverServicex64_8338]
+ServiceType = 1
+StartType   = 3
+ErrorControl= 1
+ServiceBinary  = %12%\PCIe8338x64.sys
+LoadOrderGroup = Extended Base
+
+[DriverInstallx64_8338.nt.hw]
+AddReg=DriverHwAddRegx64_8338
+
+[DriverHwAddRegx64_8338]
+;------------------------------------------------------------------------------
+;  String Definitions
+;------------------------------------------------------------------------------
+
+[Strings]
+MotionInstall = "ADLINK Motion Driver Installation Disk"
+ADLINK="ADLINK Technology Inc."
+String0="ADLINK PCI-8254 X64"
+String1="ADLINK PCI-8258 X64"
+String2="ADLINK AMP-204C X64"
+String3="ADLINK AMP-208C X64"
+String4="ADLINK PCI-8144 X64"
+String5="ADLINK PCI-7856 X64"
+String6="ADLINK PCI-C154+ X64"
+String7="ADLINK PCI-8102 X64"
+String8="ADLINK PCI-8154 X64"
+String9="ADLINK PCIe-8154 X64"
+String10="ADLINK PCI-8158 X64"
+String11="ADLINK PCIe-8158 X64"
+String12="ADLINK PCIe-8338 X64"
+String13="ADLINK PCIe-8334 X64"
+String14="ADLINK PCIe-8332 X64"
+String15="ADLINK PCIe-8331 X64"
+String16="ADLINK PCIe-7856 X64"

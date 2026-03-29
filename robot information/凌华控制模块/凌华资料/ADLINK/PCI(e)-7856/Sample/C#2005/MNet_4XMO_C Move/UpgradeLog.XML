@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="MNet_4XMO_C_CSharp_Sample">
+</Property><Property Name="方案檔" Value="C:\Program Files (x86)\ADLINK\PCI-7856\Sample\C#2005\MNet_4XMO_C Move\MNet_4XMO_C_CSharp_Sample.sln">
+</Property><Property Name="使用者選項檔" Value="C:\Program Files (x86)\ADLINK\PCI-7856\Sample\C#2005\MNet_4XMO_C Move\MNet_4XMO_C_CSharp_Sample.suo">
+</Property><Property Name="Date" Value="2009年11月2日">
+</Property><Property Name="Time" Value="下午 23:25">
+</Property></Properties><Event ErrorLevel="0" Project="" Source="MNet_4XMO_C_CSharp_Sample.sln" Description="檔案已成功備份為 C:\Program Files (x86)\ADLINK\PCI-7856\Sample\C#2005\MNet_4XMO_C Move\Backup\MNet_4XMO_C_CSharp_Sample.sln">
+</Event><Event ErrorLevel="0" Project="" Source="MNet_4XMO_C_CSharp_Sample.suo" Description="檔案已成功備份為 C:\Program Files (x86)\ADLINK\PCI-7856\Sample\C#2005\MNet_4XMO_C Move\Backup\MNet_4XMO_C_CSharp_Sample.suo">
+</Event><Event ErrorLevel="0" Project="MNet_4XMO_C_CSharp_Sample" Source="MNet_4XMO_C_CSharp_Sample\MNet_4XMO_C_CSharp_Sample.csproj" Description="專案檔已成功備份為 C:\Program Files (x86)\ADLINK\PCI-7856\Sample\C#2005\MNet_4XMO_C Move\Backup\MNet_4XMO_C_CSharp_Sample\MNet_4XMO_C_CSharp_Sample.csproj">
+</Event><Event ErrorLevel="0" Project="MNet_4XMO_C_CSharp_Sample" Source="MNet_4XMO_C_CSharp_Sample\MNet_4XMO_C_CSharp_Sample.csproj.user" Description="專案使用者檔案已成功備份為 C:\Program Files (x86)\ADLINK\PCI-7856\Sample\C#2005\MNet_4XMO_C Move\Backup\MNet_4XMO_C_CSharp_Sample\MNet_4XMO_C_CSharp_Sample.csproj.user">
+</Event><Event ErrorLevel="1" Project="MNet_4XMO_C_CSharp_Sample" Source="..\..\..\..\APS Library\Include\APS168.cs" Description="無法建置備份專案。專案包含連結的檔案: C:\Program Files (x86)\ADLINK\PCI-7856\Sample\C#2005\MNet_4XMO_C Move\Backup\MNet_4XMO_C_CSharp_Sample\APS168.cs">
+</Event><Event ErrorLevel="0" Project="MNet_4XMO_C_CSharp_Sample" Source="..\..\..\..\APS Library\Include\APS168.cs" Description="檔案已成功備份為 C:\Program Files (x86)\ADLINK\PCI-7856\Sample\C#2005\MNet_4XMO_C Move\Backup\MNet_4XMO_C_CSharp_Sample\APS168.cs">
+</Event><Event ErrorLevel="1" Project="MNet_4XMO_C_CSharp_Sample" Source="..\..\..\..\APS Library\Include\APS_Define.cs" Description="無法建置備份專案。專案包含連結的檔案: C:\Program Files (x86)\ADLINK\PCI-7856\Sample\C#2005\MNet_4XMO_C Move\Backup\MNet_4XMO_C_CSharp_Sample\APS_Define.cs">
+</Event><Event ErrorLevel="0" Project="MNet_4XMO_C_CSharp_Sample" Source="..\..\..\..\APS Library\Include\APS_Define.cs" Description="檔案已成功備份為 C:\Program Files (x86)\ADLINK\PCI-7856\Sample\C#2005\MNet_4XMO_C Move\Backup\MNet_4XMO_C_CSharp_Sample\APS_Define.cs">
+</Event><Event ErrorLevel="0" Project="MNet_4XMO_C_CSharp_Sample" Source="MNet_4XMO_C_CSharp_Sample\Main.cs" Description="檔案已成功備份為 C:\Program Files (x86)\ADLINK\PCI-7856\Sample\C#2005\MNet_4XMO_C Move\Backup\MNet_4XMO_C_CSharp_Sample\Main.cs">
+</Event><Event ErrorLevel="0" Project="MNet_4XMO_C_CSharp_Sample" Source="MNet_4XMO_C_CSharp_Sample\Main.Designer.cs" Description="檔案已成功備份為 C:\Program Files (x86)\ADLINK\PCI-7856\Sample\C#2005\MNet_4XMO_C Move\Backup\MNet_4XMO_C_CSharp_Sample\Main.Designer.cs">
+</Event><Event ErrorLevel="0" Project="MNet_4XMO_C_CSharp_Sample" Source="MNet_4XMO_C_CSharp_Sample\Program.cs" Description="檔案已成功備份為 C:\Program Files (x86)\ADLINK\PCI-7856\Sample\C#2005\MNet_4XMO_C Move\Backup\MNet_4XMO_C_CSharp_Sample\Program.cs">
+</Event><Event ErrorLevel="0" Project="MNet_4XMO_C_CSharp_Sample" Source="MNet_4XMO_C_CSharp_Sample\Properties\AssemblyInfo.cs" Description="檔案已成功備份為 C:\Program Files (x86)\ADLINK\PCI-7856\Sample\C#2005\MNet_4XMO_C Move\Backup\MNet_4XMO_C_CSharp_Sample\Properties\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="MNet_4XMO_C_CSharp_Sample" Source="MNet_4XMO_C_CSharp_Sample\Properties\Resources.Designer.cs" Description="檔案已成功備份為 C:\Program Files (x86)\ADLINK\PCI-7856\Sample\C#2005\MNet_4XMO_C Move\Backup\MNet_4XMO_C_CSharp_Sample\Properties\Resources.Designer.cs">
+</Event><Event ErrorLevel="0" Project="MNet_4XMO_C_CSharp_Sample" Source="MNet_4XMO_C_CSharp_Sample\Properties\Settings.Designer.cs" Description="檔案已成功備份為 C:\Program Files (x86)\ADLINK\PCI-7856\Sample\C#2005\MNet_4XMO_C Move\Backup\MNet_4XMO_C_CSharp_Sample\Properties\Settings.Designer.cs">
+</Event><Event ErrorLevel="0" Project="MNet_4XMO_C_CSharp_Sample" Source="MNet_4XMO_C_CSharp_Sample\Properties\Settings.settings" Description="檔案已成功備份為 C:\Program Files (x86)\ADLINK\PCI-7856\Sample\C#2005\MNet_4XMO_C Move\Backup\MNet_4XMO_C_CSharp_Sample\Properties\Settings.settings">
+</Event><Event ErrorLevel="0" Project="MNet_4XMO_C_CSharp_Sample" Source="MNet_4XMO_C_CSharp_Sample\icon1.ico" Description="檔案已成功備份為 C:\Program Files (x86)\ADLINK\PCI-7856\Sample\C#2005\MNet_4XMO_C Move\Backup\MNet_4XMO_C_CSharp_Sample\icon1.ico">
+</Event><Event ErrorLevel="0" Project="MNet_4XMO_C_CSharp_Sample" Source="MNet_4XMO_C_CSharp_Sample\Main.resx" Description="檔案已成功備份為 C:\Program Files (x86)\ADLINK\PCI-7856\Sample\C#2005\MNet_4XMO_C Move\Backup\MNet_4XMO_C_CSharp_Sample\Main.resx">
+</Event><Event ErrorLevel="0" Project="MNet_4XMO_C_CSharp_Sample" Source="MNet_4XMO_C_CSharp_Sample\Properties\Resources.resx" Description="檔案已成功備份為 C:\Program Files (x86)\ADLINK\PCI-7856\Sample\C#2005\MNet_4XMO_C Move\Backup\MNet_4XMO_C_CSharp_Sample\Properties\Resources.resx">
+</Event><Event ErrorLevel="0" Project="MNet_4XMO_C_CSharp_Sample" Source="MNet_4XMO_C_CSharp_Sample\MNet_4XMO_C_CSharp_Sample.csproj" Description="專案轉換成功">
+</Event><Event ErrorLevel="3" Project="MNet_4XMO_C_CSharp_Sample" Source="MNet_4XMO_C_CSharp_Sample\MNet_4XMO_C_CSharp_Sample.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="MNet_4XMO_C_CSharp_Sample.sln" Description="方案轉換成功">
+</Event><Event ErrorLevel="3" Project="" Source="MNet_4XMO_C_CSharp_Sample.sln" Description="Converted">
+</Event><Event ErrorLevel="0" Project="MNet_4XMO_C_CSharp_Sample" Source="MNet_4XMO_C_CSharp_Sample\MNet_4XMO_C_CSharp_Sample.csproj" Description="掃描完成: 專案檔不需要升級。">
+</Event></UpgradeLog>

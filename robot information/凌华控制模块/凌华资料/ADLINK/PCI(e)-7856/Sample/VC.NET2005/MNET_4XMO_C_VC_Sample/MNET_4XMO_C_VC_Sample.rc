@@ -1,0 +1,407 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+// Generated Help ID header file
+#define APSTUDIO_HIDDEN_SYMBOLS
+#include "resource.hm"
+#undef APSTUDIO_HIDDEN_SYMBOLS
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Chinese (Taiwan) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHT)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_TRADITIONAL
+#pragma code_page(950)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHT)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 4, 1\r\n"
+    "#pragma code_page(950)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\MNET_4XMO_C_VC_Sample.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""l.cht\\afxres.rc""          // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOG DISCARDABLE  0, 0, 235, 55
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "關於 MNET_4XMO_C_VC_Sample"
+FONT 9, "新細明體"
+BEGIN
+    ICON            128,IDC_STATIC,11,17,20,20
+    LTEXT           "MNET_4XMO_C_VC_Sample Version 1.0",IDC_STATIC,40,10,119,
+                    8,SS_NOPREFIX
+    LTEXT           "Copyright (C) 2009",IDC_STATIC,40,25,119,8
+    DEFPUSHBUTTON   "確定",IDOK,178,7,50,14,WS_GROUP
+END
+
+IDD_MNET_4XMO_C_VC_SAMPLE_DIALOG DIALOGEX 0, 0, 643, 487
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "MNET_4XMO_C_VC_Sample"
+FONT 9, "新細明體", 0, 0, 0x1
+BEGIN
+    GROUPBOX        "Master Card Info",IDC_STATIC,68,7,76,116
+    LTEXT           "Driver Version",IDC_STATIC,76,27,64,8
+    EDITTEXT        Edit_ShowMaster_DriverVer,76,36,63,12,ES_CENTER | 
+                    ES_AUTOHSCROLL
+    LTEXT           "CPLD Version",IDC_STATIC,76,77,64,8
+    EDITTEXT        Edit_ShowMaster_CPLDVer,76,85,63,12,ES_CENTER | 
+                    ES_AUTOHSCROLL
+    PUSHBUTTON      "Connect",Btn_BusConnect,29,142,62,36
+    PUSHBUTTON      "Disconnect",Btn_BusDisconnect,29,182,62,36
+    GROUPBOX        "Module Info",IDC_STATIC,146,7,76,116
+    LTEXT           "Module ID",IDC_STATIC,137,147,64,10
+    EDITTEXT        Edit_SetModuleID_ForModuleInfo,137,158,63,12,
+                    ES_AUTOHSCROLL
+    LTEXT           "FPGA Version",IDC_STATIC,153,27,64,8
+    EDITTEXT        Edit_ShowModule_FPGAVer,153,36,63,12,ES_CENTER | 
+                    ES_AUTOHSCROLL
+    LTEXT           "PCB TOP Ver.",IDC_STATIC,153,51,64,8
+    EDITTEXT        Edit_ShowModule_PCBTopVer,153,62,63,12,ES_CENTER | 
+                    ES_AUTOHSCROLL
+    PUSHBUTTON      "GetModuleInfo",Btn_GetModuleInfo,138,182,62,36
+    LTEXT           "DLL Version",IDC_STATIC,76,51,64,8
+    EDITTEXT        Edit_ShowMaster_DLLVer,76,62,63,12,ES_CENTER | 
+                    ES_AUTOHSCROLL
+    GROUPBOX        "Axis Info",IDC_STATIC,226,7,359,116
+    LTEXT           "Command 0",IDC_STATIC,230,17,64,8
+    EDITTEXT        Edit_ShowAxis_Command_0,230,25,63,12,ES_CENTER | 
+                    ES_AUTOHSCROLL
+    LTEXT           "IO Status 0",IDC_STATIC,230,57,64,8
+    EDITTEXT        Edit_ShowAxis_IOSts_0,230,67,63,12,ES_CENTER | 
+                    ES_AUTOHSCROLL
+    LTEXT           "Motion Status 0",IDC_STATIC,230,79,64,8
+    EDITTEXT        Edit_ShowAxis_MSts_0,230,87,63,12,ES_CENTER | 
+                    ES_AUTOHSCROLL
+    LTEXT           "Feedback 0",IDC_STATIC,230,37,64,8
+    EDITTEXT        Edit_ShowAxis_Feedback_0,230,45,63,12,ES_CENTER | 
+                    ES_AUTOHSCROLL
+    LTEXT           "Command 1",IDC_STATIC,297,17,64,8
+    EDITTEXT        Edit_ShowAxis_Command_1,297,25,63,12,ES_CENTER | 
+                    ES_AUTOHSCROLL
+    LTEXT           "Command 2",IDC_STATIC,364,17,64,8
+    EDITTEXT        Edit_ShowAxis_Command_2,364,25,63,12,ES_CENTER | 
+                    ES_AUTOHSCROLL
+    LTEXT           "Command 3",IDC_STATIC,430,17,64,8
+    EDITTEXT        Edit_ShowAxis_Command_3,430,25,63,12,ES_CENTER | 
+                    ES_AUTOHSCROLL
+    LTEXT           "Feedback 1",IDC_STATIC,297,37,64,8
+    EDITTEXT        Edit_ShowAxis_Feedback_1,297,45,63,12,ES_CENTER | 
+                    ES_AUTOHSCROLL
+    LTEXT           "Feedback 2",IDC_STATIC,364,37,64,8
+    EDITTEXT        Edit_ShowAxis_Feedback_2,364,45,63,12,ES_CENTER | 
+                    ES_AUTOHSCROLL
+    LTEXT           "Feedback 3",IDC_STATIC,430,37,64,8
+    EDITTEXT        Edit_ShowAxis_Feedback_3,430,45,63,12,ES_CENTER | 
+                    ES_AUTOHSCROLL
+    LTEXT           "IO Status 1",IDC_STATIC,297,57,64,8
+    EDITTEXT        Edit_ShowAxis_IOSts_1,297,67,63,12,ES_CENTER | 
+                    ES_AUTOHSCROLL
+    LTEXT           "IO Status 2",IDC_STATIC,364,57,64,8
+    EDITTEXT        Edit_ShowAxis_IOSts_2,364,67,63,12,ES_CENTER | 
+                    ES_AUTOHSCROLL
+    LTEXT           "IO Status 3",IDC_STATIC,430,57,64,8
+    EDITTEXT        Edit_ShowAxis_IOSts_3,430,67,63,12,ES_CENTER | 
+                    ES_AUTOHSCROLL
+    LTEXT           "Motion Status 1",IDC_STATIC,297,79,64,8
+    EDITTEXT        Edit_ShowAxis_MSts_1,297,87,63,12,ES_CENTER | 
+                    ES_AUTOHSCROLL
+    LTEXT           "Motion Status 2",IDC_STATIC,364,79,64,8
+    EDITTEXT        Edit_ShowAxis_MSts_2,364,87,63,12,ES_CENTER | 
+                    ES_AUTOHSCROLL
+    LTEXT           "Motion Status 3",IDC_STATIC,430,79,64,8
+    EDITTEXT        Edit_ShowAxis_MSts_3,430,87,63,12,ES_CENTER | 
+                    ES_AUTOHSCROLL
+    PUSHBUTTON      "Reset All Counter",Btn_ResetCounter,498,21,80,79
+    GROUPBOX        "Bus Start/Stop",IDC_STATIC,13,123,102,116
+    GROUPBOX        "Module Info",IDC_STATIC,117,123,102,116
+    GROUPBOX        "Single Absolute Move",IDC_STATIC,222,123,102,116
+    GROUPBOX        "Single Relative Move",IDC_STATIC,326,123,102,116
+    GROUPBOX        "Single Home Move",IDC_STATIC,429,123,102,116
+    PUSHBUTTON      "Backward",Btn_SingleAbsoluteMove_Backward,229,143,39,38
+    PUSHBUTTON      "Forward",Btn_SingleAbsoluteMove_Forward,275,143,39,38
+    PUSHBUTTON      "Stop",Btn_SingleAbsoluteMove_Stop,251,187,39,38
+    PUSHBUTTON      "Backward",Btn_SingleRelativeMove_Backward,335,143,39,38
+    PUSHBUTTON      "Forward",Btn_SingleRelativeMove_Forward,381,143,39,38
+    PUSHBUTTON      "Stop",Btn_SingleRelativeMove_Stop,357,187,39,38
+    PUSHBUTTON      "Backward",Btn_SingleHomeMove_Backward,437,143,39,38
+    PUSHBUTTON      "Forward",Btn_SingleHomeMove_Forward,483,143,39,38
+    PUSHBUTTON      "Stop",Btn_SingleHomeMove_Stop,459,187,39,38
+    GROUPBOX        "2 Axes Linear Absolute Move",IDC_STATIC,533,123,102,116
+    GROUPBOX        "2 Axes Linear Relative Move",IDC_STATIC,13,242,102,116
+    GROUPBOX        "3 Axes Linear Absolute Move",IDC_STATIC,326,243,102,116
+    GROUPBOX        "4 Axes Linear Relative Move",IDC_STATIC,13,360,102,116
+    GROUPBOX        "Point Table",IDC_STATIC,222,360,206,116
+    GROUPBOX        "Compare",IDC_STATIC,429,360,206,116
+    PUSHBUTTON      "Backward",Btn_Linear_2Axes_AbsoluteBackward,540,145,39,
+                    38
+    PUSHBUTTON      "Forward",Btn_Linear_2Axes_AbsoluteForward,588,145,39,38
+    PUSHBUTTON      "Stop",Btn_Linear_2Axes_AbsoluteStop,564,189,39,38
+    GROUPBOX        "3 Axes Linear Relative Move",IDC_STATIC,429,243,102,116
+    GROUPBOX        "4 Axes Linear Absolute Move",IDC_STATIC,533,243,102,116
+    PUSHBUTTON      "Backward",Btn_Linear_2Axes_RelateiveBackward,20,264,39,
+                    38
+    PUSHBUTTON      "Forward",Btn_Linear_2Axes_RelateiveForward,68,264,39,38
+    PUSHBUTTON      "Stop",Btn_Linear_2Axes_Relateive_Stop,44,308,39,38
+    PUSHBUTTON      "Backward",Btn_Linear_3Axes_AbsoluteBackward,332,261,39,
+                    38
+    PUSHBUTTON      "Forward",Btn_Linear_3Axes_AbsoluteForward,380,261,39,38
+    PUSHBUTTON      "Stop",Btn_Linear_3Axes_AbsoluteStop,356,305,39,38
+    PUSHBUTTON      "Backward",Btn_Linear_3Axes_RelateiveBackward,435,261,39,
+                    38
+    PUSHBUTTON      "Forward",Btn_Linear_3Axes_RelateiveForward,483,261,39,
+                    38
+    PUSHBUTTON      "Stop",Btn_Linear_3Axes_Relateive_Stop,459,305,39,38
+    PUSHBUTTON      "Backward",Btn_Linear_4Axes_RelateiveBackward,21,378,39,
+                    38
+    PUSHBUTTON      "Forward",Btn_Linear_4Axes_RelateiveForward,69,378,39,38
+    PUSHBUTTON      "Stop",Btn_Linear_4Axes_Relateive_Stop,45,422,39,38
+    PUSHBUTTON      "Backward",Btn_Linear_4Axes_AbsoluteBackward,540,261,39,
+                    38
+    PUSHBUTTON      "Forward",Btn_Linear_4Axes_AbsoluteForward,588,261,39,38
+    PUSHBUTTON      "Stop",Btn_Linear_4Axes_AbsoluteStop,564,305,39,38
+    PUSHBUTTON      "Step1:     Set Table",Btn_SetPointTable,231,402,43,62,
+                    BS_MULTILINE,0,HBtn_SetPointTable
+    PUSHBUTTON      "Step2: Move",Btn_PointTable_SingleIndexMove,279,424,49,
+                    39,BS_MULTILINE
+    LTEXT           "Target Index",IDC_STATIC,279,400,47,8
+    EDITTEXT        Edit_SetTargetIndex_ForSinglePointMove,279,410,49,12,
+                    ES_AUTOHSCROLL
+    LTEXT           "Running Index",IDC_STATIC,229,375,50,8
+    EDITTEXT        Edit_Show_PointTable_CurrIndex,283,374,45,13,ES_CENTER | 
+                    ES_AUTOHSCROLL
+    GROUPBOX        "Single Index Move",IDC_STATIC,227,390,107,78
+    PUSHBUTTON      "Set Points and Move",Btn_PointTable_MoveALL,343,402,71,
+                    62,BS_MULTILINE
+    PUSHBUTTON      "Stop",Btn_PointTable_Stop,341,374,77,15
+    GROUPBOX        "All Index Move",IDC_STATIC,337,390,84,78
+    PUSHBUTTON      "LineCMP and Move",Btn_Linear_Compare,435,451,60,19,
+                    BS_MULTILINE
+    PUSHBUTTON      "Table CMP and Move",Btn_Table_Compare,500,451,60,19,
+                    BS_MULTILINE
+    PUSHBUTTON      "Manual CMP",Btn_Manual_Compare,565,451,60,19
+    LTEXT           "TriggerCnt 0",IDC_STATIC,432,369,43,8
+    EDITTEXT        Edit_ShowTriggerCount_0,432,377,39,12,ES_CENTER | 
+                    ES_AUTOHSCROLL
+    EDITTEXT        Edit_ShowTriggerCount_1,484,377,39,12,ES_CENTER | 
+                    ES_AUTOHSCROLL
+    EDITTEXT        Edit_ShowTriggerCount_2,538,377,39,12,ES_CENTER | 
+                    ES_AUTOHSCROLL
+    EDITTEXT        Edit_ShowTriggerCount_3,588,377,39,12,ES_CENTER | 
+                    ES_AUTOHSCROLL
+    LTEXT           "TriggerEnc 0",IDC_STATIC,432,389,43,8
+    EDITTEXT        Edit_ShowTriggerEnc_0,432,397,39,12,ES_CENTER | 
+                    ES_AUTOHSCROLL
+    LTEXT           "TriggerEnc 1",IDC_STATIC,484,389,43,8
+    EDITTEXT        Edit_ShowTriggerEnc_1,484,397,39,12,ES_CENTER | 
+                    ES_AUTOHSCROLL
+    LTEXT           "TriggerEnc 2",IDC_STATIC,538,389,43,8
+    EDITTEXT        Edit_ShowTriggerEnc_2,538,397,39,12,ES_CENTER | 
+                    ES_AUTOHSCROLL
+    LTEXT           "TriggerEnc 3",IDC_STATIC,588,389,43,8
+    EDITTEXT        Edit_ShowTriggerEnc_3,588,397,39,12,ES_CENTER | 
+                    ES_AUTOHSCROLL
+    LTEXT           "CMPVal 0",IDC_STATIC,432,409,34,8
+    EDITTEXT        Edit_ShowTrigger_LinearCMP_LinearCMP_0,432,417,39,12,
+                    ES_CENTER | ES_AUTOHSCROLL | WS_GROUP
+    LTEXT           "CMPVal 1",IDC_STATIC,484,409,34,8
+    EDITTEXT        Edit_ShowTrigger_LinearCMP_LinearCMP_1,484,417,39,12,
+                    ES_CENTER | ES_AUTOHSCROLL
+    LTEXT           "CMPVal 2",IDC_STATIC,538,409,34,8
+    EDITTEXT        Edit_ShowTrigger_LinearCMP_LinearCMP_2,538,417,39,12,
+                    ES_CENTER | ES_AUTOHSCROLL
+    LTEXT           "CMPVal 3",IDC_STATIC,588,409,34,8
+    EDITTEXT        Edit_ShowTrigger_LinearCMP_LinearCMP_3,588,417,39,12,
+                    ES_CENTER | ES_AUTOHSCROLL
+    PUSHBUTTON      "Reset Trigger Count",Btn_Trigger_Count,432,431,196,17
+    LTEXT           "PCB Bottom Ver.",IDC_STATIC,152,77,64,8
+    EDITTEXT        Edit_ShowMaster_PCBBottomVer,152,86,63,12,ES_CENTER | 
+                    ES_AUTOHSCROLL
+    GROUPBOX        "2 Axes Arc Absolute Move",IDC_STATIC,118,243,102,116
+    PUSHBUTTON      "CCW",Btn_Arc_2Axes_Absolute_CCW,125,265,39,38
+    PUSHBUTTON      "CW",Btn_Arc_2Axes_Absolute_CW,173,265,39,38
+    PUSHBUTTON      "Stop",Btn_Arc_2Axes_Absolute_Stop2,149,309,39,38
+    GROUPBOX        "2 Axes Arc Relative Move",IDC_STATIC,222,243,102,116
+    PUSHBUTTON      "CCW",Btn_Arc_2Axes_Relative_CCW,231,265,39,38
+    PUSHBUTTON      "CW",Btn_Arc_2Axes_Relative_CW,279,265,39,38
+    PUSHBUTTON      "Stop",Btn_Arc_2Axes_Relateive_Stop,255,309,39,38
+    GROUPBOX        "General DIO",IDC_STATIC,118,360,102,116
+    LTEXT           "TriggerCnt 1",IDC_STATIC,484,369,43,8
+    LTEXT           "TriggerCnt 2",IDC_STATIC,538,369,43,8
+    LTEXT           "TriggerCnt 3",IDC_STATIC,588,369,43,8
+    LTEXT           "DI_Data",IDC_STATIC,124,406,43,8
+    EDITTEXT        Edit_ShowDIData,124,414,41,12,ES_CENTER | ES_AUTOHSCROLL
+    LTEXT           "DO_Data",IDC_STATIC,124,440,43,8
+    EDITTEXT        Edit_SetDOData,124,448,46,12,ES_CENTER | ES_AUTOHSCROLL
+    PUSHBUTTON      "Set DO",Btn_Set_DOData,175,439,39,30
+    LTEXT           "Module ID",IDC_STATIC,136,373,64,10
+    EDITTEXT        Edit_SetModuleID_ForGeneralDIO,136,384,63,12,
+                    ES_AUTOHSCROLL
+    LTEXT           "Chk_DOData",Chk_DOData,171,406,43,8
+    EDITTEXT        Edit_GetDOData,171,414,41,12,ES_CENTER | ES_AUTOHSCROLL
+END
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040404B0"
+        BEGIN
+            VALUE "CompanyName", "\0"
+            VALUE "FileDescription", "MNET_4XMO_C_VC_Sample MFC Application\0"
+            VALUE "FileVersion", "1, 0, 0, 1\0"
+            VALUE "InternalName", "MNET_4XMO_C_VC_Sample\0"
+            VALUE "LegalCopyright", "Copyright (C) 2009\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OriginalFilename", "MNET_4XMO_C_VC_Sample.EXE\0"
+            VALUE "ProductName", "MNET_4XMO_C_VC_Sample Application\0"
+            VALUE "ProductVersion", "1, 0, 0, 1\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x404, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 228
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 48
+    END
+
+    IDD_MNET_4XMO_C_VC_SAMPLE_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 639
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 480
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_ICON1               ICON    DISCARDABLE     "icon1.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_ABOUTBOX            "關於 MNET_4XMO_C_VC_Sample(&A)..."
+END
+
+#endif    // Chinese (Taiwan) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHT)
+#ifdef _WIN32
+LANGUAGE 4, 1
+#pragma code_page(950)
+#endif //_WIN32
+#include "res\MNET_4XMO_C_VC_Sample.rc2"  // non-Microsoft Visual C++ edited resources
+#include "l.cht\afxres.rc"          // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

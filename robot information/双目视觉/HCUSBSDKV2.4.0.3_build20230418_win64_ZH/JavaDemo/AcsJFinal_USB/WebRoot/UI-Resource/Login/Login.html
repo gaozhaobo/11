@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link href="/UI-Resource/bootstrap-3.3.7/css/bootstrap.min.css" rel="stylesheet">
+<script src="/UI-Resource/jquery-2.1.1/jquery.min.js"></script>
+<script src="/UI-Resource/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+<script src="/UI-Resource/Login/Login.js"></script>
+<title>Login</title>
+</head>
+<body>
+<div class="container">
+	<h1>Device Login</h1>
+	<div class="panel panel-primary">
+		<div class="panel-heading">
+			<h3 class="panel-title">Please input the username and password to login the device</h3>
+		</div>
+		<div class="panel-body">
+			<form method="post">
+			  <div class="form-group">
+			    <label for="dwVID">dwVID</label>
+			    <input type="text" class="form-control" id="dwVID" value="1155"> <!-- 1155 -->
+			  </div>
+			  <div class="form-group">
+			    <label for="dwPID">dwPID</label>
+			    <input type="text" class="form-control" id="dwPID" value="22315"> <!-- 22352 -->
+			  </div>
+			  <div class="form-group">
+			    <label for="szSerialNumber">szSerialNumber</label>
+			    <input type="text" class="form-control" id="szSerialNumber" value="211249261">
+			  </div>
+			  <div class="form-group">
+			    <label for="szUserName">szUserName</label>
+			    <input type="text" class="form-control" id="szUserName" value="admin">  <!-- admin -->
+			  </div>
+			  <div class="form-group">
+			    <label for="password">password</label>
+			    <input type="password" class="form-control" id="password" value="12345">  <!-- 12345 -->
+			  </div>
+			  
+			  <button  type="button" class="btn btn-default btn-lg" onclick="EnumDevice()">EnumDevice</button>		 
+			  <button  type="button" class="btn btn-default btn-lg" onclick="LoginSubmit()">Login</button>
+			  <button  type="button" class="btn btn-default btn-lg" onclick="ActivateCard()">ActiveCard</button>
+			  <hr />
+			  <div>
+			  	<label for="szInfo">身份证信息</label>
+			    <input type="text" class="form-control" id="szInfo" value="">
+			    
+			  	<p>照片信息</p>
+			  	<img id="player" style="width:200px;height:180px"/>			  	
+			  </div>
+			  <button  type="button" class="btn btn-default btn-lg" onclick="GetCertificateInfo()">GetCertificateInfo</button>
+			</form>
+		</div>
+	</div>
+</div>
+</body>
+</html>

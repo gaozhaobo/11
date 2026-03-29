@@ -1,0 +1,244 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// 中文 (台灣) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHT)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_TRADITIONAL
+#pragma code_page(950)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHT)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 4, 1\r\n"
+    "#pragma code_page(950)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\8102_Sync_Function_c.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""l.cht\\afxres.rc""          // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\8102_Sync_Function_c.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOG  0, 0, 235, 55
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "關於 8102_Sync_Function_c"
+FONT 9, "新細明體"
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,17,20,20
+    LTEXT           "8102_Sync_Function_c Version 1.0",IDC_STATIC,40,10,119,8,SS_NOPREFIX
+    LTEXT           "Copyright (C) 2006",IDC_STATIC,40,25,119,8
+    DEFPUSHBUTTON   "確定",IDOK,178,7,50,14,WS_GROUP
+END
+
+IDD_MY8102_SYNC_FUNCTION_C_DIALOG DIALOGEX 0, 0, 392, 254
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "8102_Sync_Function_c"
+FONT 12, "新細明體", 0, 0, 0x1
+BEGIN
+    GROUPBOX        "Position (p)",IDC_STATIC,16,17,98,58
+    LTEXT           "Axis 0",IDC_STATIC,25,32,22,13
+    EDITTEXT        Pos0,51,30,51,17,ES_AUTOHSCROLL
+    LTEXT           "Axis 1",IDC_STATIC,25,52,22,13
+    EDITTEXT        Pos1,51,50,51,17,ES_AUTOHSCROLL
+    GROUPBOX        "I/O Status (Hex)",IDC_STATIC,121,17,98,58
+    LTEXT           "Axis 0",IDC_STATIC,130,32,22,13
+    EDITTEXT        IOSts0,156,30,51,17,ES_AUTOHSCROLL
+    LTEXT           "Axis 1",IDC_STATIC,130,52,22,13
+    EDITTEXT        IOSts1,156,50,51,17,ES_AUTOHSCROLL
+    GROUPBOX        "Speed (pps)",IDC_STATIC,16,77,98,58
+    LTEXT           "Axis 0",IDC_STATIC,25,92,22,13
+    EDITTEXT        Speed0,52,90,51,17,ES_AUTOHSCROLL
+    LTEXT           "Axis 1",IDC_STATIC,25,112,22,13
+    EDITTEXT        Speed1,52,110,51,17,ES_AUTOHSCROLL
+    GROUPBOX        "Motion Status",IDC_STATIC,121,77,98,58
+    LTEXT           "Axis 0",IDC_STATIC,130,92,22,13
+    EDITTEXT        MotSts0,156,90,51,17,ES_AUTOHSCROLL
+    LTEXT           "Axis 1",IDC_STATIC,130,112,22,13
+    EDITTEXT        MotSts1,156,110,51,17,ES_AUTOHSCROLL
+    GROUPBOX        "Command Output",IDC_STATIC,16,137,98,58
+    LTEXT           "Axis 0",IDC_STATIC,25,152,22,13
+    EDITTEXT        CMD0,51,150,51,17,ES_AUTOHSCROLL
+    LTEXT           "Axis 1",IDC_STATIC,25,172,22,13
+    EDITTEXT        CMD1,51,170,51,17,ES_AUTOHSCROLL
+    LTEXT           "Axis:",IDC_STATIC,324,24,17,9
+    EDITTEXT        PTP_AXIS,350,22,25,17,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "PTP",IDOK2,247,22,50,21
+    CONTROL         "Use Trigger?",IDC_CHECK1,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,248,49,52,10
+    EDITTEXT        PTP_CMD,338,42,37,17,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "LINE X-Y",IDOK3,246,82,50,21
+    DEFPUSHBUTTON   "ARC X-Y",IDOK4,247,136,50,21
+    EDITTEXT        LINE_CMD_0,338,72,37,17,ES_AUTOHSCROLL
+    EDITTEXT        LINE_CMD_1,338,93,37,17,ES_AUTOHSCROLL
+    EDITTEXT        ARC_CMD_0,338,127,37,17,ES_AUTOHSCROLL
+    EDITTEXT        ARC_CMD_1,338,148,37,17,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "EMG Stop",IDOK5,324,189,50,49
+    DEFPUSHBUTTON   "Reset Position",IDOK6,248,189,50,49
+    DEFPUSHBUTTON   "Sync Start",IDOK7,153,143,50,21
+    DEFPUSHBUTTON   "Sync Stop",IDOK8,153,173,50,21
+    EDITTEXT        CMP_STS,282,61,14,17,ES_AUTOHSCROLL
+    LTEXT           "GCMP_STS",IDC_STATIC,245,65,37,10
+    LTEXT           "Dist",IDC_STATIC,320,46,17,9
+    LTEXT           "DistX",IDC_STATIC,317,75,17,9
+    LTEXT           "DistY",IDC_STATIC,317,97,17,9
+    LTEXT           "CenterX",IDC_STATIC,311,130,24,8
+    LTEXT           "CenterY",IDC_STATIC,311,151,25,8
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040404B0"
+        BEGIN
+            VALUE "FileDescription", "8102_Sync_Function_c MFC Application"
+            VALUE "FileVersion", "1, 0, 0, 1"
+            VALUE "InternalName", "8102_Sync_Function_c"
+            VALUE "LegalCopyright", "Copyright (C) 2006"
+            VALUE "OriginalFilename", "8102_Sync_Function_c.EXE"
+            VALUE "ProductName", "8102_Sync_Function_c Application"
+            VALUE "ProductVersion", "1, 0, 0, 1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x404, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 228
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 48
+    END
+
+    IDD_MY8102_SYNC_FUNCTION_C_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 384
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 247
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_ABOUTBOX            "關於 8102_Sync_Function_c(&A)..."
+END
+
+#endif    // 中文 (台灣) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHT)
+#ifdef _WIN32
+LANGUAGE 4, 1
+#pragma code_page(950)
+#endif //_WIN32
+#include "res\8102_Sync_Function_c.rc2"  // non-Microsoft Visual C++ edited resources
+#include "l.cht\afxres.rc"          // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

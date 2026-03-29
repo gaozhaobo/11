@@ -1,0 +1,21 @@
+SCC = This is a Source Code Control file
+
+[SERVO.DSP]
+SCC_Aux_Path = "\\ps2svr\PS2 Software Database\"
+SCC_Project_Name = "$/Motion/PCI-8102/SetupDSK_R2008/PCI-8102R in SS/PCI-8102 Setup Disk/Sample/VC.NET(2005)/Sample1", KUNEAAAA
+
+[SERVO.DSW]
+SCC_Aux_Path = "\\ps2svr\PS2 Software Database\"
+SCC_Project_Name = "$/Motion/PCI-8102/SetupDSK_R2008/PCI-8102R in SS/PCI-8102 Setup Disk/Sample/VC.NET(2005)/Sample1", KUNEAAAA
+
+[SERVO.sln]
+SCC_Aux_Path = "\\ps2svr\PS2 Software Database\"
+SCC_Project_Name = "$/Motion/PCI-8102/SetupDSK_R2008/PCI-8102R in SS/PCI-8102 Setup Disk/Sample/VC.NET(2005)/Sample1", KUNEAAAA
+
+[SERVO.vcproj]
+SCC_Aux_Path = "\\ps2svr\PS2 Software Database\"
+SCC_Project_Name = "$/Motion/PCI-8102/SetupDSK_R2008/PCI-8102R in SS/PCI-8102 Setup Disk/Sample/VC.NET(2005)/Sample1", KUNEAAAA
+
+[SERVOx64.vcproj]
+SCC_Aux_Path = "\\ps2svr\PS2 Software Database\"
+SCC_Project_Name = "$/Motion/PCI-8102/SetupDSK_R2008/PCI-8102R in SS/PCI-8102 Setup Disk/Sample/VC.NET(2005)/Sample1", KUNEAAAA

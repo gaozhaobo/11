@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AcsDemo_USB Language="English">
+    <Form>
+      <Name>AcsDemo_USB</Name>
+      <Controls>
+        <Control name="groupBoxVerInfo" text="Version Info"/>
+        <Control name ="label3" text ="SDK version:"/>
+        <Control name ="groupBoxLogin" text ="Login Info"/>
+        <Control name ="label5" text ="User Name"/>
+        <Control name ="label7" text ="Language"/>
+        <Control name ="label6" text ="Password"/>
+        <Control name ="groupBoxDeviceInfo" text ="Device Info"/>
+        <Control name ="btnTraverse" text ="Traverse"/>
+        <Control name ="btnLoginDevice" text ="Login"/>
+        <Control name ="btnLogOutDevice" text ="Logout"/>
+        <Control name ="tabPage1" text ="Device Interface"/>
+        <Control name ="tabPage2" text ="Certificate Interface"/>
+        <Control name ="btnActivateCard" text ="Activate Card"/>
+        <Control name ="btnM1PwdVerify" text ="M1 Pwd Verify"/>
+        <Control name ="btnM1ModifySCB" text ="M1 Modify SCB"/>
+        <Control name ="btnGetCardNo" text ="Get Card No"/>
+        <Control name ="btnCertificateConfig" text ="Certificate Config"/>
+        <Control name ="groupBoxInfo" text ="Info"/>
+      </Controls>
+    </Form>
+    <Form>
+      <Name>ActivateCard</Name>
+      <Controls>
+        <Control name ="label1" text="Waiting Time"/>
+        <Control name ="label3" text ="second"/>
+        <Control name ="btnActivate" text ="Activate Card"/>
+        <Control name ="label4" text ="Device Response"/>
+        <Control name ="label5" text ="Card Protocol Type"/>
+        <Control name ="label6" text ="Serial Number Len"/>
+        <Control name ="label7" text ="Serial Number"/>
+        <Control name ="label8" text ="Select Confirm Len"/>
+        <Control name ="label9" text ="Select Confirm"/>
+        <Control name ="ActivateCard" text ="Activate"/>
+      </Controls>
+    </Form>
+    <Form>
+      <Name>CertificateCard</Name>
+      <Controls>
+        <Control name ="groupBoxPicture" text="Picture"/>
+        <Control name ="btnAcquire" text ="Acquire"/>
+        <Control name ="CertificateCard" text ="Acquire CertificateCard Info"/>
+      </Controls>
+    </Form>
+    <Form>
+      <Name>M1ModifySCB</Name>
+      <Controls>
+        <Control name ="label1" text ="Sector No[0-15]:"/>
+        <Control name ="label2" text ="6Byte Pwd A(Hex separated by space):"/>
+        <Control name ="label3" text ="4Byte Control Bit(Hex separated by space):"/>
+        <Control name ="label4" text ="6Byte pwd B(Hex separated by space):"/>
+        <Control name ="btnModify" text ="Modify"/>
+        <Control name ="M1ModifySCB" text ="M1ModifySCB"/>
+      </Controls>
+    </Form>
+    <Form>
+      <Name>M1PwdVerify</Name>
+      <Controls>
+        <Control name ="M1PwdType" text="M1 Pwd Type:"/>
+        <Control name ="M1SCBNoToVerify" text="SCB No To Verify:"/>
+        <Control name ="M1Pwd" text ="6Byte Pwd(Hex separated by space):"/>
+        <Control name ="M1PwdVerify" text ="M1PwdVerify"/>
+      </Controls>
+    </Form>
+</AcsDemo_USB>

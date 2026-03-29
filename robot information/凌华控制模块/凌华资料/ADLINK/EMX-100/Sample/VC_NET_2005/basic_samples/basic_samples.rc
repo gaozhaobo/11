@@ -1,0 +1,300 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Chinese (Taiwan) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHT)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_TRADITIONAL
+#pragma code_page(950)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHT)\r\n"
+    "LANGUAGE 4, 1\r\n"
+    "#pragma code_page(950)\r\n"
+    "#include ""res\\basic_samples.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""     // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\basic_samples.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 235, 55
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About basic_samples"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,17,20,20
+    LTEXT           "basic_samples Version 1.0",IDC_STATIC,40,10,119,8,SS_NOPREFIX
+    LTEXT           "Copyright (C) 2018",IDC_STATIC,40,25,119,8
+    DEFPUSHBUTTON   "OK",IDOK,178,7,50,16,WS_GROUP
+END
+
+IDD_BASIC_SAMPLES_DIALOG DIALOGEX 0, 0, 331, 182
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "Sample Program"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    PUSHBUTTON      "Initial",IDC_BUTTON1,15,18,50,14
+    PUSHBUTTON      "Close",IDC_BUTTON2,15,33,50,14
+    GROUPBOX        "Start here",IDC_STATIC,7,7,63,168
+    PUSHBUTTON      "Get Version",IDC_BUTTON3,15,50,50,14
+    PUSHBUTTON      "Axis Monitor",IDC_BUTTON4,15,66,50,14
+    PUSHBUTTON      "Load Param",IDC_BUTTON5,15,82,50,14
+    PUSHBUTTON      "Homing",IDC_BUTTON6,83,17,50,14
+    PUSHBUTTON      "Stop Move",IDC_BUTTON9,83,108,50,14
+    PUSHBUTTON      "EMG Stop",IDC_BUTTON10,83,124,50,14
+    PUSHBUTTON      "Jog ON",IDC_BUTTON11,83,35,50,14
+    PUSHBUTTON      "P2P",IDC_BUTTON12,83,73,50,14
+    PUSHBUTTON      "Jog OFF",IDC_BUTTON13,83,54,50,14
+    PUSHBUTTON      "repeat move",IDC_BUTTON14,154,18,50,14
+    GROUPBOX        "Basic move functions",IDC_STATIC,76,7,64,168
+    GROUPBOX        "Advanced ",IDC_STATIC,146,7,73,168
+    GROUPBOX        "Aux functions",IDC_STATIC,230,7,94,168
+    PUSHBUTTON      "Digital I/O",IDC_BUTTON20,235,17,50,14
+    COMBOBOX        IDC_COMBO1,15,114,48,82,CBS_DROPDOWN | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Target 1st axis",IDC_STATIC,15,103,49,8
+    PUSHBUTTON      "CMP Trigger",IDC_BUTTON25,235,33,49,18
+    PUSHBUTTON      "VelMove",IDC_BUTTON7,86,92,45,14
+    EDITTEXT        IDC_EDIT1,94,149,44,14,ES_AUTOHSCROLL
+    LTEXT           "ret = ",IDC_STATIC,74,152,20,8
+    EDITTEXT        IDC_EDIT2,160,49,40,14,ES_AUTOHSCROLL
+    LTEXT           "delay (ms)",IDC_STATIC,153,39,34,8
+END
+
+IDD_DLG_VERSION DIALOGEX 0, 0, 142, 125
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Version info"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "Exit",IDOK,45,108,50,14
+    EDITTEXT        IDC_EDIT1,59,12,72,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT2,59,30,72,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT3,60,48,72,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT4,59,66,72,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT5,60,84,72,14,ES_AUTOHSCROLL
+    LTEXT           "APS DLL",IDC_STATIC,11,18,27,8
+    LTEXT           "FMAC SW",IDC_STATIC,9,36,32,8
+    LTEXT           "FMAC MW",IDC_STATIC,9,54,34,8
+    LTEXT           "FMAC EXE",IDC_STATIC,9,72,34,8
+    LTEXT           "FMAC Library",IDC_STATIC,9,90,44,8
+END
+
+IDD_DLG_AXIS_MONITOR DIALOGEX 0, 0, 264, 178
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Axis status monitor"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_EDIT1,73,24,74,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT2,73,44,74,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT3,73,64,74,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT4,73,84,74,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT5,73,104,74,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT6,73,124,74,14,ES_AUTOHSCROLL
+    LTEXT           "Command position :",IDC_STATIC,7,24,65,8
+    LTEXT           "Feedback position:",IDC_STATIC,7,44,65,8
+    LTEXT           "Target position  :",IDC_STATIC,7,64,65,8
+    LTEXT           "Error position   :",IDC_STATIC,7,84,65,8
+    LTEXT           "Command velocity :",IDC_STATIC,7,104,65,8
+    LTEXT           "Feedback velocity:",IDC_STATIC,7,124,65,8
+    CONTROL         "ALM ",IDC_CHECK1,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,159,18,39,10
+    CONTROL         "PEL ",IDC_CHECK2,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,159,28,39,10
+    CONTROL         "MEL ",IDC_CHECK3,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,159,38,39,10
+    CONTROL         "ORG ",IDC_CHECK4,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,159,48,39,10
+    CONTROL         "EMG ",IDC_CHECK5,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,159,58,39,10
+    CONTROL         "EZ  ",IDC_CHECK6,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,159,68,39,10
+    CONTROL         "INP ",IDC_CHECK7,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,159,78,39,10
+    CONTROL         "SVON",IDC_CHECK8,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,159,88,39,10
+    GROUPBOX        "Motion I/O",IDC_STATIC,153,7,45,164
+    GROUPBOX        "Motion status",IDC_STATIC,202,7,55,164
+    CONTROL         "MDN",IDC_CHECK17,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,207,18,39,10
+    CONTROL         "EMGS",IDC_CHECK18,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,207,28,39,10
+    CONTROL         "ALMS   ",IDC_CHECK19,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,207,38,39,10
+    CONTROL         "PELS  ",IDC_CHECK20,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,207,48,39,10
+    CONTROL         "MELS   ",IDC_CHECK21,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,207,58,39,10
+    CONTROL         "SPELS",IDC_CHECK22,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,207,68,39,10
+    CONTROL         "SMELS",IDC_CHECK23,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,207,78,39,10
+    CONTROL         "HMES",IDC_CHECK24,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,207,88,39,10
+    CONTROL         "ORGS",IDC_CHECK25,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,207,98,39,10
+    CONTROL         "EZS",IDC_CHECK26,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,207,108,39,10
+    COMBOBOX        IDC_COMBO1,43,7,64,153,CBS_DROPDOWN | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Axis ID:",IDC_STATIC,7,7,26,8
+    PUSHBUTTON      "Reset position",IDC_BUTTON1,16,145,50,14
+    PUSHBUTTON      "svon",IDC_BUTTON2,162,124,23,14
+    PUSHBUTTON      "svoff",IDC_BUTTON3,162,139,23,14
+    CONTROL         "RDY",IDC_CHECK10,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,160,98,39,10
+    EDITTEXT        IDC_EDIT7,94,157,40,14,ES_AUTOHSCROLL
+    LTEXT           "get status err",IDC_STATIC,81,147,45,8
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904e4"
+        BEGIN
+            VALUE "CompanyName", "TODO: <Company name>"
+            VALUE "FileDescription", "TODO: <File description>"
+            VALUE "FileVersion", "1.0.0.1"
+            VALUE "InternalName", "basic_samples.exe"
+            VALUE "LegalCopyright", "TODO: (c) <Company name>.  All rights reserved."
+            VALUE "OriginalFilename", "basic_samples.exe"
+            VALUE "ProductName", "TODO: <Product name>"
+            VALUE "ProductVersion", "1.0.0.1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1252
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 228
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 48
+    END
+
+    IDD_BASIC_SAMPLES_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 324
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 175
+    END
+
+    IDD_DLG_VERSION, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 135
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 118
+    END
+
+    IDD_DLG_AXIS_MONITOR, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 257
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 171
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_ABOUTBOX            "&About basic_samples..."
+END
+
+#endif    // Chinese (Taiwan) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHT)
+LANGUAGE 4, 1
+#pragma code_page(950)
+#include "res\basic_samples.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"     // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

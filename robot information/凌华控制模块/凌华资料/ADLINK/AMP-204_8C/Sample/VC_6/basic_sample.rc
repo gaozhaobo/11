@@ -1,0 +1,472 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Chinese (Taiwan) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHT)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_TRADITIONAL
+#pragma code_page(950)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\basic_sample.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON    DISCARDABLE     "res\\basic_sample.ico"
+IDI_ICON1               ICON    DISCARDABLE     "basic_samples.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_Get_Version DIALOG DISCARDABLE  0, 0, 120, 106
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Version"
+FONT 10, "System"
+BEGIN
+    EDITTEXT        IDC_EDIT1,50,20,50,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT2,50,34,50,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT3,50,47,50,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT4,50,61,50,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT5,50,74,50,12,ES_AUTOHSCROLL
+    LTEXT           "DLL",IDC_STATIC,12,21,17,10
+    LTEXT           "Driver",IDC_STATIC,12,35,22,10
+    LTEXT           "Kernel",IDC_STATIC,13,50,24,10
+    LTEXT           "Firmware",IDC_STATIC,12,63,33,10
+    LTEXT           "PCB",IDC_STATIC,13,76,17,10
+    GROUPBOX        "Info.",IDC_STATIC,7,7,100,85
+END
+
+IDD_axis_monitor DIALOG DISCARDABLE  0, 0, 428, 177
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Axis Monitor"
+FONT 10, "System"
+BEGIN
+    EDITTEXT        EDIT_cmd_0,80,26,40,12,ES_AUTOHSCROLL
+    EDITTEXT        EDIT_cmd_1,122,26,40,12,ES_AUTOHSCROLL
+    EDITTEXT        EDIT_cmd_2,165,26,40,12,ES_AUTOHSCROLL
+    EDITTEXT        EDIT_cmd_3,208,26,40,12,ES_AUTOHSCROLL
+    EDITTEXT        EDIT_cmd_4,251,26,40,12,ES_AUTOHSCROLL
+    EDITTEXT        EDIT_cmd_5,293,26,40,12,ES_AUTOHSCROLL
+    EDITTEXT        EDIT_cmd_6,335,26,40,12,ES_AUTOHSCROLL
+    EDITTEXT        EDIT_cmd_7,377,26,40,12,ES_AUTOHSCROLL
+    EDITTEXT        EDIT_fb_0,80,40,40,12,ES_AUTOHSCROLL
+    EDITTEXT        EDIT_fb_1,122,40,40,12,ES_AUTOHSCROLL
+    EDITTEXT        EDIT_fb_2,165,40,40,12,ES_AUTOHSCROLL
+    EDITTEXT        EDIT_fb_3,208,40,40,12,ES_AUTOHSCROLL
+    EDITTEXT        EDIT_fb_4,251,40,40,12,ES_AUTOHSCROLL
+    EDITTEXT        EDIT_fb_5,293,40,40,12,ES_AUTOHSCROLL
+    EDITTEXT        EDIT_fb_6,335,40,40,12,ES_AUTOHSCROLL
+    EDITTEXT        EDIT_fb_7,377,40,40,12,ES_AUTOHSCROLL
+    EDITTEXT        EDIT_tg_0,80,55,40,12,ES_AUTOHSCROLL
+    EDITTEXT        EDIT_tg_1,122,55,40,12,ES_AUTOHSCROLL
+    EDITTEXT        EDIT_tg_2,165,55,40,12,ES_AUTOHSCROLL
+    EDITTEXT        EDIT_tg_3,208,55,40,12,ES_AUTOHSCROLL
+    EDITTEXT        EDIT_tg_4,251,55,40,12,ES_AUTOHSCROLL
+    EDITTEXT        EDIT_tg_5,293,55,40,12,ES_AUTOHSCROLL
+    EDITTEXT        EDIT_tg_6,335,55,40,12,ES_AUTOHSCROLL
+    EDITTEXT        EDIT_tg_7,377,55,40,12,ES_AUTOHSCROLL
+    EDITTEXT        EDIT_err_0,80,69,40,12,ES_AUTOHSCROLL
+    EDITTEXT        EDIT_err_1,122,69,40,12,ES_AUTOHSCROLL
+    EDITTEXT        EDIT_err_2,165,69,40,12,ES_AUTOHSCROLL
+    EDITTEXT        EDIT_err_3,208,69,40,12,ES_AUTOHSCROLL
+    EDITTEXT        EDIT_err_4,251,69,40,12,ES_AUTOHSCROLL
+    EDITTEXT        EDIT_err_5,293,69,40,12,ES_AUTOHSCROLL
+    EDITTEXT        EDIT_err_6,335,69,40,12,ES_AUTOHSCROLL
+    EDITTEXT        EDIT_err_7,377,69,40,12,ES_AUTOHSCROLL
+    EDITTEXT        EDIT_cv_0,80,83,40,12,ES_AUTOHSCROLL
+    EDITTEXT        EDIT_cv_1,122,83,40,12,ES_AUTOHSCROLL
+    EDITTEXT        EDIT_cv_2,165,83,40,12,ES_AUTOHSCROLL
+    EDITTEXT        EDIT_cv_3,208,83,40,12,ES_AUTOHSCROLL
+    EDITTEXT        EDIT_cv_4,251,83,40,12,ES_AUTOHSCROLL
+    EDITTEXT        EDIT_cv_5,293,83,40,12,ES_AUTOHSCROLL
+    EDITTEXT        EDIT_cv_6,335,83,40,12,ES_AUTOHSCROLL
+    EDITTEXT        EDIT_cv_7,377,83,40,12,ES_AUTOHSCROLL
+    EDITTEXT        EDIT_fv_0,80,96,40,12,ES_AUTOHSCROLL
+    EDITTEXT        EDIT_fv_1,122,96,40,12,ES_AUTOHSCROLL
+    EDITTEXT        EDIT_fv_2,165,96,40,12,ES_AUTOHSCROLL
+    EDITTEXT        EDIT_fv_3,208,96,40,12,ES_AUTOHSCROLL
+    EDITTEXT        EDIT_fv_4,250,96,40,12,ES_AUTOHSCROLL
+    EDITTEXT        EDIT_fv_5,293,96,40,12,ES_AUTOHSCROLL
+    EDITTEXT        EDIT_fv_6,335,96,40,12,ES_AUTOHSCROLL
+    EDITTEXT        EDIT_fv_7,377,96,40,12,ES_AUTOHSCROLL
+    EDITTEXT        EDIT_mio_0,80,109,40,12,ES_AUTOHSCROLL
+    EDITTEXT        EDIT_mio_1,122,109,40,12,ES_AUTOHSCROLL
+    EDITTEXT        EDIT_mio_2,165,109,40,12,ES_AUTOHSCROLL
+    EDITTEXT        EDIT_mio_3,208,109,40,12,ES_AUTOHSCROLL
+    EDITTEXT        EDIT_mio_4,250,109,40,12,ES_AUTOHSCROLL
+    EDITTEXT        EDIT_mio_5,293,109,40,12,ES_AUTOHSCROLL
+    EDITTEXT        EDIT_mio_6,335,109,40,12,ES_AUTOHSCROLL
+    EDITTEXT        EDIT_mio_7,377,109,40,12,ES_AUTOHSCROLL
+    EDITTEXT        EDIT_msts_0,80,122,40,12,ES_AUTOHSCROLL
+    EDITTEXT        EDIT_msts_1,122,122,40,12,ES_AUTOHSCROLL
+    EDITTEXT        EDIT_msts_2,165,122,40,12,ES_AUTOHSCROLL
+    EDITTEXT        EDIT_msts_3,208,122,40,12,ES_AUTOHSCROLL
+    EDITTEXT        EDIT_msts_4,250,122,40,12,ES_AUTOHSCROLL
+    EDITTEXT        EDIT_msts_5,293,122,40,12,ES_AUTOHSCROLL
+    EDITTEXT        EDIT_msts_6,335,122,40,12,ES_AUTOHSCROLL
+    EDITTEXT        EDIT_msts_7,377,122,40,12,ES_AUTOHSCROLL
+    LTEXT           "Axis 0",IDC_STATIC,89,13,24,10
+    LTEXT           "Axis 1",IDC_STATIC,131,13,24,10
+    LTEXT           "Axis 2",IDC_STATIC,174,13,24,10
+    LTEXT           "Axis 3",IDC_STATIC,217,13,24,10
+    LTEXT           "Axis 4",IDC_STATIC,259,13,24,10
+    LTEXT           "Axis 5",IDC_STATIC,302,13,24,10
+    LTEXT           "Axis 6",IDC_STATIC,344,13,24,10
+    LTEXT           "Axis 7",IDC_STATIC,385,13,24,10
+    LTEXT           "Command position",IDC_STATIC,10,28,65,10
+    LTEXT           "Feedback position",IDC_STATIC,10,42,65,10
+    LTEXT           "Target position",IDC_STATIC,10,57,65,10
+    LTEXT           "Error position",IDC_STATIC,10,71,65,10
+    LTEXT           "Feedback velocity",IDC_STATIC,10,98,65,10
+    LTEXT           "Motion status",IDC_STATIC,10,124,65,10
+    LTEXT           "Command velocity",IDC_STATIC,10,85,65,10
+    LTEXT           "Motion I/O",IDC_STATIC,10,112,65,10
+    PUSHBUTTON      "Servo ON All",IDC_BUTTON1,14,139,51,11
+    PUSHBUTTON      "Servo OFF All",IDC_BUTTON2,14,153,51,11
+    PUSHBUTTON      "Reset Counter",IDC_BUTTON3,359,141,58,11
+END
+
+IDD_Cmp_Trig DIALOG DISCARDABLE  0, 0, 299, 144
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Comparator Trigger"
+FONT 10, "System"
+BEGIN
+    EDITTEXT        EDIT_Trig_Cnt_0,63,26,45,12,ES_AUTOHSCROLL
+    EDITTEXT        EDIT_Trig_Cnt_1,110,26,45,12,ES_AUTOHSCROLL
+    EDITTEXT        EDIT_Trig_Cnt_2,156,26,45,12,ES_AUTOHSCROLL
+    EDITTEXT        EDIT_Trig_Cnt_3,203,26,45,12,ES_AUTOHSCROLL
+    LTEXT           "CH0",IDC_STATIC,80,14,16,8
+    LTEXT           "CH1",IDC_STATIC,127,13,17,10
+    LTEXT           "CH2",IDC_STATIC,171,13,17,10
+    LTEXT           "CH3",IDC_STATIC,217,14,16,9
+    LTEXT           "Trigger Count",IDC_STATIC,12,27,49,8
+    GROUPBOX        "Info.",IDC_STATIC,7,7,246,35
+    EDITTEXT        EDIT_line_value_0,83,62,45,12,ES_AUTOHSCROLL
+    EDITTEXT        EDIT_line_value_1,129,62,45,12,ES_AUTOHSCROLL
+    EDITTEXT        EDIT_table_value_0,83,75,45,12,ES_AUTOHSCROLL
+    EDITTEXT        EDIT_table_value_1,129,75,45,12,ES_AUTOHSCROLL
+    LTEXT           "CMP Value (linear)",IDC_STATIC,15,64,64,8
+    LTEXT           "CMP Value (Table)",IDC_STATIC,15,76,64,8
+    LTEXT           "#1",IDC_STATIC,100,51,16,8
+    LTEXT           "#2",IDC_STATIC,146,51,16,8
+    GROUPBOX        "Info",IDC_STATIC,7,46,181,50
+    EDITTEXT        EDIT_timer,53,110,47,12,ES_AUTOHSCROLL
+    LTEXT           "Timer Value",IDC_STATIC,10,112,40,8
+    GROUPBOX        "Info",IDC_STATIC,7,99,100,31
+    PUSHBUTTON      "Reset",IDC_BUTTON1,256,12,33,13
+    PUSHBUTTON      "Manual",IDC_BUTTON2,192,51,33,13
+    PUSHBUTTON      "Linear",IDC_BUTTON25,192,67,33,13
+    PUSHBUTTON      "Table",IDC_BUTTON3,192,84,33,13
+    PUSHBUTTON      "Stop",IDC_BUTTON26,110,103,33,13
+    PUSHBUTTON      "Clear",IDC_BUTTON27,110,119,33,13
+END
+
+IDD_PWM_VAO DIALOG DISCARDABLE  0, 0, 265, 118
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "PWM / VAO"
+FONT 10, "System"
+BEGIN
+    EDITTEXT        EDIT_freq_0,53,29,47,12,ES_AUTOHSCROLL
+    EDITTEXT        EDIT_freq_1,102,29,47,12,ES_AUTOHSCROLL
+    EDITTEXT        EDIT_freq_2,151,28,47,12,ES_AUTOHSCROLL
+    EDITTEXT        EDIT_freq_3,200,28,47,12,ES_AUTOHSCROLL
+    LTEXT           "CH3",IDC_STATIC,215,16,18,9
+    LTEXT           "CH2",IDC_STATIC,166,16,18,9
+    LTEXT           "CH1",IDC_STATIC,118,16,18,9
+    LTEXT           "CH0",IDC_STATIC,69,17,18,9
+    LTEXT           "Freq [Hz]",IDC_STATIC,18,29,33,11
+    EDITTEXT        EDIT_pwm_width_0,53,42,47,12,ES_AUTOHSCROLL
+    EDITTEXT        EDIT_pwm_width_1,102,42,47,12,ES_AUTOHSCROLL
+    EDITTEXT        EDIT_pwm_width_2,151,42,47,12,ES_AUTOHSCROLL
+    EDITTEXT        EDIT_pwm_width_3,200,42,47,12,ES_AUTOHSCROLL
+    LTEXT           "Width [nS]",IDC_STATIC,15,42,36,11
+    GROUPBOX        "Info",IDC_STATIC,7,7,247,69
+    EDITTEXT        EDIT_vao_sts,53,89,46,12,ES_AUTOHSCROLL
+    LTEXT           "vao status",IDC_STATIC,14,89,36,11
+    GROUPBOX        "Info",IDC_STATIC,7,79,100,27
+    PUSHBUTTON      "PWM",IDC_BUTTON1,207,79,40,13
+    PUSHBUTTON      "VAO ON",IDC_BUTTON2,111,78,40,13
+    PUSHBUTTON      "VAO OFF",IDC_BUTTON25,111,94,40,13
+    EDITTEXT        EDIT_cnt_0,52,57,47,12,ES_AUTOHSCROLL
+    EDITTEXT        EDIT_cnt_1,101,57,47,12,ES_AUTOHSCROLL
+    EDITTEXT        EDIT_cnt_2,151,57,47,12,ES_AUTOHSCROLL
+    EDITTEXT        EDIT_cnt_3,200,57,47,12,ES_AUTOHSCROLL
+    LTEXT           "Trig Cnt",IDC_STATIC,19,57,29,11
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_Get_Version, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 113
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 99
+    END
+
+    IDD_axis_monitor, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 421
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 168
+    END
+
+    IDD_Cmp_Trig, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 292
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 137
+    END
+
+    IDD_PWM_VAO, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 258
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 111
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+#endif    // Chinese (Taiwan) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOG DISCARDABLE  0, 0, 235, 55
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About basic_sample"
+FONT 8, "MS Sans Serif"
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,17,20,20
+    LTEXT           "basic_sample Version 1.0",IDC_STATIC,40,10,119,8,
+                    SS_NOPREFIX
+    LTEXT           "Copyright (C) 2013",IDC_STATIC,40,25,119,8
+    DEFPUSHBUTTON   "OK",IDOK,178,7,50,14,WS_GROUP
+END
+
+IDD_BASIC_SAMPLE_DIALOG DIALOGEX 0, 0, 364, 192
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "basic_sample"
+FONT 8, "MS Sans Serif"
+BEGIN
+    PUSHBUTTON      "Initial",IDC_BUTTON1,15,25,63,16
+    PUSHBUTTON      "Close",IDC_BUTTON2,16,45,63,16
+    PUSHBUTTON      "Get Version",IDC_BUTTON3,16,66,63,16
+    PUSHBUTTON      "Axis Monitor",IDC_BUTTON4,16,87,63,16
+    PUSHBUTTON      "Load Param",IDC_BUTTON5,16,108,63,16
+    EDITTEXT        EDIT_1st_axis,18,159,61,14,ES_AUTOHSCROLL
+    LTEXT           "Target 1st axis",IDC_STATIC,20,146,49,12
+    PUSHBUTTON      "Motion Done?",IDC_BUTTON6,16,127,63,16
+    GROUPBOX        "Start here",IDC_STATIC,7,7,82,172
+    PUSHBUTTON      "Homing",IDC_BUTTON7,103,21,63,16
+    PUSHBUTTON      "Velocity Move",IDC_BUTTON8,103,40,63,16
+    PUSHBUTTON      "Jog ON",IDC_BUTTON9,103,59,63,16
+    PUSHBUTTON      "Jog OFF",IDC_BUTTON10,103,78,63,16
+    PUSHBUTTON      "P2P",IDC_BUTTON11,103,98,63,16
+    PUSHBUTTON      "Stop Move",IDC_BUTTON12,103,117,63,16
+    PUSHBUTTON      "EMG Stop",IDC_BUTTON13,103,137,63,16
+    GROUPBOX        "Basic Move Functions",IDC_STATIC,95,7,83,172
+    PUSHBUTTON      "2D Line",IDC_BUTTON14,192,23,63,16
+    PUSHBUTTON      "2D Arc",IDC_BUTTON15,192,43,63,16
+    PUSHBUTTON      "3D Arc",IDC_BUTTON16,192,63,63,16
+    PUSHBUTTON      "3D Spiral",IDC_BUTTON17,192,83,63,16
+    PUSHBUTTON      "2D Contour",IDC_BUTTON18,192,102,63,16
+    PUSHBUTTON      "Point Table",IDC_BUTTON19,276,117,63,16
+    PUSHBUTTON      "Gear / Gantry",IDC_BUTTON20,276,137,63,16
+    GROUPBOX        "Interpolation",IDC_STATIC,182,7,84,172
+    PUSHBUTTON      "Interrupt",IDC_BUTTON21,276,17,63,16
+    PUSHBUTTON      "Digital I/O",IDC_BUTTON22,276,37,63,16
+    PUSHBUTTON      "Analog I/O",IDC_BUTTON23,276,56,63,16
+    PUSHBUTTON      "CMP Trigger",IDC_BUTTON24,276,76,63,16
+    PUSHBUTTON      "PWM / VAO",IDC_BUTTON28,276,97,63,16
+    GROUPBOX        "Aux Functions",IDC_STATIC,270,7,77,171
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 228
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 48
+    END
+
+    IDD_BASIC_SAMPLE_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 357
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 185
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904B0"
+        BEGIN
+            VALUE "CompanyName", "\0"
+            VALUE "FileDescription", "basic_sample MFC Application\0"
+            VALUE "FileVersion", "1, 0, 0, 1\0"
+            VALUE "InternalName", "basic_sample\0"
+            VALUE "LegalCopyright", "Copyright (C) 2013\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OriginalFilename", "basic_sample.EXE\0"
+            VALUE "ProductName", "basic_sample Application\0"
+            VALUE "ProductVersion", "1, 0, 0, 1\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_ABOUTBOX            "&About basic_sample..."
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#endif //_WIN32
+#include "res\basic_sample.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

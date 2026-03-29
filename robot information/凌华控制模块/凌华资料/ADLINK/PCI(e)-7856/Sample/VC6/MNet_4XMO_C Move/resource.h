@@ -1,0 +1,119 @@
+//{{NO_DEPENDENCIES}}
+// Microsoft Developer Studio generated include file.
+// Used by MNET_4XMO_C_VC_Sample.rc
+//
+#define IDM_ABOUTBOX                    0x0010
+#define IDD_ABOUTBOX                    100
+#define IDS_ABOUTBOX                    101
+#define IDD_MNET_4XMO_C_VC_SAMPLE_DIALOG 102
+#define IDR_MAINFRAME                   128
+#define IDI_ICON1                       131
+#define IDI_ICON2                       133
+#define IDC_EDIT1                       1000
+#define Edit_SetTargetIndex_ForSinglePointMove 1000
+#define Edit_ShowMaster_DriverVer       1001
+#define IDC_EDIT2                       1002
+#define Edit_Show_PointTable_CurrIndex  1002
+#define Edit_ShowMaster_CPLDVer         1003
+#define IDC_EDIT3                       1004
+#define Edit_ShowMaster_PCBVer          1005
+#define Edit_ShowMaster_PCBBottomVer    1005
+#define Edit_SetModuleID_ForModuleInfo  1006
+#define IDC_BUTTON2                     1007
+#define Btn_PointTable_MoveALL          1007
+#define Btn_BusConnect                  1008
+#define IDC_BUTTON3                     1009
+#define Btn_PointTable_Stop             1009
+#define Btn_BusDisconnect               1010
+#define Edit_ShowModule_FPGAVer         1011
+#define Edit_ShowModule_DSPVer          1012
+#define Edit_ShowModule_PCBTopVer       1012
+#define Btn_GetModuleInfo               1013
+#define Edit_ShowMaster_DLLVer          1014
+#define Edit_ShowAxis_Command_0         1015
+#define Edit_ShowAxis_Command_1         1016
+#define Edit_ShowAxis_Command_2         1017
+#define Edit_ShowAxis_Command_3         1018
+#define Edit_ShowAxis_Feedback_0        1019
+#define Edit_ShowAxis_Feedback_1        1020
+#define Edit_ShowAxis_Feedback_2        1021
+#define Edit_ShowAxis_Feedback_3        1022
+#define IDC_BUTTON4                     1023
+#define Btn_ResetCounter                1023
+#define Edit_ShowAxis_IOSts_0           1024
+#define Edit_ShowAxis_IOSts_1           1025
+#define Edit_ShowAxis_IOSts_2           1026
+#define Edit_ShowAxis_IOSts_3           1027
+#define Edit_ShowAxis_MSts_0            1028
+#define Edit_ShowAxis_MSts_1            1029
+#define Edit_ShowAxis_MSts_2            1030
+#define Edit_ShowAxis_MSts_3            1031
+#define Btn_SingleAbsoluteMove_Backward 1032
+#define Btn_SingleAbsoluteMove_Forward  1033
+#define Btn_SingleAbsoluteMove_Stop     1034
+#define Btn_SingleRelativeMove_Backward 1035
+#define Btn_SingleRelativeMove_Forward  1036
+#define Btn_SingleRelativeMove_Stop     1037
+#define Btn_SingleHomeMove_Backward     1038
+#define Btn_SingleHomeMove_Forward      1039
+#define Btn_SingleHomeMove_Stop         1040
+#define Btn_Linear_2Axes_AbsoluteBackward 1041
+#define Btn_Linear_2Axes_AbsoluteForward 1042
+#define Btn_Linear_2Axes_AbsoluteStop   1043
+#define Btn_Linear_2Axes_RelateiveBackward 1044
+#define Btn_Linear_2Axes_RelateiveForward 1045
+#define Btn_Linear_2Axes_Relateive_Stop 1046
+#define Btn_Linear_3Axes_AbsoluteBackward 1047
+#define Btn_Linear_3Axes_AbsoluteForward 1048
+#define Btn_Linear_3Axes_AbsoluteStop   1049
+#define Btn_Linear_3Axes_RelateiveBackward 1050
+#define Btn_Linear_3Axes_RelateiveForward 1051
+#define Btn_Linear_3Axes_Relateive_Stop 1052
+#define Btn_Linear_4Axes_RelateiveBackward 1053
+#define Btn_Linear_4Axes_RelateiveForward 1054
+#define Btn_Linear_4Axes_Relateive_Stop 1055
+#define Btn_Linear_4Axes_AbsoluteBackward 1056
+#define Btn_Linear_4Axes_AbsoluteForward 1057
+#define Btn_Linear_4Axes_AbsoluteStop   1058
+#define Btn_SetPointTable               1059
+#define Btn_PointTable_SingleIndexMove  1060
+#define Btn_Linear_Compare              1061
+#define Btn_Table_Compare               1062
+#define Btn_Manual_Compare              1063
+#define Edit_ShowTriggerCount_0         1064
+#define Edit_ShowTriggerCount_1         1065
+#define Edit_ShowTriggerCount_2         1066
+#define Edit_ShowTriggerCount_3         1067
+#define Btn_Trigger_Count               1068
+#define Btn_Arc_2Axes_Absolute_CCW      1069
+#define Btn_Arc_2Axes_Absolute_CW       1070
+#define Edit_ShowTriggerEnc_0           1071
+#define Edit_ShowTriggerEnc_1           1072
+#define Edit_ShowTriggerEnc_2           1073
+#define Edit_ShowTriggerEnc_3           1074
+#define Edit_ShowTrigger_LinearCMP_LinearCMP_0 1075
+#define Edit_ShowTrigger_LinearCMP_LinearCMP_1 1076
+#define Edit_ShowTrigger_LinearCMP_LinearCMP_2 1077
+#define Edit_ShowTrigger_LinearCMP_LinearCMP_3 1078
+#define Btn_Arc_2Axes_Absolute_Stop2    1079
+#define Btn_Arc_2Axes_Relative_CCW      1080
+#define Btn_Arc_2Axes_Relative_CW       1081
+#define Btn_Arc_2Axes_Relateive_Stop    1082
+#define Edit_ShowDIData                 1083
+#define Btn_Get_DIData                  1084
+#define Edit_GetDOData                  1084
+#define Edit_SetDOData                  1085
+#define Btn_Set_DOData                  1086
+#define Edit_SetModuleID_ForGeneralDIO  1087
+#define Chk_DOData                      1088
+
+// Next default values for new objects
+// 
+#ifdef APSTUDIO_INVOKED
+#ifndef APSTUDIO_READONLY_SYMBOLS
+#define _APS_NEXT_RESOURCE_VALUE        136
+#define _APS_NEXT_COMMAND_VALUE         32771
+#define _APS_NEXT_CONTROL_VALUE         1089
+#define _APS_NEXT_SYMED_VALUE           101
+#endif
+#endif

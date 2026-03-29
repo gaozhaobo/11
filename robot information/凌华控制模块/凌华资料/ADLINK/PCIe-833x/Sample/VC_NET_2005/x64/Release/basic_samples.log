@@ -1,0 +1,40 @@
+﻿  stdafx.cpp
+  basic_samples.cpp
+D:\MY doucument\机械臂资料\实验室机械臂\凌华资料\ADLINK\PCIe-833x\Sample\VC_NET_2005\resource.h(92,1): warning C4005: “IDCANCEL”: 宏重定义
+D:\Windows Kits\10\Include\10.0.19041.0\um\winuser.h(11118): message : 参见“IDCANCEL”的前一个定义
+  basic_samplesDlg.cpp
+D:\MY doucument\机械臂资料\实验室机械臂\凌华资料\ADLINK\PCIe-833x\Sample\VC_NET_2005\resource.h(92,1): warning C4005: “IDCANCEL”: 宏重定义
+D:\Windows Kits\10\Include\10.0.19041.0\um\winuser.h(11118): message : 参见“IDCANCEL”的前一个定义
+  Dialog_axis_monitor.cpp
+D:\MY doucument\机械臂资料\实验室机械臂\凌华资料\ADLINK\PCIe-833x\Sample\VC_NET_2005\resource.h(92,1): warning C4005: “IDCANCEL”: 宏重定义
+D:\Windows Kits\10\Include\10.0.19041.0\um\winuser.h(11118): message : 参见“IDCANCEL”的前一个定义
+  Dialog_cmp_trig.cpp
+D:\MY doucument\机械臂资料\实验室机械臂\凌华资料\ADLINK\PCIe-833x\Sample\VC_NET_2005\resource.h(92,1): warning C4005: “IDCANCEL”: 宏重定义
+D:\Windows Kits\10\Include\10.0.19041.0\um\winuser.h(11118): message : 参见“IDCANCEL”的前一个定义
+  Dialog_pwm_vao.cpp
+D:\MY doucument\机械臂资料\实验室机械臂\凌华资料\ADLINK\PCIe-833x\Sample\VC_NET_2005\resource.h(92,1): warning C4005: “IDCANCEL”: 宏重定义
+D:\Windows Kits\10\Include\10.0.19041.0\um\winuser.h(11118): message : 参见“IDCANCEL”的前一个定义
+  Dialog_version.cpp
+D:\MY doucument\机械臂资料\实验室机械臂\凌华资料\ADLINK\PCIe-833x\Sample\VC_NET_2005\resource.h(92,1): warning C4005: “IDCANCEL”: 宏重定义
+D:\Windows Kits\10\Include\10.0.19041.0\um\winuser.h(11118): message : 参见“IDCANCEL”的前一个定义
+  dialogDataExchange.cpp
+D:\MY doucument\机械臂资料\实验室机械臂\凌华资料\ADLINK\PCIe-833x\Sample\VC_NET_2005\dialogDataExchange.cpp(51,2): warning C4996: '_itoa': This function or variable may be unsafe. Consider using _itoa_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\MY doucument\机械臂资料\实验室机械臂\凌华资料\ADLINK\PCIe-833x\Sample\VC_NET_2005\dialogDataExchange.cpp(63,33): warning C4267: “初始化”: 从“size_t”转换到“I32”，可能丢失数据
+D:\MY doucument\机械臂资料\实验室机械臂\凌华资料\ADLINK\PCIe-833x\Sample\VC_NET_2005\dialogDataExchange.cpp(58,2): warning C4996: '_itoa': This function or variable may be unsafe. Consider using _itoa_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  SDO_TEST.cpp
+D:\MY doucument\机械臂资料\实验室机械臂\凌华资料\ADLINK\PCIe-833x\Sample\VC_NET_2005\resource.h(92,1): warning C4005: “IDCANCEL”: 宏重定义
+D:\Windows Kits\10\Include\10.0.19041.0\um\winuser.h(11118): message : 参见“IDCANCEL”的前一个定义
+D:\MY doucument\机械臂资料\实验室机械臂\凌华资料\ADLINK\PCIe-833x\Sample\VC_NET_2005\SDO_TEST.cpp(74,19): warning C4244: “=”: 从“long”转换到“U16”，可能丢失数据
+D:\MY doucument\机械臂资料\实验室机械臂\凌华资料\ADLINK\PCIe-833x\Sample\VC_NET_2005\SDO_TEST.cpp(77,22): warning C4244: “=”: 从“long”转换到“U8”，可能丢失数据
+D:\MY doucument\机械臂资料\实验室机械臂\凌华资料\ADLINK\PCIe-833x\Sample\VC_NET_2005\SDO_TEST.cpp(89,16): warning C4244: “=”: 从“long”转换到“U8”，可能丢失数据
+D:\MY doucument\机械臂资料\实验室机械臂\凌华资料\ADLINK\PCIe-833x\Sample\VC_NET_2005\SDO_TEST.cpp(149,19): warning C4244: “=”: 从“long”转换到“U16”，可能丢失数据
+D:\MY doucument\机械臂资料\实验室机械臂\凌华资料\ADLINK\PCIe-833x\Sample\VC_NET_2005\SDO_TEST.cpp(152,22): warning C4244: “=”: 从“long”转换到“U8”，可能丢失数据
+  TimeMeasure.cpp
+  sample_main.c
+D:\Windows Kits\10\Include\10.0.19041.0\um\winuser.rh(1434): warning RC4005: 'IDCANCEL' : redefinition
+  
+  正在生成代码
+  Previous IPDB not found, fall back to full compilation.
+  All 398 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  已完成代码的生成
+  basic_samples.vcxproj -> D:\MY doucument\机械臂资料\实验室机械臂\凌华资料\ADLINK\PCIe-833x\Sample\VC_NET_2005\x64\Release\basic_samples.exe

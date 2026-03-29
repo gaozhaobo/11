@@ -1,0 +1,310 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Chinese (Taiwan) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHT)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_TRADITIONAL
+#pragma code_page(950)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHT)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 4, 1\r\n"
+    "#pragma code_page(950)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\VC_Sample.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""l.cht\\afxres.rc""          // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOG DISCARDABLE  0, 0, 235, 55
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "關於 VC_Sample"
+FONT 9, "新細明體"
+BEGIN
+    ICON            128,IDC_STATIC,11,17,20,20
+    LTEXT           "VC_Sample Version 1.0",IDC_STATIC,40,10,119,8,
+                    SS_NOPREFIX
+    LTEXT           "Copyright (C) 2009",IDC_STATIC,40,25,119,8
+    DEFPUSHBUTTON   "確定",IDOK,178,7,50,14,WS_GROUP
+END
+
+IDD_VC_SAMPLE_DIALOG DIALOGEX 0, 0, 643, 487
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "ADLINK VC6 Sample"
+FONT 9, "新細明體"
+BEGIN
+    GROUPBOX        "Card Info",IDC_STATIC,45,14,76,108
+    LTEXT           "Driver Version",IDC_STATIC,50,28,64,8
+    EDITTEXT        Edit_ShowMaster_DriverVer,50,39,63,12,ES_CENTER | 
+                    ES_AUTOHSCROLL
+    LTEXT           "FPGA Version",IDC_STATIC,50,85,64,8
+    EDITTEXT        Edit_ShowMaster_CPLDVer,50,96,63,12,ES_CENTER | 
+                    ES_AUTOHSCROLL
+    LTEXT           "DLL Version",IDC_STATIC,50,55,64,8
+    EDITTEXT        Edit_ShowMaster_DLLVer,50,67,63,12,ES_CENTER | 
+                    ES_AUTOHSCROLL
+    GROUPBOX        "Motion Status",IDC_STATIC,135,14,425,108
+    LTEXT           "Command Pulses",IDC_STATIC,141,38,57,8
+    EDITTEXT        Edit_ShowAxis_Command_0,203,35,63,12,ES_CENTER | 
+                    ES_AUTOHSCROLL
+    LTEXT           "Motion IO Status ",IDC_STATIC,143,80,54,8
+    EDITTEXT        Edit_ShowAxis_IOSts_0,203,77,63,12,ES_CENTER | 
+                    ES_AUTOHSCROLL
+    LTEXT           "Motion Status ",IDC_STATIC,148,99,46,8
+    EDITTEXT        Edit_ShowAxis_MSts_0,203,97,63,12,ES_CENTER | 
+                    ES_AUTOHSCROLL
+    LTEXT           "Feedback Pulses ",IDC_STATIC,144,58,51,8
+    EDITTEXT        Edit_ShowAxis_Feedback_0,203,55,63,12,ES_CENTER | 
+                    ES_AUTOHSCROLL
+    EDITTEXT        Edit_ShowAxis_Command_1,270,35,63,12,ES_CENTER | 
+                    ES_AUTOHSCROLL
+    EDITTEXT        Edit_ShowAxis_Command_2,337,35,63,12,ES_CENTER | 
+                    ES_AUTOHSCROLL
+    EDITTEXT        Edit_ShowAxis_Command_3,403,35,63,12,ES_CENTER | 
+                    ES_AUTOHSCROLL
+    EDITTEXT        Edit_ShowAxis_Feedback_1,270,55,63,12,ES_CENTER | 
+                    ES_AUTOHSCROLL
+    EDITTEXT        Edit_ShowAxis_Feedback_2,337,55,63,12,ES_CENTER | 
+                    ES_AUTOHSCROLL
+    EDITTEXT        Edit_ShowAxis_Feedback_3,403,55,63,12,ES_CENTER | 
+                    ES_AUTOHSCROLL
+    EDITTEXT        Edit_ShowAxis_IOSts_1,270,77,63,12,ES_CENTER | 
+                    ES_AUTOHSCROLL
+    EDITTEXT        Edit_ShowAxis_IOSts_2,337,77,63,12,ES_CENTER | 
+                    ES_AUTOHSCROLL
+    EDITTEXT        Edit_ShowAxis_IOSts_3,403,77,63,12,ES_CENTER | 
+                    ES_AUTOHSCROLL
+    EDITTEXT        Edit_ShowAxis_MSts_1,270,97,63,12,ES_CENTER | 
+                    ES_AUTOHSCROLL
+    EDITTEXT        Edit_ShowAxis_MSts_2,337,97,63,12,ES_CENTER | 
+                    ES_AUTOHSCROLL
+    EDITTEXT        Edit_ShowAxis_MSts_3,403,96,63,12,ES_CENTER | 
+                    ES_AUTOHSCROLL
+    PUSHBUTTON      "Reset Counter",Btn_ResetCounter,481,43,62,54
+    GROUPBOX        "Single Absolute Move",IDC_STATIC,39,123,102,116
+    GROUPBOX        "Single Relative Move",IDC_STATIC,146,124,102,116
+    GROUPBOX        "Single Home Move",IDC_STATIC,252,124,98,116
+    PUSHBUTTON      "Backward",Btn_SingleAbsoluteMove_Backward,47,143,39,38
+    PUSHBUTTON      "Forward",Btn_SingleAbsoluteMove_Forward,93,143,39,38
+    PUSHBUTTON      "Stop",Btn_SingleAbsoluteMove_Stop,69,187,39,38
+    PUSHBUTTON      "Backward",Btn_SingleRelativeMove_Backward,153,143,39,38
+    PUSHBUTTON      "Forward",Btn_SingleRelativeMove_Forward,199,143,39,38
+    PUSHBUTTON      "Stop",Btn_SingleRelativeMove_Stop,175,187,39,38
+    PUSHBUTTON      "Backward",Btn_SingleHomeMove_Backward,255,143,39,38
+    PUSHBUTTON      "Forward",Btn_SingleHomeMove_Forward,301,143,39,38
+    PUSHBUTTON      "Stop",Btn_SingleHomeMove_Stop,277,187,39,38
+    GROUPBOX        "2 Axes Linear Absolute Move",IDC_STATIC,355,124,103,116
+    GROUPBOX        "2 Axes Linear Relative Move",IDC_STATIC,463,124,102,116
+    GROUPBOX        "3 Axes Linear Absolute Move",IDC_STATIC,252,244,102,116
+    GROUPBOX        "4 Axes Linear Relative Move",IDC_STATIC,40,360,102,116
+    PUSHBUTTON      "Backward",Btn_Linear_2Axes_AbsoluteBackward,361,145,39,
+                    38
+    PUSHBUTTON      "Forward",Btn_Linear_2Axes_AbsoluteForward,409,145,39,38
+    PUSHBUTTON      "Stop",Btn_Linear_2Axes_AbsoluteStop,385,189,39,38
+    GROUPBOX        "3 Axes Linear Relative Move",IDC_STATIC,357,244,102,116
+    GROUPBOX        "4 Axes Linear Absolute Move",IDC_STATIC,464,244,102,116
+    PUSHBUTTON      "Backward",Btn_Linear_2Axes_RelateiveBackward,469,147,39,
+                    38
+    PUSHBUTTON      "Forward",Btn_Linear_2Axes_RelateiveForward,517,147,39,
+                    38
+    PUSHBUTTON      "Stop",Btn_Linear_2Axes_Relateive_Stop,493,191,39,38
+    PUSHBUTTON      "Backward",Btn_Linear_3Axes_AbsoluteBackward,259,265,39,
+                    38
+    PUSHBUTTON      "Forward",Btn_Linear_3Axes_AbsoluteForward,307,265,39,38
+    PUSHBUTTON      "Stop",Btn_Linear_3Axes_AbsoluteStop,283,309,39,38
+    PUSHBUTTON      "Backward",Btn_Linear_3Axes_RelateiveBackward,363,265,39,
+                    38
+    PUSHBUTTON      "Forward",Btn_Linear_3Axes_RelateiveForward,411,265,39,
+                    38
+    PUSHBUTTON      "Stop",Btn_Linear_3Axes_Relateive_Stop,387,309,39,38
+    PUSHBUTTON      "Backward",Btn_Linear_4Axes_RelateiveBackward,47,381,39,
+                    38
+    PUSHBUTTON      "Forward",Btn_Linear_4Axes_RelateiveForward,95,381,39,38
+    PUSHBUTTON      "Stop",Btn_Linear_4Axes_Relateive_Stop,71,425,39,38
+    PUSHBUTTON      "Backward",Btn_Linear_4Axes_AbsoluteBackward,472,266,39,
+                    38
+    PUSHBUTTON      "Forward",Btn_Linear_4Axes_AbsoluteForward,520,266,39,38
+    PUSHBUTTON      "Stop",Btn_Linear_4Axes_AbsoluteStop,496,310,39,38
+    GROUPBOX        "2 Axes Arc Absolute Move",IDC_STATIC,39,244,102,116
+    PUSHBUTTON      "CCW",Btn_Arc_2Axes_Absolute_CCW,46,265,39,38
+    PUSHBUTTON      "CW",Btn_Arc_2Axes_Absolute_CW,94,265,39,38
+    PUSHBUTTON      "Stop",Btn_Arc_2Axes_Absolute_Stop2,70,309,39,38
+    GROUPBOX        "2 Axes Arc Relative Move",IDC_STATIC,146,244,102,116
+    PUSHBUTTON      "CCW",Btn_Arc_2Axes_Relative_CCW,151,265,39,38
+    PUSHBUTTON      "CW",Btn_Arc_2Axes_Relative_CW,199,265,39,38
+    PUSHBUTTON      "Stop",Btn_Arc_2Axes_Relateive_Stop,175,309,39,38
+    CTEXT           "Axis 2",IDC_STATIC,357,22,21,8
+    CTEXT           "Axis 3",IDC_STATIC,423,22,21,8
+    CTEXT           "Axis 1",IDC_STATIC,290,22,21,8
+    CTEXT           "Axis 0",IDC_STATIC,224,22,21,8
+    EDITTEXT        IDC_EDIT1,172,388,67,14,ES_AUTOHSCROLL
+    LTEXT           "Input Card ID",IDC_STATIC,173,377,67,9
+    PUSHBUTTON      "Set Card ID",IDC_BUTTON1,171,405,70,25
+END
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040404B0"
+        BEGIN
+            VALUE "CompanyName", "\0"
+            VALUE "FileDescription", "VC_Sample MFC Application\0"
+            VALUE "FileVersion", "1, 0, 0, 1\0"
+            VALUE "InternalName", "VC_Sample\0"
+            VALUE "LegalCopyright", "Copyright (C) 2009\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OriginalFilename", "VC_Sample.EXE\0"
+            VALUE "ProductName", "VC_Sample Application\0"
+            VALUE "ProductVersion", "1, 0, 0, 1\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x404, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 228
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 48
+    END
+
+    IDD_VC_SAMPLE_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 639
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 480
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_ICON1               ICON    DISCARDABLE     "ADLINK.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_ABOUTBOX            "關於 VC_Sample(&A)..."
+END
+
+#endif    // Chinese (Taiwan) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHT)
+#ifdef _WIN32
+LANGUAGE 4, 1
+#pragma code_page(950)
+#endif //_WIN32
+#include "res\VC_Sample.rc2"  // non-Microsoft Visual C++ edited resources
+#include "l.cht\afxres.rc"          // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

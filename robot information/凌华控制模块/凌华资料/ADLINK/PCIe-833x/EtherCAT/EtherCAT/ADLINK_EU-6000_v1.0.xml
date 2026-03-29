@@ -1,0 +1,1801 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<EtherCATInfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="EtherCATInfo.xsd" Version="1.3">
+  <Vendor>
+    <Id>5194</Id>
+    <Name>ADLINK</Name>
+  </Vendor>
+  <Descriptions>
+    <Groups>
+      <Group SortOrder="0">
+        <Type>EvaBoardDemo</Type>
+        <Name LcId="1033">Remote IO</Name>
+      </Group>
+    </Groups>
+    <Devices>
+	   <Device Physics="YY">
+        <Type ProductCode="#x00000100" RevisionNo="#x00010001">EU-6000</Type>
+        <Name LcId="1033">BUS-Coupler</Name>
+        	<!--<ImageData16x14>424DE6000000000000007600000028000000100000000E00000001000400000000007000000000000000000000000000000000000000FFFFFF00C0C0C00080808000000000000000FF0000FFFF0000FF0000FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF0000000000000000000000000001111100002222222213310000222222221111000022222222133100042533222211114004233322221331400426332262111100002222222213310000253322621111000023332222166100002633224216610000222222221111000000000000000000</ImageData16x14>-->
+      	<Info>
+		<StateMachine>
+			<Timeout>
+				<PreopTimeout>10000</PreopTimeout>
+				<SafeopOpTimeout>10000</SafeopOpTimeout>
+				<BackToInitTimeout>10000</BackToInitTimeout>
+				<BackToSafeopTimeout>10000</BackToSafeopTimeout>
+			</Timeout>
+		</StateMachine>
+		<Mailbox>
+			<Timeout>
+				<RequestTimeout>10000</RequestTimeout>
+				<ResponseTimeout>10000</ResponseTimeout>
+			</Timeout>
+		</Mailbox>
+			</Info>
+        <GroupType>EvaBoardDemo</GroupType>
+        <Profile>
+          <ChannelInfo>
+            <ProfileNo>5001</ProfileNo>
+            <AddInfo>0</AddInfo>
+          </ChannelInfo>
+          <Dictionary>
+            <DataTypes>
+              <DataType>
+                <Name>BOOL</Name>
+                <BitSize>1</BitSize>
+              </DataType>
+              <DataType>
+                <Name>USINT</Name>
+                <BitSize>8</BitSize>
+              </DataType>
+							<DataType>
+                <Name>BIT(13)</Name>
+                <BitSize>13</BitSize>
+              </DataType>
+							<DataType>
+                <Name>BIT(14)</Name>
+                <BitSize>14</BitSize>
+              </DataType>
+							<DataType>
+                <Name>UINT</Name>
+                <BitSize>16</BitSize>
+              </DataType>
+              <DataType>
+                <Name>INT</Name>
+                <BitSize>16</BitSize>
+              </DataType>
+			  <DataType>
+                <Name>UDINT</Name>
+                <BitSize>32</BitSize>
+              </DataType>
+				<DataType>
+					<Name>DINT</Name>
+					<BitSize>32</BitSize>
+				</DataType>							
+				<DataType>
+								<Name>DTf050</Name>
+								<BitSize>1040</BitSize>
+								<SubItem>
+									<SubIdx>0</SubIdx>
+									<Name>SubIndex 000</Name>
+									<Type>UINT</Type>
+									<BitSize>16</BitSize>
+									<BitOffs>0</BitOffs>
+									<Flags>
+										<Access>ro</Access>
+										<Category>o</Category>
+									</Flags>
+								</SubItem>
+								<SubItem>
+									<SubIdx>1</SubIdx>
+									<Name>Module 1 Indent</Name>
+									<Type>UDINT</Type>
+									<BitSize>32</BitSize>
+									<BitOffs>16</BitOffs>
+									<Flags>
+										<Access>ro</Access>
+										<Category>o</Category>
+										<Backup>1</Backup>
+										<Setting>1</Setting>
+									</Flags>
+								</SubItem>
+								<SubItem>
+										<SubIdx>2</SubIdx>
+										<Name>Module 2 Indent</Name>
+										<Type>UDINT</Type>
+										<BitSize>32</BitSize>
+										<BitOffs>48</BitOffs>
+										<Flags>
+											<Access>ro</Access>
+											<Category>o</Category>
+											<Backup>1</Backup>
+											<Setting>1</Setting>
+										</Flags>
+								</SubItem>	
+								<SubItem>
+										<SubIdx>3</SubIdx>
+										<Name>Module 3 Indent</Name>
+										<Type>UDINT</Type>
+										<BitSize>32</BitSize>
+										<BitOffs>80</BitOffs>
+										<Flags>
+											<Access>ro</Access>
+											<Category>o</Category>
+											<Backup>1</Backup>
+											<Setting>1</Setting>
+										</Flags>
+								</SubItem>
+								<SubItem>
+										<SubIdx>4</SubIdx>
+										<Name>Module 4 Indent</Name>
+										<Type>UDINT</Type>
+										<BitSize>32</BitSize>
+										<BitOffs>112</BitOffs>
+										<Flags>
+											<Access>ro</Access>
+											<Category>o</Category>
+											<Backup>1</Backup>
+											<Setting>1</Setting>
+										</Flags>
+								</SubItem>
+								<SubItem>
+										<SubIdx>5</SubIdx>
+										<Name>Module 5 Indent</Name>
+										<Type>UDINT</Type>
+										<BitSize>32</BitSize>
+										<BitOffs>144</BitOffs>
+										<Flags>
+											<Access>ro</Access>
+											<Category>o</Category>
+											<Backup>1</Backup>
+											<Setting>1</Setting>
+										</Flags>
+								</SubItem>
+								<SubItem>
+										<SubIdx>6</SubIdx>
+										<Name>Module 6 Indent</Name>
+										<Type>UDINT</Type>
+										<BitSize>32</BitSize>
+										<BitOffs>176</BitOffs>
+										<Flags>
+											<Access>ro</Access>
+											<Category>o</Category>
+											<Backup>1</Backup>
+											<Setting>1</Setting>
+										</Flags>
+								</SubItem>
+								<SubItem>
+										<SubIdx>7</SubIdx>
+										<Name>Module 7 Indent</Name>
+										<Type>UDINT</Type>
+										<BitSize>32</BitSize>
+										<BitOffs>208</BitOffs>
+										<Flags>
+											<Access>ro</Access>
+											<Category>o</Category>
+											<Backup>1</Backup>
+											<Setting>1</Setting>
+										</Flags>
+								</SubItem>	
+								<SubItem>
+										<SubIdx>8</SubIdx>
+										<Name>Module 8 Indent</Name>
+										<Type>UDINT</Type>
+										<BitSize>32</BitSize>
+										<BitOffs>240</BitOffs>
+										<Flags>
+											<Access>ro</Access>
+											<Category>o</Category>
+											<Backup>1</Backup>
+											<Setting>1</Setting>
+										</Flags>
+								</SubItem>	
+								<SubItem>
+										<SubIdx>9</SubIdx>
+										<Name>Module 9 Indent</Name>
+										<Type>UDINT</Type>
+										<BitSize>32</BitSize>
+										<BitOffs>272</BitOffs>
+										<Flags>
+											<Access>ro</Access>
+											<Category>o</Category>
+											<Backup>1</Backup>
+											<Setting>1</Setting>
+										</Flags>
+								</SubItem>		
+								<SubItem>
+										<SubIdx>10</SubIdx>
+										<Name>Module 10 Indent</Name>
+										<Type>UDINT</Type>
+										<BitSize>32</BitSize>
+										<BitOffs>304</BitOffs>
+										<Flags>
+											<Access>ro</Access>
+											<Category>o</Category>
+											<Backup>1</Backup>
+											<Setting>1</Setting>
+										</Flags>
+								</SubItem>
+								<SubItem>
+										<SubIdx>11</SubIdx>
+										<Name>Module 11 Indent</Name>
+										<Type>UDINT</Type>
+										<BitSize>32</BitSize>
+										<BitOffs>336</BitOffs>
+										<Flags>
+											<Access>ro</Access>
+											<Category>o</Category>
+											<Backup>1</Backup>
+											<Setting>1</Setting>
+										</Flags>
+								</SubItem>	
+								<SubItem>
+										<SubIdx>12</SubIdx>
+										<Name>Module 12 Indent</Name>
+										<Type>UDINT</Type>
+										<BitSize>32</BitSize>
+										<BitOffs>368</BitOffs>
+										<Flags>
+											<Access>ro</Access>
+											<Category>o</Category>
+											<Backup>1</Backup>
+											<Setting>1</Setting>
+										</Flags>
+								</SubItem>
+								<SubItem>
+										<SubIdx>13</SubIdx>
+										<Name>Module 13 Indent</Name>
+										<Type>UDINT</Type>
+										<BitSize>32</BitSize>
+										<BitOffs>400</BitOffs>
+										<Flags>
+											<Access>ro</Access>
+											<Category>o</Category>
+											<Backup>1</Backup>
+											<Setting>1</Setting>
+										</Flags>
+								</SubItem>
+								<SubItem>
+										<SubIdx>14</SubIdx>
+										<Name>Module 14 Indent</Name>
+										<Type>UDINT</Type>
+										<BitSize>32</BitSize>
+										<BitOffs>432</BitOffs>
+										<Flags>
+											<Access>ro</Access>
+											<Category>o</Category>
+											<Backup>1</Backup>
+											<Setting>1</Setting>
+										</Flags>
+								</SubItem>
+								<SubItem>
+										<SubIdx>15</SubIdx>
+										<Name>Module 15 Indent</Name>
+										<Type>UDINT</Type>
+										<BitSize>32</BitSize>
+										<BitOffs>464</BitOffs>
+										<Flags>
+											<Access>ro</Access>
+											<Category>o</Category>
+											<Backup>1</Backup>
+											<Setting>1</Setting>
+										</Flags>
+								</SubItem>	
+								<SubItem>
+										<SubIdx>16</SubIdx>
+										<Name>Module 16 Indent</Name>
+										<Type>UDINT</Type>
+										<BitSize>32</BitSize>
+										<BitOffs>496</BitOffs>
+										<Flags>
+											<Access>ro</Access>
+											<Category>o</Category>
+											<Backup>1</Backup>
+											<Setting>1</Setting>
+										</Flags>
+								</SubItem>	
+								<SubItem>
+										<SubIdx>17</SubIdx>
+										<Name>Module 17 Indent</Name>
+										<Type>UDINT</Type>
+										<BitSize>32</BitSize>
+										<BitOffs>528</BitOffs>
+										<Flags>
+											<Access>ro</Access>
+											<Category>o</Category>
+											<Backup>1</Backup>
+											<Setting>1</Setting>
+										</Flags>
+								</SubItem>
+								<SubItem>
+										<SubIdx>18</SubIdx>
+										<Name>Module 18 Indent</Name>
+										<Type>UDINT</Type>
+										<BitSize>32</BitSize>
+										<BitOffs>560</BitOffs>
+										<Flags>
+											<Access>ro</Access>
+											<Category>o</Category>
+											<Backup>1</Backup>
+											<Setting>1</Setting>
+										</Flags>
+								</SubItem>
+								<SubItem>
+										<SubIdx>19</SubIdx>
+										<Name>Module 19 Indent</Name>
+										<Type>UDINT</Type>
+										<BitSize>32</BitSize>
+										<BitOffs>592</BitOffs>
+										<Flags>
+											<Access>ro</Access>
+											<Category>o</Category>
+											<Backup>1</Backup>
+											<Setting>1</Setting>
+										</Flags>
+								</SubItem>	
+								<SubItem>
+										<SubIdx>20</SubIdx>
+										<Name>Module 20 Indent</Name>
+										<Type>UDINT</Type>
+										<BitSize>32</BitSize>
+										<BitOffs>624</BitOffs>
+										<Flags>
+											<Access>ro</Access>
+											<Category>o</Category>
+											<Backup>1</Backup>
+											<Setting>1</Setting>
+										</Flags>
+								</SubItem>
+								<SubItem>
+										<SubIdx>21</SubIdx>
+										<Name>Module 21 Indent</Name>
+										<Type>UDINT</Type>
+										<BitSize>32</BitSize>
+										<BitOffs>656</BitOffs>
+										<Flags>
+											<Access>ro</Access>
+											<Category>o</Category>
+											<Backup>1</Backup>
+											<Setting>1</Setting>
+										</Flags>
+								</SubItem>
+								<SubItem>
+										<SubIdx>22</SubIdx>
+										<Name>Module 22 Indent</Name>
+										<Type>UDINT</Type>
+										<BitSize>32</BitSize>
+										<BitOffs>688</BitOffs>
+										<Flags>
+											<Access>ro</Access>
+											<Category>o</Category>
+											<Backup>1</Backup>
+											<Setting>1</Setting>
+										</Flags>
+								</SubItem>	
+								<SubItem>
+										<SubIdx>23</SubIdx>
+										<Name>Module 23 Indent</Name>
+										<Type>UDINT</Type>
+										<BitSize>32</BitSize>
+										<BitOffs>720</BitOffs>
+										<Flags>
+											<Access>ro</Access>
+											<Category>o</Category>
+											<Backup>1</Backup>
+											<Setting>1</Setting>
+										</Flags>
+								</SubItem>
+								<SubItem>
+										<SubIdx>24</SubIdx>
+										<Name>Module 24 Indent</Name>
+										<Type>UDINT</Type>
+										<BitSize>32</BitSize>
+										<BitOffs>752</BitOffs>
+										<Flags>
+											<Access>ro</Access>
+											<Category>o</Category>
+											<Backup>1</Backup>
+											<Setting>1</Setting>
+										</Flags>
+								</SubItem>
+								<SubItem>
+										<SubIdx>25</SubIdx>
+										<Name>Module 25 Indent</Name>
+										<Type>UDINT</Type>
+										<BitSize>32</BitSize>
+										<BitOffs>784</BitOffs>
+										<Flags>
+											<Access>ro</Access>
+											<Category>o</Category>
+											<Backup>1</Backup>
+											<Setting>1</Setting>
+										</Flags>
+								</SubItem>
+								<SubItem>
+										<SubIdx>26</SubIdx>
+										<Name>Module 26 Indent</Name>
+										<Type>UDINT</Type>
+										<BitSize>32</BitSize>
+										<BitOffs>816</BitOffs>
+										<Flags>
+											<Access>ro</Access>
+											<Category>o</Category>
+											<Backup>1</Backup>
+											<Setting>1</Setting>
+										</Flags>
+								</SubItem>
+								<SubItem>
+										<SubIdx>27</SubIdx>
+										<Name>Module 27 Indent</Name>
+										<Type>UDINT</Type>
+										<BitSize>32</BitSize>
+										<BitOffs>848</BitOffs>
+										<Flags>
+											<Access>ro</Access>
+											<Category>o</Category>
+											<Backup>1</Backup>
+											<Setting>1</Setting>
+										</Flags>
+								</SubItem>	
+								<SubItem>
+										<SubIdx>28</SubIdx>
+										<Name>Module 28 Indent</Name>
+										<Type>UDINT</Type>
+										<BitSize>32</BitSize>
+										<BitOffs>880</BitOffs>
+										<Flags>
+											<Access>ro</Access>
+											<Category>o</Category>
+											<Backup>1</Backup>
+											<Setting>1</Setting>
+										</Flags>
+								</SubItem>	
+								<SubItem>
+										<SubIdx>29</SubIdx>
+										<Name>Module 29 Indent</Name>
+										<Type>UDINT</Type>
+										<BitSize>32</BitSize>
+										<BitOffs>912</BitOffs>
+										<Flags>
+											<Access>ro</Access>
+											<Category>o</Category>
+											<Backup>1</Backup>
+											<Setting>1</Setting>
+										</Flags>
+								</SubItem>	
+								<SubItem>
+										<SubIdx>30</SubIdx>
+										<Name>Module 30 Indent</Name>
+										<Type>UDINT</Type>
+										<BitSize>32</BitSize>
+										<BitOffs>944</BitOffs>
+										<Flags>
+											<Access>ro</Access>
+											<Category>o</Category>
+											<Backup>1</Backup>
+											<Setting>1</Setting>
+										</Flags>
+								</SubItem>	
+								<SubItem>
+										<SubIdx>31</SubIdx>
+										<Name>Module 31 Indent</Name>
+										<Type>UDINT</Type>
+										<BitSize>32</BitSize>
+										<BitOffs>976</BitOffs>
+										<Flags>
+											<Access>ro</Access>
+											<Category>o</Category>
+											<Backup>1</Backup>
+											<Setting>1</Setting>
+										</Flags>
+								</SubItem>	
+								<SubItem>
+										<SubIdx>32</SubIdx>
+										<Name>Module 32 Indent</Name>
+										<Type>UDINT</Type>
+										<BitSize>32</BitSize>
+										<BitOffs>1008</BitOffs>
+										<Flags>
+											<Access>ro</Access>
+											<Category>o</Category>
+											<Backup>1</Backup>
+											<Setting>1</Setting>
+										</Flags>
+								</SubItem>																																																																																																																																																																																																																																																																																																																																																																																																																		
+							</DataType>
+			 
+            </DataTypes>	
+             <Objects>
+					<Object>
+								<Index>#xf050</Index>
+								<Name>Scaned Module Ident List</Name>
+								<Type>DTf050</Type>
+								<BitSize>1040</BitSize>
+								<Info>
+									<SubItem>
+										<Name>SubIndex 000</Name>
+										<Info>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>Module 1 Ident</Name>
+										<Info>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>Module 2 Ident</Name>
+										<Info>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>Module 3 Ident</Name>
+										<Info>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>Module 4 Ident</Name>
+										<Info>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>Module 5 Ident</Name>
+										<Info>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>Module 6 Ident</Name>
+										<Info>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>Module 7 Ident</Name>
+										<Info>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>Module 8 Ident</Name>
+										<Info>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>Module 9 Ident</Name>
+										<Info>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>Module 10 Ident</Name>
+										<Info>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>Module 11 Ident</Name>
+										<Info>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>Module 12 Ident</Name>
+										<Info>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>Module 13 Ident</Name>
+										<Info>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>Module 14 Ident</Name>
+										<Info>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>Module 15 Ident</Name>
+										<Info>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>Module 16 Ident</Name>
+										<Info>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>Module 17 Ident</Name>
+										<Info>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>Module 18 Ident</Name>
+										<Info>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>Module 19 Ident</Name>
+										<Info>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>Module 20 Ident</Name>
+										<Info>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>Module 21 Ident</Name>
+										<Info>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>Module 22 Ident</Name>
+										<Info>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>Module 23 Ident</Name>
+										<Info>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>Module 24 Ident</Name>
+										<Info>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>Module 25 Ident</Name>
+										<Info>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>Module 26 Ident</Name>
+										<Info>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>Module 27 Ident</Name>
+										<Info>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>Module 28 Ident</Name>
+										<Info>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>Module 29 Ident</Name>
+										<Info>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>Module 30 Ident</Name>
+										<Info>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>Module 31 Ident</Name>
+										<Info>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>Module 32 Ident</Name>
+										<Info>
+										</Info>
+									</SubItem>								
+								</Info>
+								<Flags>
+									<Access>ro</Access>
+									<Category>o</Category>
+								</Flags>
+				 </Object>
+			</Objects>
+          </Dictionary>
+        </Profile>
+        <Fmmu>Outputs</Fmmu>
+        <Fmmu>Inputs</Fmmu>
+        <Fmmu>MBoxState</Fmmu>
+        <Sm DefaultSize="529" StartAddress="#x1000" ControlByte="#x26" Enable="1">MBoxOut</Sm>
+        <Sm DefaultSize="529" StartAddress="#x1400" ControlByte="#x22" Enable="1">MBoxIn</Sm>
+        <Sm StartAddress="#x1800" ControlByte="#x64" Enable="1">Outputs</Sm>
+        <Sm StartAddress="#x1c00" ControlByte="#x20" Enable="1">Inputs</Sm>
+		
+       <Mailbox DataLinkLayer="true">
+			    <CoE SdoInfo="true" CompleteAccess="true" SegmentedSdo="true"/>							
+       </Mailbox>
+	   <Slots IdentifyModuleBy="ModuleIdent" SlotIndexIncrement="16" SlotPdoIncrement="1">
+          <Slot MinInstances="0" MaxInstances="32" SlotIndexIncrement="16" SlotPdoIncrement="1" TreeView="SLOT">
+            <Name>EU Serials IO Modules</Name>
+            <ModuleClass>
+              <Class>ADLINK</Class>
+			  <Name>EU Serials IO Modules</Name>
+			  <!--<ImageData16x14>424DE6000000000000007600000028000000100000000E0000000100040000000000700000000000000000000000000000000000000080808000C0C0C0000000000000FF0000FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF0000000000000000000111101111011110011110111101111001221012210122100111101111011110012210122101221001111011110111100122101221012210011110111101111001221012210122100111101111011110013310133101331001331013310133100111101111011110</ImageData16x14>-->
+            </ModuleClass>
+          </Slot>
+        </Slots>								
+        <ESC>
+		  <Reg0400>2498</Reg0400>
+          <Reg0410>10000</Reg0410>
+          <Reg0420>10000</Reg0420>
+        </ESC>
+		<Eeprom>
+          <ByteSize>2048</ByteSize>
+          <ConfigData>89008022020000000000</ConfigData>
+        </Eeprom>
+        <Image16x14>DEVICE</Image16x14>
+      </Device>
+    </Devices>    
+    <Modules>
+		<!--8 Channels Digital Input Modules-->		
+    	<Module>
+    		<Type ModuleIdent="9" ModuleClass="ADLINK" ModulePdoGroup="0">EU1108</Type>
+				<Name>Digital Input, 8 Channels, PNP</Name>
+					<!--<ImageData16x14>424DE6000000000000007600000028000000100000000E00000001000400000000007000000000000000000000000000000000000000FFFFFF008080800000000000C0C0C00000FFFF0000FF0000FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF0000000011111002000000003333100200000000333310020000000032231002000000003333100200000000322310020000000033331002004444443223100200444444333310020044444432231002004444443333100200444444355312020244444435531022204444443333100200</ImageData16x14>-->
+    	<TxPdo Fixed="0" Sm="3">
+          <Index DependOnSlot="1">#x1a00</Index>
+          <Name>Channels Data</Name>
+          <Entry>
+            <Index DependOnSlot="1">#x6000</Index>
+            <SubIndex>1</SubIndex>
+            <BitLen>1</BitLen>
+            <Name>Channel 1</Name>
+            <DataType>BOOL</DataType>
+          </Entry>
+          <Entry>
+            <Index DependOnSlot="1">#x6000</Index>
+            <SubIndex>2</SubIndex>
+            <BitLen>1</BitLen>
+            <Name>Channel 2</Name>
+            <DataType>BOOL</DataType>
+          </Entry>
+          <Entry>
+            <Index DependOnSlot="1">#x6000</Index>
+            <SubIndex>3</SubIndex>
+            <BitLen>1</BitLen>
+            <Name>Channel 3</Name>
+            <DataType>BOOL</DataType>
+          </Entry>
+          <Entry>
+            <Index DependOnSlot="1">#x6000</Index>
+            <SubIndex>4</SubIndex>
+            <BitLen>1</BitLen>
+            <Name>Channel 4</Name>
+            <DataType>BOOL</DataType>
+          </Entry>
+          <Entry>
+           <Index DependOnSlot="1">#x6000</Index>
+            <SubIndex>5</SubIndex>
+            <BitLen>1</BitLen>
+            <Name>Channel 5</Name>
+            <DataType>BOOL</DataType>
+          </Entry>
+          <Entry>
+            <Index DependOnSlot="1">#x6000</Index>
+            <SubIndex>6</SubIndex>
+            <BitLen>1</BitLen>
+            <Name>Channel 6</Name>
+            <DataType>BOOL</DataType>
+          </Entry>
+          <Entry>
+            <Index DependOnSlot="1">#x6000</Index>
+            <SubIndex>7</SubIndex>
+            <BitLen>1</BitLen>
+            <Name>Channel 7</Name>
+            <DataType>BOOL</DataType>
+          </Entry>
+          <Entry>
+           <Index DependOnSlot="1">#x6000</Index>
+            <SubIndex>8</SubIndex>
+            <BitLen>1</BitLen>
+            <Name>Channel 8</Name>
+            <DataType>BOOL</DataType>
+          </Entry>
+          <Entry>
+           <Index DependOnSlot="1">#x0000</Index>
+            <SubIndex>9</SubIndex>
+            <BitLen>8</BitLen>
+          </Entry>
+          <Entry>
+            <Index DependOnSlot="1">#x6002</Index>
+            <SubIndex>1</SubIndex>
+            <BitLen>1</BitLen>
+            <Name>Temperature Alarm</Name>
+            <DataType>BOOL</DataType>
+          </Entry>
+          <Entry>
+            <Index DependOnSlot="1">#x6002</Index>
+            <SubIndex>2</SubIndex>
+            <BitLen>1</BitLen>
+            <Name>Voltage Alarm</Name>
+            <DataType>BOOL</DataType>
+          </Entry>  
+          <Entry>
+           <Index>#x0000</Index>
+            <SubIndex>3</SubIndex>
+            <BitLen>14</BitLen>      
+          </Entry>
+         </TxPdo>	        	
+				<Mailbox>
+					<CoE>
+						<InitCmd>
+							<Transition>PS</Transition>
+							<Index DependOnSlot="1">#x8000</Index>
+							<SubIndex>1</SubIndex>
+							<Data>0900</Data>
+						</InitCmd>
+					</CoE>	
+				</Mailbox>				
+    	</Module>
+		<Module>
+    		<Type ModuleIdent="6" ModuleClass="ADLINK" ModulePdoGroup="0">EU1008</Type>
+				<Name>Digital Input, 8 Channels, NPN</Name>
+						<!--<ImageData16x14>424DE6000000000000007600000028000000100000000E00000001000400000000007000000000000000000000000000000000000000FFFFFF008080800000000000C0C0C00000FFFF0000FF0000FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF0000000011111002000000003333100200000000333310020000000032231002000000003333100200000000322310020000000033331002004444443223100200444444333310020044444432231002004444443333100200444444355312020244444435531022204444443333100200</ImageData16x14>-->
+    	<TxPdo Fixed="0" Sm="3">
+          <Index DependOnSlot="1">#x1a00</Index>
+          <Name>Channels Data</Name>
+          <Entry>
+            <Index DependOnSlot="1">#x6000</Index>
+            <SubIndex>1</SubIndex>
+            <BitLen>1</BitLen>
+            <Name>Channel 1</Name>
+            <DataType>BOOL</DataType>
+          </Entry>
+          <Entry>
+            <Index DependOnSlot="1">#x6000</Index>
+            <SubIndex>2</SubIndex>
+            <BitLen>1</BitLen>
+            <Name>Channel 2</Name>
+            <DataType>BOOL</DataType>
+          </Entry>
+          <Entry>
+            <Index DependOnSlot="1">#x6000</Index>
+            <SubIndex>3</SubIndex>
+            <BitLen>1</BitLen>
+            <Name>Channel 3</Name>
+            <DataType>BOOL</DataType>
+          </Entry>
+          <Entry>
+            <Index DependOnSlot="1">#x6000</Index>
+            <SubIndex>4</SubIndex>
+            <BitLen>1</BitLen>
+            <Name>Channel 4</Name>
+            <DataType>BOOL</DataType>
+          </Entry>
+          <Entry>
+           <Index DependOnSlot="1">#x6000</Index>
+            <SubIndex>5</SubIndex>
+            <BitLen>1</BitLen>
+            <Name>Channel 5</Name>
+            <DataType>BOOL</DataType>
+          </Entry>
+          <Entry>
+            <Index DependOnSlot="1">#x6000</Index>
+            <SubIndex>6</SubIndex>
+            <BitLen>1</BitLen>
+            <Name>Channel 6</Name>
+            <DataType>BOOL</DataType>
+          </Entry>
+          <Entry>
+            <Index DependOnSlot="1">#x6000</Index>
+            <SubIndex>7</SubIndex>
+            <BitLen>1</BitLen>
+            <Name>Channel 7</Name>
+            <DataType>BOOL</DataType>
+          </Entry>
+          <Entry>
+           <Index DependOnSlot="1">#x6000</Index>
+            <SubIndex>8</SubIndex>
+            <BitLen>1</BitLen>
+            <Name>Channel 8</Name>
+            <DataType>BOOL</DataType>
+          </Entry>
+          <Entry>
+           <Index DependOnSlot="1">#x0000</Index>
+            <SubIndex>9</SubIndex>
+            <BitLen>8</BitLen>
+          </Entry>
+          <Entry>
+            <Index DependOnSlot="1">#x6002</Index>
+            <SubIndex>1</SubIndex>
+            <BitLen>1</BitLen>
+            <Name>Temperature Alarm</Name>
+            <DataType>BOOL</DataType>
+          </Entry>
+          <Entry>
+            <Index DependOnSlot="1">#x6002</Index>
+            <SubIndex>2</SubIndex>
+            <BitLen>1</BitLen>
+            <Name>Voltage Alarm</Name>
+            <DataType>BOOL</DataType>
+          </Entry>  
+          <Entry>
+           <Index>#x0000</Index>
+            <SubIndex>3</SubIndex>
+            <BitLen>14</BitLen>
+          </Entry>
+        </TxPdo>	        	
+				<Mailbox>
+					<CoE>
+						<InitCmd>
+							<Transition>PS</Transition>
+							<Index DependOnSlot="1">#x8000</Index>
+							<SubIndex>1</SubIndex>
+							<Data>0600</Data>
+						</InitCmd>
+					</CoE>	
+				</Mailbox>				
+    	</Module>
+
+		<!--8 Channels Digital Output Modules-->
+    	<Module>
+    		<Type ModuleIdent="11" ModuleClass="ADLINK" ModulePdoGroup="0">EU2008</Type>
+				<Name>Digital Output, 8 Channels, PNP</Name>
+					<!--<ImageData16x14>424DE6000000000000007600000028000000100000000E00000001000400000000007000000000000000000000000000000000000000FFFFFF008080800000000000C0C0C0000000FF0000FF0000FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF0000000011111002000000003333102220000000333312020200000032231002000000003333100200000000322310020000000033331002004444443223100200444444333310020044444432231002004444443333100200444444355310020044444435531002004444443333100200</ImageData16x14>-->
+    	<RxPdo Fixed="0" Sm="2">
+          <Index DependOnSlot="1">#x1600</Index>
+          <Name>Channels Data</Name>
+          <Entry>
+            <Index DependOnSlot="1">#x7000</Index>
+            <SubIndex>1</SubIndex>
+            <BitLen>1</BitLen>
+            <Name>Channel 1</Name>
+            <DataType>BOOL</DataType>
+          </Entry>
+          <Entry>
+            <Index DependOnSlot="1">#x7000</Index>
+            <SubIndex>2</SubIndex>
+            <BitLen>1</BitLen>
+            <Name>Channel 2</Name>
+            <DataType>BOOL</DataType>
+          </Entry>
+          <Entry>
+            <Index DependOnSlot="1">#x7000</Index>
+            <SubIndex>3</SubIndex>
+            <BitLen>1</BitLen>
+            <Name>Channel 3</Name>
+            <DataType>BOOL</DataType>
+          </Entry>
+          <Entry>
+            <Index DependOnSlot="1">#x7000</Index>
+            <SubIndex>4</SubIndex>
+            <BitLen>1</BitLen>
+            <Name>Channel 4</Name>
+            <DataType>BOOL</DataType>
+          </Entry>
+          <Entry>
+           <Index DependOnSlot="1">#x7000</Index>
+            <SubIndex>5</SubIndex>
+            <BitLen>1</BitLen>
+            <Name>Channel 5</Name>
+            <DataType>BOOL</DataType>
+          </Entry>
+          <Entry>
+            <Index DependOnSlot="1">#x7000</Index>
+            <SubIndex>6</SubIndex>
+            <BitLen>1</BitLen>
+            <Name>Channel 6</Name>
+            <DataType>BOOL</DataType>
+          </Entry>
+          <Entry>
+            <Index DependOnSlot="1">#x7000</Index>
+            <SubIndex>7</SubIndex>
+            <BitLen>1</BitLen>
+            <Name>Channel 7</Name>
+            <DataType>BOOL</DataType>
+          </Entry>
+          <Entry>
+           <Index DependOnSlot="1">#x7000</Index>
+            <SubIndex>8</SubIndex>
+            <BitLen>1</BitLen>
+            <Name>Channel 8</Name>
+            <DataType>BOOL</DataType>
+          </Entry>
+          <Entry>
+           <Index DependOnSlot="1">#x0000</Index>
+            <SubIndex>9</SubIndex>
+            <BitLen>8</BitLen>
+          </Entry>
+        </RxPdo>
+    	<TxPdo Fixed="0" Sm="3">
+          <Index DependOnSlot="1">#x1a00</Index>
+          <Name>Alarm Data</Name>
+          <Entry>
+            <Index DependOnSlot="1">#x6002</Index>
+            <SubIndex>1</SubIndex>
+            <BitLen>1</BitLen>
+            <Name>Temperature Alarm</Name>
+            <DataType>BOOL</DataType>
+          </Entry>
+          <Entry>
+            <Index DependOnSlot="1">#x6002</Index>
+            <SubIndex>2</SubIndex>
+            <BitLen>1</BitLen>
+            <Name>Voltage Alarm</Name>
+            <DataType>BOOL</DataType>
+          </Entry>  
+          <Entry>
+            <Index DependOnSlot="1">#x6002</Index>
+            <SubIndex>3</SubIndex>
+            <BitLen>1</BitLen>
+            <Name>Driver Abnormal Alarm</Name>
+            <DataType>BOOL</DataType>
+          </Entry>  
+          <Entry>
+           <Index>#x0000</Index>
+            <SubIndex>4</SubIndex>
+            <BitLen>13</BitLen>
+          </Entry>
+        </TxPdo>	        	
+				<Mailbox>
+					<CoE>
+						<InitCmd>
+							<Transition>PS</Transition>
+							<Index DependOnSlot="1">#x8000</Index>
+							<SubIndex>1</SubIndex>
+							<Data>0B00</Data>
+						</InitCmd>
+					</CoE>	
+				</Mailbox>				
+    	</Module>
+    	<Module>
+    		<Type ModuleIdent="12" ModuleClass="ADLINK" ModulePdoGroup="0">EU2108</Type>
+				<Name>Digital Output, 8 Channels, NPN</Name>
+					<!--<ImageData16x14>424DE6000000000000007600000028000000100000000E00000001000400000000007000000000000000000000000000000000000000FFFFFF008080800000000000C0C0C0000000FF0000FF0000FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF0000000011111002000000003333102220000000333312020200000032231002000000003333100200000000322310020000000033331002004444443223100200444444333310020044444432231002004444443333100200444444355310020044444435531002004444443333100200</ImageData16x14>-->
+    	<RxPdo Fixed="0" Sm="2">
+          <Index DependOnSlot="1">#x1600</Index>
+          <Name>Channels Data</Name>
+          <Entry>
+            <Index DependOnSlot="1">#x7000</Index>
+            <SubIndex>1</SubIndex>
+            <BitLen>1</BitLen>
+            <Name>Channel 1</Name>
+            <DataType>BOOL</DataType>
+          </Entry>
+          <Entry>
+            <Index DependOnSlot="1">#x7000</Index>
+            <SubIndex>2</SubIndex>
+            <BitLen>1</BitLen>
+            <Name>Channel 2</Name>
+            <DataType>BOOL</DataType>
+          </Entry>
+          <Entry>
+            <Index DependOnSlot="1">#x7000</Index>
+            <SubIndex>3</SubIndex>
+            <BitLen>1</BitLen>
+            <Name>Channel 3</Name>
+            <DataType>BOOL</DataType>
+          </Entry>
+          <Entry>
+            <Index DependOnSlot="1">#x7000</Index>
+            <SubIndex>4</SubIndex>
+            <BitLen>1</BitLen>
+            <Name>Channel 4</Name>
+            <DataType>BOOL</DataType>
+          </Entry>
+          <Entry>
+           <Index DependOnSlot="1">#x7000</Index>
+            <SubIndex>5</SubIndex>
+            <BitLen>1</BitLen>
+            <Name>Channel 5</Name>
+            <DataType>BOOL</DataType>
+          </Entry>
+          <Entry>
+            <Index DependOnSlot="1">#x7000</Index>
+            <SubIndex>6</SubIndex>
+            <BitLen>1</BitLen>
+            <Name>Channel 6</Name>
+            <DataType>BOOL</DataType>
+          </Entry>
+          <Entry>
+            <Index DependOnSlot="1">#x7000</Index>
+            <SubIndex>7</SubIndex>
+            <BitLen>1</BitLen>
+            <Name>Channel 7</Name>
+            <DataType>BOOL</DataType>
+          </Entry>
+          <Entry>
+           <Index DependOnSlot="1">#x7000</Index>
+            <SubIndex>8</SubIndex>
+            <BitLen>1</BitLen>
+            <Name>Channel 8</Name>
+            <DataType>BOOL</DataType>
+          </Entry>
+          <Entry>
+           <Index DependOnSlot="1">#x0000</Index>
+            <SubIndex>9</SubIndex>
+            <BitLen>8</BitLen>
+          </Entry>
+        </RxPdo>
+    	<TxPdo Fixed="0" Sm="3">
+          <Index DependOnSlot="1">#x1a00</Index>
+          <Name>Alarm Data</Name>
+          <Entry>
+            <Index DependOnSlot="1">#x6002</Index>
+            <SubIndex>1</SubIndex>
+            <BitLen>1</BitLen>
+            <Name>Temperature Alarm</Name>
+            <DataType>BOOL</DataType>
+          </Entry>
+          <Entry>
+            <Index DependOnSlot="1">#x6002</Index>
+            <SubIndex>2</SubIndex>
+            <BitLen>1</BitLen>
+            <Name>Voltage Alarm</Name>
+            <DataType>BOOL</DataType>
+          </Entry>  
+          <Entry>
+           <Index>#x0000</Index>
+            <SubIndex>3</SubIndex>
+            <BitLen>14</BitLen>     
+          </Entry>
+        </TxPdo>
+				<Mailbox>
+					<CoE>
+						<InitCmd>
+							<Transition>PS</Transition>
+							<Index DependOnSlot="1">#x8000</Index>
+							<SubIndex>1</SubIndex>
+							<Data>0C00</Data>
+						</InitCmd>
+					</CoE>	
+				</Mailbox>				
+    	</Module>
+    	
+    	<!--4 Channels Analog Input Modules-->
+		<Module>	
+    		<Type ModuleIdent="49" ModuleClass="ADLINK" ModulePdoGroup="0">EU3104</Type>
+				<Name>Analog Input, Voltage(0-10V), 4 Channels, 16 Bit</Name>
+					<!--<ImageData16x14>424DE6000000000000007600000028000000100000000E00000001000400000000007000000000000000000000000000000000000000FFFFFF008080800000000000C0C0C00000FF0000FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF0000000011111002000000003333100200000000333310020000000032231002000000003333100200000000322310020000000033331002004444443223100200444444333310020044444432231002004444443333100200444444344312020244444434431022204444443333100200</ImageData16x14>-->
+		<TxPdo Fixed="0" Sm="3">
+          <Index DependOnSlot="1">#x1a00</Index>
+          <Name>Channels Data</Name>
+          <Entry>
+            <Index DependOnSlot="1">#x6001</Index>
+            <SubIndex>1</SubIndex>
+            <BitLen>16</BitLen>
+            <Name>Channel 1</Name>
+            <DataType>UINT</DataType>
+          </Entry>
+          <Entry>
+            <Index DependOnSlot="1">#x6001</Index>
+            <SubIndex>2</SubIndex>
+            <BitLen>16</BitLen>
+            <Name>Channel 2</Name>
+            <DataType>UINT</DataType>
+          </Entry>
+          <Entry>
+            <Index DependOnSlot="1">#x6001</Index>
+            <SubIndex>3</SubIndex>
+            <BitLen>16</BitLen>
+            <Name>Channel 3</Name>
+            <DataType>UINT</DataType>
+          </Entry>
+          <Entry>
+            <Index DependOnSlot="1">#x6001</Index>
+            <SubIndex>4</SubIndex>
+            <BitLen>16</BitLen>
+            <Name>Channel 4</Name>
+            <DataType>UINT</DataType>
+          </Entry>
+          <Entry>
+            <Index DependOnSlot="1">#x6002</Index>
+            <SubIndex>1</SubIndex>
+            <BitLen>1</BitLen>
+            <Name>Temperature Alarm</Name>
+            <DataType>BOOL</DataType>
+          </Entry>
+          <Entry>
+            <Index DependOnSlot="1">#x6002</Index>
+            <SubIndex>2</SubIndex>
+            <BitLen>1</BitLen>
+            <Name>Voltage Alarm</Name>
+            <DataType>BOOL</DataType>
+          </Entry>  
+          <Entry>
+            <Index DependOnSlot="1">#x6002</Index>
+            <SubIndex>3</SubIndex>
+            <BitLen>1</BitLen>
+            <Name>Input Voltage Overflow Alarm</Name>
+            <DataType>BOOL</DataType>
+          </Entry>  
+          <Entry>
+           <Index>#x0000</Index>
+            <SubIndex>4</SubIndex>
+            <BitLen>13</BitLen>
+          </Entry>
+        </TxPdo>
+				<Mailbox>
+					<CoE>
+						<InitCmd>
+							<Transition>PS</Transition>
+							<Index DependOnSlot="1">#x8000</Index>
+							<SubIndex>1</SubIndex>
+							<Data>3100</Data>
+						</InitCmd>
+					</CoE>	
+				</Mailbox>				
+		</Module>
+		<Module>	
+    		<Type ModuleIdent="41" ModuleClass="ADLINK" ModulePdoGroup="0">EU3304</Type>
+				<Name>Analog Input, Current(4-20mA), 4 Channels, 16 Bit</Name>
+					<!--<ImageData16x14>424DE6000000000000007600000028000000100000000E00000001000400000000007000000000000000000000000000000000000000FFFFFF008080800000000000C0C0C00000FF0000FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF0000000011111002000000003333100200000000333310020000000032231002000000003333100200000000322310020000000033331002004444443223100200444444333310020044444432231002004444443333100200444444344312020244444434431022204444443333100200</ImageData16x14>-->
+		<TxPdo Fixed="0" Sm="3">
+          <Index DependOnSlot="1">#x1a00</Index>
+          <Name>Channels Data</Name>
+          <Entry>
+            <Index DependOnSlot="1">#x6001</Index>
+            <SubIndex>1</SubIndex>
+            <BitLen>16</BitLen>
+            <Name>Channel 1</Name>
+            <DataType>UINT</DataType>
+          </Entry>
+          <Entry>
+            <Index DependOnSlot="1">#x6001</Index>
+            <SubIndex>2</SubIndex>
+            <BitLen>16</BitLen>
+            <Name>Channel 2</Name>
+            <DataType>UINT</DataType>
+          </Entry>
+          <Entry>
+            <Index DependOnSlot="1">#x6001</Index>
+            <SubIndex>3</SubIndex>
+            <BitLen>16</BitLen>
+            <Name>Channel 3</Name>
+            <DataType>UINT</DataType>
+          </Entry>
+          <Entry>
+            <Index DependOnSlot="1">#x6001</Index>
+            <SubIndex>4</SubIndex>
+            <BitLen>16</BitLen>
+            <Name>Channel 4</Name>
+            <DataType>UINT</DataType>
+          </Entry>
+          <Entry>
+            <Index DependOnSlot="1">#x6002</Index>
+            <SubIndex>1</SubIndex>
+            <BitLen>1</BitLen>
+            <Name>Temperature Alarm</Name>
+            <DataType>BOOL</DataType>
+          </Entry>
+          <Entry>
+            <Index DependOnSlot="1">#x6002</Index>
+            <SubIndex>2</SubIndex>
+            <BitLen>1</BitLen>
+            <Name>Voltage Alarm</Name>
+            <DataType>BOOL</DataType>
+          </Entry>  
+          <Entry>
+            <Index DependOnSlot="1">#x6002</Index>
+            <SubIndex>3</SubIndex>
+            <BitLen>1</BitLen>
+            <Name>Input Current Overflow Alarm</Name>
+            <DataType>BOOL</DataType>
+          </Entry>  
+          <Entry>
+           <Index>#x0000</Index>
+            <SubIndex>4</SubIndex>
+            <BitLen>13</BitLen>
+          </Entry>
+        </TxPdo>
+				<Mailbox>
+					<CoE>
+						<InitCmd>
+							<Transition>PS</Transition>
+							<Index DependOnSlot="1">#x8000</Index>
+							<SubIndex>1</SubIndex>
+							<Data>2900</Data>
+						</InitCmd>
+					</CoE>	
+				</Mailbox>				
+		</Module>		
+		
+		<!--4 Channels Temperature Modules-->	
+		<Module>	
+    		<Type ModuleIdent="56" ModuleClass="ADLINK" ModulePdoGroup="0">EU3404</Type>
+				<Name>TC (K,J,T,E,N,S,R,B,C), 4 Channels, 16 Bit</Name>
+					<!--<ImageData16x14>424DE6000000000000007600000028000000100000000E0000000100040000000000700000000000000000000000000000000000000000000000FFFFFF0080808000C0C0C0000080FF0000FF0000FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF0001110122222111110111013333211111011101333321111101010130032111110010013333211111011101300321111111111133332111114444443003211111444444333321111144444430032111114444443333211111444444355321111144444435532111114444443333211111</ImageData16x14>-->
+		<TxPdo Fixed="0" Sm="3">
+          <Index DependOnSlot="1">#x1a00</Index>
+          <Name>Channels Data</Name>
+          <Entry>
+            <Index DependOnSlot="1">#x6001</Index>
+            <SubIndex>1</SubIndex>
+            <BitLen>16</BitLen>
+            <Name>Channel 1</Name>
+            <DataType>INT</DataType>
+          </Entry>
+          <Entry>
+            <Index DependOnSlot="1">#x6001</Index>
+            <SubIndex>2</SubIndex>
+            <BitLen>16</BitLen>
+            <Name>Channel 2</Name>
+            <DataType>INT</DataType>
+          </Entry>
+          <Entry>
+            <Index DependOnSlot="1">#x6001</Index>
+            <SubIndex>3</SubIndex>
+            <BitLen>16</BitLen>
+            <Name>Channel 3</Name>
+            <DataType>INT</DataType>
+          </Entry>
+          <Entry>
+            <Index DependOnSlot="1">#x6001</Index>
+            <SubIndex>4</SubIndex>
+            <BitLen>16</BitLen>
+            <Name>Channel 4</Name>
+            <DataType>INT</DataType>
+          </Entry>
+          <Entry>
+            <Index DependOnSlot="1">#x6002</Index>
+            <SubIndex>1</SubIndex>
+            <BitLen>1</BitLen>
+            <Name>Temperature Alarm</Name>
+            <DataType>BOOL</DataType>
+          </Entry>
+          <Entry>
+            <Index DependOnSlot="1">#x6002</Index>
+            <SubIndex>2</SubIndex>
+            <BitLen>1</BitLen>
+            <Name>Voltage Alarm</Name>
+            <DataType>BOOL</DataType>
+          </Entry>  
+          <Entry>
+            <Index DependOnSlot="1">#x6002</Index>
+            <SubIndex>3</SubIndex>
+            <BitLen>1</BitLen>
+            <Name>Input Voltage Overflow Alarm</Name>
+            <DataType>BOOL</DataType>
+          </Entry>  
+          <Entry>
+           <Index>#x0000</Index>
+            <SubIndex>4</SubIndex>
+            <BitLen>13</BitLen>
+          </Entry>
+        </TxPdo>
+				
+		  <Profile>
+			<Dictionary>
+			<DataTypes>
+				 <!--FR3924热电偶选择-->
+			<DataType>
+				<Name>DT5038TT</Name>
+				<BaseType>UDINT</BaseType>
+				<BitSize>32</BitSize>
+				<EnumInfo>
+				<Text LcId='1033'>THERMOCOUPLE_K</Text>
+				<Enum>0</Enum>
+				</EnumInfo>
+				<EnumInfo>
+				<Text LcId='1033'>THERMOCOUPLE_J</Text>
+				<Enum>1</Enum>
+				</EnumInfo>
+				<EnumInfo>
+				<Text LcId='1033'>THERMOCOUPLE_T</Text>
+				<Enum>2</Enum>
+				</EnumInfo>
+				<EnumInfo>
+				<Text LcId='1033'>THERMOCOUPLE_E</Text>
+				<Enum>3</Enum>
+				</EnumInfo>
+				<EnumInfo>
+				<Text LcId='1033'>THERMOCOUPLE_N</Text>
+				<Enum>4</Enum>
+				</EnumInfo>
+				<EnumInfo>
+				<Text LcId='1033'>THERMOCOUPLE_S</Text>
+				<Enum>5</Enum>
+				</EnumInfo>
+				<EnumInfo>
+				<Text LcId='1033'>THERMOCOUPLE_R</Text>
+				<Enum>6</Enum>
+				</EnumInfo>
+				<EnumInfo>
+				<Text LcId='1033'>THERMOCOUPLE_B</Text>
+				<Enum>7</Enum>
+				</EnumInfo>
+				<EnumInfo>
+				<Text LcId='1033'>THERMOCOUPLE_C</Text>
+				<Enum>8</Enum>
+				</EnumInfo>
+			</DataType>
+			<DataType>
+					<Name>DT5038</Name>
+					<BitSize>80</BitSize>
+					<SubItem>
+						<SubIdx>0</SubIdx>
+						<Name>Number of Entries</Name>
+						<Type>USINT</Type>
+						<Comment LcId='1033'>Number of entries</Comment>
+						<BitSize>8</BitSize>
+						<BitOffs>0</BitOffs>
+						<Flags>
+						<Access>ro</Access>
+						<Setting>0</Setting>
+						</Flags>
+					</SubItem>
+					<SubItem>
+						<SubIdx>1</SubIdx>
+						<Name>Module Ident</Name>
+						<Type>UDINT</Type>
+						<Comment LcId='1033'>Must Config Idnet</Comment>
+						<BitSize>32</BitSize>
+						<BitOffs>16</BitOffs>
+						<Flags>
+						<Access>rw</Access>
+						<Setting>1</Setting>
+						</Flags>
+					</SubItem>	
+					<SubItem>
+						<SubIdx>2</SubIdx>
+						<Name>Thermocouple Type Select</Name>
+						<Type>DT5038TT</Type>
+						<Comment LcId='1033'>range:0,1,2,3,4,5,6,7,8</Comment>
+						<BitSize>32</BitSize>
+						<BitOffs>48</BitOffs>
+						<Flags>
+						<Access>rw</Access>
+						<Setting>1</Setting>
+						</Flags>
+					</SubItem>			 		    			
+			  </DataType>
+			</DataTypes>
+			<Objects>
+				<!--新增FR3924对象字典-->
+			 <Object>
+				<Index>#x5038</Index>
+				<Name LcId='1033'>FR3924 ConfigData</Name>
+				<Type>DT5038</Type>
+				<BitSize>80</BitSize>
+				<Info>
+					<SubItem>
+					<Name>Number of Entries</Name>
+				<Info>
+					<MinValue>#x02</MinValue>
+					<MaxValue>#x02</MaxValue>
+					<DefaultValue>#x02</DefaultValue>
+				</Info>
+				</SubItem>
+				<SubItem>
+					<Name>Module Ident</Name>
+				 <Info>
+					<MinValue>#x38</MinValue>
+					<MaxValue>#x38</MaxValue>
+					<DefaultValue>#x38</DefaultValue>
+					</Info>
+				</SubItem>
+				<SubItem>
+					<Name>Thermocouple Type Select</Name>
+				<Info>
+					<MinValue>#x00</MinValue>
+					<MaxValue>#x08</MaxValue>
+					<DefaultValue>#x00</DefaultValue>
+					</Info>
+				</SubItem>
+				</Info>
+			 </Object> 
+			</Objects>
+			</Dictionary>
+		</Profile>
+			<!--<Mailbox>
+				<CoE>
+					<InitCmd>
+						<Transition>PS</Transition>
+						<Index DependOnSlot="1">#x8000</Index>
+						<SubIndex>1</SubIndex>
+						<Data>3800</Data>
+					</InitCmd>
+				</CoE>	
+			</Mailbox>-->				
+		</Module>	
+			
+		<!--2 Channels Temperature Modules-->	
+		<Module>	
+    		<Type ModuleIdent="21" ModuleClass="ADLINK" ModulePdoGroup="0">EU3502</Type>
+				<Name>RTD (PT100,PT200,PT500,PT1000,Ni120,Resistance), 2 Channels, 16 Bit</Name>
+					<!--<ImageData16x14>424DE6000000000000007600000028000000100000000E0000000100040000000000700000000000000000000000000000000000000000000000FFFFFF0080808000C0C0C0000080FF0000FF0000FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF0001110122222111110111013333211111011101333321111101010130032111110010013333211111011101300321111111111133332111114444443003211111444444333321111144444430032111114444443333211111444444355321111144444435532111114444443333211111</ImageData16x14>-->
+		<TxPdo Fixed="0" Sm="3">
+          <Index DependOnSlot="1">#x1a00</Index>
+          <Name>Channels Data</Name>
+          <Entry>
+            <Index DependOnSlot="1">#x6001</Index>
+            <SubIndex>1</SubIndex>
+            <BitLen>16</BitLen>
+            <Name>Channel 1</Name>
+            <DataType>INT</DataType>
+          </Entry>
+          <Entry>
+            <Index DependOnSlot="1">#x6001</Index>
+            <SubIndex>2</SubIndex>
+            <BitLen>16</BitLen>
+            <Name>Channel 2</Name>
+            <DataType>INT</DataType>
+          </Entry>
+          <Entry>
+            <Index DependOnSlot="1">#x6002</Index>
+            <SubIndex>1</SubIndex>
+            <BitLen>1</BitLen>
+            <Name>Temperature Alarm</Name>
+            <DataType>BOOL</DataType>
+          </Entry>
+          <Entry>
+            <Index DependOnSlot="1">#x6002</Index>
+            <SubIndex>2</SubIndex>
+            <BitLen>1</BitLen>
+            <Name>Voltage Alarm</Name>
+            <DataType>BOOL</DataType>
+          </Entry>  
+          <Entry>
+            <Index DependOnSlot="1">#x6002</Index>
+            <SubIndex>3</SubIndex>
+            <BitLen>1</BitLen>
+            <Name>Input Voltage Overflow Alarm</Name>
+            <DataType>BOOL</DataType>
+          </Entry>  
+          <Entry>
+           <Index>#x0000</Index>
+            <SubIndex>4</SubIndex>
+            <BitLen>13</BitLen>
+          </Entry>
+        </TxPdo>
+		<!--有COE配置信息  测试使用-->
+		<Profile>
+				<Dictionary>
+					<DataTypes>
+						<DataType>
+							<Name>DT5015TT</Name>
+							<BaseType>UDINT</BaseType>
+							<BitSize>32</BitSize>
+							<EnumInfo>
+							<Text LcId='1033'>PT100</Text>
+							<Enum>0</Enum>
+							</EnumInfo>
+							<EnumInfo>
+							<Text LcId='1033'>PT200</Text>
+							<Enum>1</Enum>
+							</EnumInfo>
+							<EnumInfo>
+							<Text LcId='1033'>PT500</Text>
+							<Enum>2</Enum>
+							</EnumInfo>
+							<EnumInfo>
+							<Text LcId='1033'>PT1000</Text>
+							<Enum>3</Enum>
+							</EnumInfo>
+							<EnumInfo>
+							<Text LcId='1033'>NI120</Text>
+							<Enum>4</Enum>
+							</EnumInfo>
+							<EnumInfo>
+							<Text LcId='1033'>RESISTANCE_MEASUREMENT</Text>
+							<Enum>5</Enum>
+							</EnumInfo>
+						</DataType> 
+						<DataType>
+							<Name>DT5015</Name>
+							<BitSize>80</BitSize>
+							<SubItem>
+							<SubIdx>0</SubIdx>
+							<Name>Number of Entries</Name>
+							<Type>USINT</Type>
+							<Comment LcId='1033'>Number of entries</Comment>
+							<BitSize>8</BitSize>
+							<BitOffs>0</BitOffs>
+							<Flags>
+							<Access>ro</Access>
+							<Setting>0</Setting>
+							</Flags>
+							</SubItem>
+							<SubItem>
+							<SubIdx>1</SubIdx>
+							<Name>Module Ident</Name>
+							<Type>UDINT</Type>
+							<Comment LcId='1033'>Must Config Idnet</Comment>
+							<BitSize>32</BitSize>
+							<BitOffs>16</BitOffs>
+							<Flags>
+							<Access>rw</Access>
+							<Setting>1</Setting>
+							</Flags>
+							</SubItem>	
+							<SubItem>
+							<SubIdx>2</SubIdx>
+							<Name>Resistance Type Select</Name>
+							<Type>DT5015TT</Type>
+							<Comment LcId='1033'>range:0,1,2,3,4,5</Comment>
+							<BitSize>32</BitSize>
+							<BitOffs>48</BitOffs>
+							<Flags>
+							<Access>rw</Access>
+							<Setting>1</Setting>
+							</Flags>
+							</SubItem>			 		    			
+						</DataType>   
+			        </DataTypes>  
+					<!--FR3822对象字典-->
+					<Objects>
+						<Object>
+							<Index>#x5015</Index>
+							<Name LcId='1033'>FR3822 ConfigData</Name>
+							<Type>DT5015</Type>
+							<BitSize>80</BitSize>
+							<Info>
+							<SubItem>
+							<Name>Number of Entries</Name>
+							<Info>
+							<MinValue>#x02</MinValue>
+							<MaxValue>#x02</MaxValue>
+							<DefaultValue>#x02</DefaultValue>
+							</Info>
+							</SubItem>
+							<SubItem>
+							<Name>Module Ident</Name>
+							<Info>
+							<MinValue>#x15</MinValue>
+							<MaxValue>#x15</MaxValue>
+							<DefaultValue>#x15</DefaultValue>
+							</Info>
+							</SubItem>
+							<SubItem>
+							<Name>Resistance Type Select</Name>
+							<Info>
+							<MinValue>#x00</MinValue>
+							<MaxValue>#x05</MaxValue>
+							<DefaultValue>#x00</DefaultValue>
+							</Info>
+							</SubItem>
+							</Info>
+						</Object> 
+					</Objects>
+				</Dictionary>
+		</Profile>
+			<!--<Mailbox>
+				<CoE>
+					<InitCmd>
+						<Transition>PS</Transition>
+						<Index DependOnSlot="1">#x8000</Index>
+						<SubIndex>1</SubIndex>
+						<Data>1500</Data>
+					</InitCmd>
+				</CoE>	
+			</Mailbox>-->				
+		</Module>	
+							    	
+    	<!--4 Channels Analog Ouput Modules-->			
+		<Module>	
+    		<Type ModuleIdent="50" ModuleClass="ADLINK" ModulePdoGroup="0">EU4104</Type>
+				<Name>Analog Output, Voltage(0-10V), 4 Channels, 16 Bit</Name>
+				   <!--<ImageData16x14>424DE6000000000000007600000028000000100000000E00000001000400000000007000000000000000000000000000000000000000FFFFFF008080800000000000C0C0C000FF00000000FF0000FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF0000000011111002000000003333102220000000333312020200000032231002000000003333100200000000322310020000000033331002004444443223100200444444333310020044444432231002004444443333100200444444355310020044444435531002004444443333100200</ImageData16x14>-->
+		<RxPdo Fixed="0" Sm="2">
+          <Index DependOnSlot="1">#x1600</Index>
+          <Name>Channels Data</Name>
+          <Entry>
+            <Index DependOnSlot="1">#x7001</Index>
+            <SubIndex>1</SubIndex>
+            <BitLen>16</BitLen>
+            <Name>Channel 1</Name>
+            <DataType>UINT</DataType>
+          </Entry>
+          <Entry>
+            <Index DependOnSlot="1">#x7001</Index>
+            <SubIndex>2</SubIndex>
+            <BitLen>16</BitLen>
+            <Name>Channel 2</Name>
+            <DataType>UINT</DataType>
+          </Entry>
+          <Entry>
+            <Index DependOnSlot="1">#x7001</Index>
+            <SubIndex>3</SubIndex>
+            <BitLen>16</BitLen>
+            <Name>Channel 3</Name>
+            <DataType>UINT</DataType>
+          </Entry>
+          <Entry>
+            <Index DependOnSlot="1">#x7001</Index>
+            <SubIndex>4</SubIndex>
+            <BitLen>16</BitLen>
+            <Name>Channel 4</Name>
+            <DataType>UINT</DataType>
+          </Entry>
+        </RxPdo>
+		<TxPdo Fixed="0" Sm="3">
+          <Index DependOnSlot="1">#x1a00</Index>
+          <Name>Alarm Data</Name>
+          <Entry>
+            <Index DependOnSlot="1">#x6002</Index>
+            <SubIndex>1</SubIndex>
+            <BitLen>1</BitLen>
+            <Name>Temperature Alarm</Name>
+            <DataType>BOOL</DataType>
+          </Entry>
+          <Entry>
+            <Index DependOnSlot="1">#x6002</Index>
+            <SubIndex>2</SubIndex>
+            <BitLen>1</BitLen>
+            <Name>Voltage Alarm</Name>
+            <DataType>BOOL</DataType>
+          </Entry>  
+          <Entry>
+           <Index>#x0000</Index>
+            <SubIndex>3</SubIndex>
+            <BitLen>14</BitLen>
+          </Entry>
+        </TxPdo>	        	        
+				<Mailbox>
+					<CoE>
+						<InitCmd>
+							<Transition>PS</Transition>
+							<Index DependOnSlot="1">#x8000</Index>
+							<SubIndex>1</SubIndex>
+							<Data>3200</Data>
+						</InitCmd>
+					</CoE>	
+				</Mailbox>				
+		</Module>			
+		<Module>
+    		<Type ModuleIdent="53" ModuleClass="ADLINK" ModulePdoGroup="0">EU4304</Type>
+				<Name>Analog Output, Current(4-20mA), 4 Channels, 16 Bit</Name>
+				   <!--<ImageData16x14>424DE6000000000000007600000028000000100000000E00000001000400000000007000000000000000000000000000000000000000FFFFFF008080800000000000C0C0C000FF00000000FF0000FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF0000000011111002000000003333102220000000333312020200000032231002000000003333100200000000322310020000000033331002004444443223100200444444333310020044444432231002004444443333100200444444355310020044444435531002004444443333100200</ImageData16x14>-->
+		<RxPdo Fixed="0" Sm="2">
+          <Index DependOnSlot="1">#x1600</Index>
+          <Name>Channels Data</Name>
+          <Entry>
+            <Index DependOnSlot="1">#x7001</Index>
+            <SubIndex>1</SubIndex>
+            <BitLen>16</BitLen>
+            <Name>Channel 1</Name>
+            <DataType>UINT</DataType>
+          </Entry>
+          <Entry>
+            <Index DependOnSlot="1">#x7001</Index>
+            <SubIndex>2</SubIndex>
+            <BitLen>16</BitLen>
+            <Name>Channel 2</Name>
+            <DataType>UINT</DataType>
+          </Entry>
+          <Entry>
+            <Index DependOnSlot="1">#x7001</Index>
+            <SubIndex>3</SubIndex>
+            <BitLen>16</BitLen>
+            <Name>Channel 3</Name>
+            <DataType>UINT</DataType>
+          </Entry>
+          <Entry>
+            <Index DependOnSlot="1">#x7001</Index>
+            <SubIndex>4</SubIndex>
+            <BitLen>16</BitLen>
+            <Name>Channel 4</Name>
+            <DataType>UINT</DataType>
+          </Entry>
+        </RxPdo>
+		<TxPdo Fixed="0" Sm="3">
+          <Index DependOnSlot="1">#x1a00</Index>
+          <Name>Alarm Data</Name>
+          <Entry>
+            <Index DependOnSlot="1">#x6002</Index>
+            <SubIndex>1</SubIndex>
+            <BitLen>1</BitLen>
+            <Name>Temperature Alarm</Name>
+            <DataType>BOOL</DataType>
+          </Entry>
+          <Entry>
+            <Index DependOnSlot="1">#x6002</Index>
+            <SubIndex>2</SubIndex>
+            <BitLen>1</BitLen>
+            <Name>Voltage Alarm</Name>
+            <DataType>BOOL</DataType>
+          </Entry>  
+          <Entry>
+           <Index>#x0000</Index>
+            <SubIndex>3</SubIndex>
+            <BitLen>14</BitLen>
+          </Entry>
+        </TxPdo>	        	        
+				<Mailbox>
+					<CoE>
+						<InitCmd>
+							<Transition>PS</Transition>
+							<Index DependOnSlot="1">#x8000</Index>
+							<SubIndex>1</SubIndex>
+							<Data>3500</Data>
+						</InitCmd>
+					</CoE>	
+				</Mailbox>				
+		</Module>
+
+	</Modules>    
+  </Descriptions>
+</EtherCATInfo>

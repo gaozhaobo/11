@@ -1,0 +1,285 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Chinese (Taiwan) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHT)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_TRADITIONAL
+#pragma code_page(950)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\8144_Interrupt.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_ICON1               ICON                    "icon1.ico"
+#endif    // Chinese (Taiwan) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOG  0, 0, 270, 62
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About 8144_Interrupt"
+FONT 10, "Arial"
+BEGIN
+    ICON            IDI_ICON1,IDC_STATIC,14,13,21,19
+    LTEXT           "8144_Interrupt Version 1.0",IDC_STATIC,40,10,119,8,SS_NOPREFIX
+    LTEXT           "Copyright (C) 2006",IDC_STATIC,40,25,119,8
+    DEFPUSHBUTTON   "OK",IDOK,213,7,50,14,WS_GROUP
+END
+
+IDD_MY8144_INTERRUPT_DIALOG DIALOGEX 0, 0, 438, 288
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "PCI - 8144 Interrupt Program"
+FONT 10, "Arial", 0, 0, 0x1
+BEGIN
+    GROUPBOX        "Digital Input Status",IDC_STATIC,185,10,244,43
+    EDITTEXT        IDC_EDIT1,405,25,14,12,ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_EDIT2,375,25,14,12,ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_EDIT3,345,25,14,12,ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_EDIT4,315,25,14,12,ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_EDIT5,285,25,14,12,ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_EDIT6,255,25,14,12,ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_EDIT7,225,25,14,12,ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_EDIT8,195,25,14,12,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "Bit 7",IDC_STATIC,194,39,20,10
+    LTEXT           "Bit 0",IDC_STATIC,405,39,20,10
+    GROUPBOX        "Select GPIO Interrupt Factor",IDC_STATIC,185,60,245,215
+    GROUPBOX        "Raising edge",IDC_STATIC,190,75,235,45
+    CONTROL         "Bit 0",IDC_RADIO1,"Button",BS_AUTORADIOBUTTON,205,90,35,10
+    CONTROL         "Bit 1",IDC_RADIO2,"Button",BS_AUTORADIOBUTTON,265,90,30,10
+    CONTROL         "Bit 2",IDC_RADIO3,"Button",BS_AUTORADIOBUTTON,325,90,30,10
+    CONTROL         "Bit 3",IDC_RADIO4,"Button",BS_AUTORADIOBUTTON,380,90,35,10
+    CONTROL         "Bit 4",IDC_RADIO5,"Button",BS_AUTORADIOBUTTON,205,105,30,10
+    CONTROL         "Bit 5",IDC_RADIO6,"Button",BS_AUTORADIOBUTTON,265,105,30,10
+    CONTROL         "Bit 6",IDC_RADIO7,"Button",BS_AUTORADIOBUTTON,325,105,30,10
+    CONTROL         "Bit 7",IDC_RADIO8,"Button",BS_AUTORADIOBUTTON,380,105,30,10
+    GROUPBOX        "Falling edge",IDC_STATIC,190,125,235,45
+    CONTROL         "Bit 0",IDC_RADIO9,"Button",BS_AUTORADIOBUTTON,205,140,30,10
+    CONTROL         "Bit 1",IDC_RADIO10,"Button",BS_AUTORADIOBUTTON,265,140,30,10
+    CONTROL         "Bit 2",IDC_RADIO11,"Button",BS_AUTORADIOBUTTON,325,140,30,10
+    CONTROL         "Bit 3",IDC_RADIO12,"Button",BS_AUTORADIOBUTTON,380,140,30,10
+    CONTROL         "Bit 4",IDC_RADIO13,"Button",BS_AUTORADIOBUTTON,205,155,30,10
+    CONTROL         "Bit 5",IDC_RADIO14,"Button",BS_AUTORADIOBUTTON,265,155,30,10
+    CONTROL         "Bit 6",IDC_RADIO15,"Button",BS_AUTORADIOBUTTON,325,155,30,10
+    CONTROL         "Bit 7",IDC_RADIO16,"Button",BS_AUTORADIOBUTTON,380,155,30,10
+    GROUPBOX        "Control Panel",IDC_STATIC,190,180,235,90
+    PUSHBUTTON      "Set GPIO Interrupt Factor",IDC_BUTTON1,197,197,106,29
+    PUSHBUTTON      "Reset GPIO Interrupt Factor",IDC_BUTTON2,318,196,101,13
+    PUSHBUTTON      "Reset Interrupt Counter",IDC_BUTTON3,319,214,100,13
+    PUSHBUTTON      "Wait Single GPIO Interrupt",IDC_BUTTON4,197,233,106,29
+    PUSHBUTTON      "EXIT",IDC_BUTTON5,340,235,60,25
+    GROUPBOX        "Digital Input Interrupt Counter",IDC_STATIC,20,9,155,265
+    EDITTEXT        IDC_EDIT9,100,30,55,12,ES_RIGHT | ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_EDIT10,100,45,55,12,ES_RIGHT | ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_EDIT11,100,60,55,12,ES_RIGHT | ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_EDIT12,100,75,55,12,ES_RIGHT | ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_EDIT13,100,90,55,12,ES_RIGHT | ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_EDIT14,100,105,55,12,ES_RIGHT | ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_EDIT15,100,120,55,12,ES_RIGHT | ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_EDIT16,100,135,55,12,ES_RIGHT | ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_EDIT17,100,150,55,12,ES_RIGHT | ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_EDIT18,100,165,55,12,ES_RIGHT | ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_EDIT19,100,180,55,12,ES_RIGHT | ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_EDIT20,100,195,55,12,ES_RIGHT | ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_EDIT21,100,210,55,12,ES_RIGHT | ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_EDIT22,100,225,55,12,ES_RIGHT | ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_EDIT23,100,240,55,12,ES_RIGHT | ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_EDIT24,100,255,55,12,ES_RIGHT | ES_AUTOHSCROLL | ES_READONLY
+    CTEXT           "Raising Bit 0",IDC_STATIC,35,32,55,10
+    CTEXT           "Raising Bit 2",IDC_STATIC,35,62,55,10
+    CTEXT           "Raising Bit 3",IDC_STATIC,35,77,55,10
+    CTEXT           "Raising Bit 4",IDC_STATIC,34,92,55,10
+    CTEXT           "Raising Bit 5",IDC_STATIC,35,107,55,10
+    CTEXT           "Raising Bit 6",IDC_STATIC,35,122,55,10
+    CTEXT           "Raising Bit 7",IDC_STATIC,34,137,55,10
+    CTEXT           "Raising Bit 1",IDC_STATIC,35,47,55,10
+    CTEXT           "Falling Bit 0",IDC_STATIC,35,152,55,10
+    CTEXT           "Falling Bit 1",IDC_STATIC,34,167,55,10
+    CTEXT           "Falling Bit 2",IDC_STATIC,35,182,55,10
+    CTEXT           "Falling Bit 3",IDC_STATIC,35,197,55,10
+    CTEXT           "Falling Bit 4",IDC_STATIC,35,212,55,10
+    CTEXT           "Falling Bit 5",IDC_STATIC,35,227,55,10
+    CTEXT           "Falling Bit 6",IDC_STATIC,35,242,55,10
+    CTEXT           "Falling Bit 7",IDC_STATIC,35,257,55,10
+    LTEXT           "Bit 1",IDC_STATIC,375,39,20,10
+    LTEXT           "Bit 2",IDC_STATIC,344,39,20,10
+    LTEXT           "Bit 3",IDC_STATIC,314,39,20,10
+    LTEXT           "Bit 4",IDC_STATIC,284,39,20,10
+    LTEXT           "Bit 5",IDC_STATIC,254,39,20,10
+    LTEXT           "Bit 6",IDC_STATIC,224,39,20,10
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "FileDescription", "8144_Interrupt MFC Application"
+            VALUE "FileVersion", "1, 0, 0, 1"
+            VALUE "InternalName", "8144_Interrupt"
+            VALUE "LegalCopyright", "Copyright (C) 2006"
+            VALUE "OriginalFilename", "8144_Interrupt.EXE"
+            VALUE "ProductName", "8144_Interrupt Application"
+            VALUE "ProductVersion", "1, 0, 0, 1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 263
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 55
+    END
+
+    IDD_MY8144_INTERRUPT_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 431
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 281
+        HORZGUIDE, 46
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_ABOUTBOX            "&About 8144_Interrupt..."
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#endif //_WIN32
+#include "res\8144_Interrupt.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

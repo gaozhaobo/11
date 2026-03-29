@@ -1,0 +1,267 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Chinese (Taiwan) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHT)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_TRADITIONAL
+#pragma code_page(950)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHT)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 4, 1\r\n"
+    "#pragma code_page(950)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\PCI_8144_DIO.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""l.cht\\afxres.rc""          // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_ICON1               ICON                    "res\\icon1.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "000004b0"
+        BEGIN
+            VALUE "CompanyName", "ADLINK"
+            VALUE "FileDescription", "PCI_8144_DIO"
+            VALUE "FileVersion", "1, 0, 0, 1"
+            VALUE "InternalName", "PCI_8144_DIO"
+            VALUE "LegalCopyright", "Copyright c 2006"
+            VALUE "OriginalFilename", "PCI_8144_DIO.exe"
+            VALUE "ProductName", "ADLINK PCI_8144_DIO"
+            VALUE "ProductVersion", "1, 0, 0, 1"
+        END
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "FileDescription", "PCI_8144_DIO MFC Application"
+            VALUE "FileVersion", "1, 0, 0, 1"
+            VALUE "InternalName", "PCI_8144_DIO"
+            VALUE "LegalCopyright", "Copyright (C) 2006"
+            VALUE "OriginalFilename", "PCI_8144_DIO.EXE"
+            VALUE "ProductName", "PCI_8144_DIO Application"
+            VALUE "ProductVersion", "1, 0, 0, 1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x0, 1200, 0x409, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_ABOUTBOX            "Ãö©ó PCI_8144_DIO(&A)..."
+END
+
+#endif    // Chinese (Taiwan) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOG  0, 0, 235, 55
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About PCI - 8144 DIO Program"
+FONT 9, "????"
+BEGIN
+    ICON            IDI_ICON1,IDC_STATIC,11,17,20,20
+    LTEXT           "PCI_8144_DIO Version 1.0",IDC_STATIC,40,10,119,8,SS_NOPREFIX
+    LTEXT           "Copyright (C) 2006",IDC_STATIC,40,25,119,8
+    DEFPUSHBUTTON   "OK",IDOK,178,7,50,14,WS_GROUP
+END
+
+IDD_PCI_8144_DIO_DIALOG DIALOGEX 0, 0, 279, 209
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "PCI - 8144 DIO Sample Program"
+FONT 10, "Arial", 0, 0, 0x1
+BEGIN
+    GROUPBOX        "DO State",IDC_STATIC,8,13,48,179
+    GROUPBOX        "DI State",IDC_STATIC,69,13,48,179
+    GROUPBOX        "Set GPIO Output Bits",IDC_STATIC,150,110,103,82
+    CONTROL         "Bit 0",IDC_Bit_0,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,165,125,31,9
+    CONTROL         "Bit 1",IDC_Bit_1,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,165,140,28,9
+    CONTROL         "Bit 2",IDC_Bit_2,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,165,155,31,9
+    CONTROL         "Bit 3",IDC_Bit_3,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,165,170,31,9
+    CONTROL         "Bit 4",IDC_Bit_4,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,210,125,31,9
+    CONTROL         "Bit 5",IDC_Bit_5,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,210,140,31,9
+    CONTROL         "Bit 6",IDC_Bit_6,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,210,155,31,9
+    CONTROL         "Bit 7",IDC_Bit_7,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,210,170,31,9
+    PUSHBUTTON      "Set DO",IDC_BtnSetDO,145,70,55,30
+    PUSHBUTTON      "Get DO",IDC_BtnGetDO,145,30,55,30
+    PUSHBUTTON      "GetDI",IDC_BtnGetDI,205,30,55,30
+    PUSHBUTTON      "EXIT",IDC_BtnExit,205,70,55,30
+    EDITTEXT        IDC_EDIT1,30,25,15,12,ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_EDIT2,30,45,15,12,ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_EDIT3,30,65,15,12,ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_EDIT4,30,85,15,12,ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_EDIT5,30,105,15,12,ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_EDIT6,30,125,15,12,ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_EDIT7,30,145,15,12,ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_EDIT8,30,165,15,12,ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_EDIT9,95,25,15,12,ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_EDIT10,95,45,15,12,ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_EDIT11,95,65,15,12,ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_EDIT12,95,85,15,12,ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_EDIT13,95,105,15,12,ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_EDIT14,95,125,15,12,ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_EDIT15,95,145,15,12,ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_EDIT16,95,165,15,12,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "Bit 0",IDC_STATIC,12,27,16,9
+    LTEXT           "Bit 1",IDC_STATIC,12,47,16,9
+    LTEXT           "Bit 2",IDC_STATIC,12,67,16,9
+    LTEXT           "Bit 3",IDC_STATIC,12,87,16,9
+    LTEXT           "Bit 4",IDC_STATIC,12,107,16,9
+    LTEXT           "Bit 5",IDC_STATIC,12,127,16,9
+    LTEXT           "Bit 6",IDC_STATIC,12,147,16,9
+    LTEXT           "Bit 7",IDC_STATIC,12,166,16,9
+    LTEXT           "Bit 0",IDC_STATIC,76,27,16,9
+    LTEXT           "Bit 1",IDC_STATIC,76,47,16,9
+    LTEXT           "Bit 2",IDC_STATIC,76,67,16,9
+    LTEXT           "Bit 3",IDC_STATIC,76,87,16,9
+    LTEXT           "Bit 4",IDC_STATIC,76,107,16,9
+    LTEXT           "Bit 5",IDC_STATIC,76,126,16,9
+    LTEXT           "Bit 6",IDC_STATIC,76,147,16,9
+    LTEXT           "Bit 7",IDC_STATIC,76,167,16,9
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 228
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 48
+    END
+
+    IDD_PCI_8144_DIO_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 272
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 207
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHT)
+#ifdef _WIN32
+LANGUAGE 4, 1
+#pragma code_page(950)
+#endif //_WIN32
+#include "res\PCI_8144_DIO.rc2"  // non-Microsoft Visual C++ edited resources
+#include "l.cht\afxres.rc"          // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

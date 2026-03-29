@@ -1,0 +1,8 @@
+LIBRARY Caculate_Robot2_V_with_Robot1
+EXPORTS
+Caculate_Robot2_V_with_Robot1Initialize
+Caculate_Robot2_V_with_Robot1InitializeWithHandlers
+Caculate_Robot2_V_with_Robot1Terminate
+Caculate_Robot2_V_with_Robot1PrintStackTrace
+mlxCaculate_Robot2_V_with_Robot1
+

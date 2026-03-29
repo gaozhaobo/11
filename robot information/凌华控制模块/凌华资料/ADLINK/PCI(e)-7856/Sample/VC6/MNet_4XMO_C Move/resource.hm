@@ -1,0 +1,4 @@
+// Microsoft Developer Studio generated Help ID include file.
+// Used by MNET_4XMO_C_VC_Sample.rc
+//
+#define HBtn_SetPointTable              0x80660423    // IDD_MNET_4XMO_C_VC_SAMPLE_DIALOG

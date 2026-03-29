@@ -1,0 +1,14 @@
+key：
+1.各个文件介绍：
+	APS_FunctionLibrary  /  PCIe-8338 Function Library：关于PCIe-8338的函数库使用方法介绍。最为重要
+	Motion_Creator_pro：凌华调试工具使用方法。
+	PT Motion API：函数使用示例程序
+	EPSSeries_50-1Z188 : 关于EPS的介绍，可以先忽略，遇到问题时在查看，一般来讲，这个模块不会出现问题。
+	凌华资料zip ：该压缩包是从凌华官方网站上下载下来的，如果损坏了可以直接去官网下载，里面包含了上述
+	                       所有东西，同时还有三方库、示例程序等重要内容，如果实在看不懂APS_FunctionLibrary 和
+                                        PCIe-8338 Function Library这两个文件，可以先去该文件夹中的PCIe-8338/Sample去看下示
+		      例程序是怎么写的。该文件夹中的APS-SDK非常重要，如果换设备了需要重装SDK，重新设置
+		      环境路径等。
+
+2.APS_FunctionLibrary文件夹和PCIe-8338 Function Library文件夹中关于PCIe-8338的函数介绍是一样的，
+只不过一个是英文版本一个是中文版本。

@@ -1,0 +1,65 @@
+/****************************************************************************/
+/*  Company:ADLink Technology Inc.                                          */  
+/*  Product:LinkMasterPro				                    */
+/*  Purpose:Update history                                                  */  
+/*                                                                          */ 
+/*  Note:                                                                   */
+/*  NEW:Add a new function.                                                 */
+/*  MOD:Modify or fix a function.                                           */
+/*                                                                          */
+/****************************************************************************/
+[2018/12/25] Version : R1.0.1812251
+	A.[User's Manual]				No update
+        B.[Library]   					No update
+        C.[LinkMasterPro]                   		V:1.0.18.12251
+                1) Add SDO object 0x1030 to show slot status.
+        D.[EPS-6000]			ECATFW__EPS-6000_v18121301.bin
+===============================================================================
+[2018/11/16] Version : R1.0.1811161
+	A.[User's Manual]				No update
+        B.[Library]   					No update
+        C.[LinkMasterPro]                   		No update
+        D.[EPS-6000]			ECATFW__EPS-6000_v18110601.bin
+===============================================================================
+[2018/01/08] Version : R1.0.1801081
+	A.[User's Manual]				No update
+        B.[Library]   					No update
+        C.[LinkMasterPro]                   		V:1.0.18.01081
+		1) For the ESI generation, keep the original manual ID value.
+		2) For the tree view of the devices, list the manual ID.
+		3) Added the button in each EPS device to write the manual ID.
+		4) Force Flush EEPROM button added to flush default SII to EEPROM.
+		5) Able to export ESI with 5004 modules.
+        D.[EPS-6000]			ECATFW__EPS-6000_v17120401.bin
+===============================================================================
+[2017/12/08] Version : R1.0.1712081
+        A.[User's Manual]				No update
+        B.[Library]   					No update
+        C.[LinkMasterPro]                   		V:1.0.17.12081
+		1) Disable "Export ESI" button if unknown module(s) is detected.
+		2) Add hint to inform user update firmware or LinkMasterPro version if unknown module(s) is detected.
+		3) Bug fix when 10+ EPS devices is scanned.
+        D.[EPS-6000]			ECATFW__EPS-6000_v17120401.bin
+===============================================================================
+[2017/09/29] Version : R1.0.1709291
+        A.[User's Manual]				No update
+        B.[Library]   					No update
+        C.[LinkMasterPro]                   		V:1.0.17.09271
+		1) Disable "Export ESI" button after finished FoE to avoid invalid process.
+        D.[EPS-6000]			ECATFW__EPS-6000_v17071901.bin
+===============================================================================
+[2017/08/10] Version : R1.0.1708101
+        A.[User's Manual]				No update
+        B.[Library]   					No update
+        C.[LinkMasterPro]                   		V:1.0.17.08041
+		1) Support EPS-1032.
+        D.[EPS-6000]			ECATFW__EPS-6000_v17071901.bin
+===============================================================================
+[2016/12/09] Version : R1.0.0.12091
+        A.[User's Manual]				No update
+        B.[Library]   					No update
+        C.[LinkMasterPro]                   		V:1.0.16.11231
+        D.[EPS-6000]
+===============================================================================
+
+

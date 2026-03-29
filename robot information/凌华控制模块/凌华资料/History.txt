@@ -1,0 +1,757 @@
+---------------------------- Readme File-----------------------------------------
+/*  Company:Adlink Technology Inc.                                             */  
+/*  Product:APS-SDK				                               */ 
+/*  NEW:Add a new function or support a new hardware                           */
+/*  MOD:Modify or fix a function.                                              */
+/*  Miscellaneous : Revise sample,manual,file add, others etc ,.               */
+---------------------------------------------------------------------------------
+****  Hardware Support ****
+PCI-8254(8)
+PCI-8144
+PCI-8102
+PCI(e)-7856
+PCI(e)-8154
+PCI(e)-8158
+AMP-204(8)_C
+PCI-C154+
+PCIe-833x
+EMX-100
+
+****  Supported Operation Systems  ****
+x86 : Window 7,Window 10
+x64 : Window 7,Window 10
+***************************************
+***
+********************** This Update for PCIe-833X, PCI(e)-7856, AMP-204C/208C, PCI-8254/58, EMX-100, PCI(e)-8154, PCI(e)-8158 ******************************
+
+[2019/10/31] Version : R1.1.00.191031
+
+	[APS Manual]		V1.5 [2019.10.04]
+	[PCIe-833x Manual]	V1.1 [2019.10.30]
+	[APS Library] 		V:2019100401
+        [MCP2]			V:2.1.19.10291
+	[FirmwareUpdate]	V:1.18
+	[833x Kernel]		V:2019102503
+	[AMP-204C/208C kernel]	V:2019061401
+	[PCI-8254/58 kernel]	
+	[EMX-100 Library]	V:2019.10.3.1
+		
+
+		
+*****************************************************************************************
+
+
+***************************************  Detail release note  ***********************************************
+
+========================= [2019/10/31] Version : R1.1.00.191031 ======================
+
+	A.[Driver]
+	   
+
+	B.[Manual]
+	   1.[PCIe-833x Manual]			From V1.1 [2019.08.21] to V1.1 [2019.10.30]
+		MOD: Remove pitch compensation.
+		NEW: Add description for board parameter PRB_ECAT_RESTORE_OUTPUT doesn't support EU-6000 series DO modules.
+		MOD: Remove PRB_ECAT_MODE description in card name list.
+		NEW: Add PRB_OP_RETRY_COUNT (0x18) parameter description.
+
+	C.[APS Library]
+	   
+	
+	D.[Utility]
+	   1.[MCP2]				From  V:2.1.19.10042 to V:2.1.19.10291
+	     [MCP2-MDB]				From  V:20191003 to V:20191030
+		MOD: Revise single movement delay time location.
+		MOD: Revise velocity move positive and negative value configuration.
+		NEW: Add connection quality monitor form for engineer test.
+		MOD: PCIe-833x remove axis parameter ENC_SRC_SELECT.
+		MOD: PCIe-833x remove parameter 0x102 ECAT_MODE board.	   
+
+	E.[Firmware]
+	   1.[PCIe-833x]			From V:2019100201 to V:2019102503
+		MOD: Fix first axis servo on issue that when connecting slave topology decrease.	
+
+	F.[Other]
+	   1.[All]
+		MOD: Fix APS_get_field_bus_pdo_offset() & APS_get_field_bus_module_info() declaration in .cs files.
+		MOD: Fix APS_get_2d_compensation_command_position () declaration in .vb files.
+		MOD: Update APS_Define parameter header files.
+
+========================= [2019/10/07] Version : R1.0.18.191007 ======================
+
+	A.[Driver]
+	   
+
+	B.[Manual]
+	   1.[General APS manual]	From V1.5 [2019.10.02] to V1.5 [2019.10.04]
+		MOD: Revise PCIe-7856 version data format description.
+
+	   2.[EMX-100]			From V1.0 [2019.09.16] to V1.0 [2019.10.04]
+		NEW: Add axis parameter PRA_HOME_EZ_DIR, PRA_SERVO_LOGIC.
+	   
+
+	C.[APS Library]			From  V:2019100201 to V:2019100401	
+	   1.[EMX-100]
+		NEW: Add servo on logic and EZ direction axes parameters.
+	
+	D.[Utility]
+	   1.[MCP2]				From  V:2.1.19.10012 to V:2.1.19.10042
+	     [MCP2-MDB]				From  V:20190917 to V:20191003
+		MOD: PCI(e)-7856 revise speed button caption from "M isc." to "Misc".
+		NEW: EMX-100 Add servo on logic and EZ direction parameter.
+	   
+
+	E.[Firmware]
+	   1.[PCIe-833x]			From V:2019100101 to V:2019100201
+		MOD: Recover fine interpolation calculation.
+		
+
+	F.[Other]
+	   1.[All]
+		MOD: Update axis parameter in header file.
+	   
+
+========================= [2019/10/03] Version : R1.0.17.191003 ======================
+
+	A.[Driver]
+	   
+
+	B.[Manual]
+	   1.[General APS manual]	From V1.5 [2019.08.27] to V1.5 [2019.10.02]
+		MOD: Revise PCI(e)-7856 Device information.
+
+	   2.[EMX-100]			From V1.0 [2019.03.19] to V1.0 [2019.09.16]
+		MOD: Update SAMP error code define -913 ERR_EXE_GET_STATUS_TIMEOUT.
+	   
+
+	C.[APS Library]				From  V:2019090901 to V:2019100201
+	   1.[PCI(e)-7856]
+		MOD: Revise PCIe-7856 FPGA version description with decimal.
+		MOD: Fix APS_set_field_bus_param() set PRF_INITIAL_TYPE = 0 would not reset DO output while re-connect HSL-fieldbus issue.
+		MOD: Fix APS_get_field_bus_param() get PRF_INITIAL_TYPE would return error issue.
+
+	   2.[PCIe-8338]
+		MOD: Fix APS_get_field_bus_analysis_topology API will return -13 error code (delete file fail)with some computer.
+
+	   3.[PCI-8254/8 & AMP-204/8]
+		NEW: Support 2D compensation.
+	
+	D.[Utility]
+	   1.[MCP2]				From  V:2.1.19.09111 to V:2.1.19.10012
+	     [MCP2-MDB]				From  V:20190905 to V:20190917
+		MOD: PCIe-833x fix sometimes open or close sampling form with over 16 axes topology will access violation issue.
+		MOD: PCIe-833x revise PDO code When disconnect field bus and keep opening PDO form.
+		MOD: PCIe-833x fix kernel performance consuming time would sometimes very large value occur bug.
+		MOD: PCI(e)-7856 revise 2D Operation form layout for set position text description.
+		MOD: PCI(e)-7856 revise MIsc form caption from PCI-7856 to PCIe-7856.
+		MOD: PCI(e)-7856 revise version info from CPLD to CPLD/FPGA.
+		MOD: PCI(e)-7856 remove axis parameter GPDO_SEL of MNET 4XMO-C.
+
+	E.[Firmware]
+	   1.[PCIe-833x]			From V:2019090901 to V:2019100101
+		MOD: Modify DO restore function, if the IO slave is not ADLINK supported will not do restore value function.
+		MOD: Modify EC_GetMdiStatus() to prevent can't get DigitalInput value when PDO offset is 0.
+		MOD: Fix measure loop loading over 100% or smaller than 0% issue.
+
+	F.[Other]
+	   1.[PCIe-833x]
+		NEW: Add new ESI file.
+
+	   2.[All]
+		MOD: Add DEVICE_NAME_PCIE_7856 to APS_define.cs & .vb files.
+		MOD: Add PRA_EGEAR_SOURCE(0x66) define in .cs file.
+
+========================= [2019/9/12] Version : R1.0.16.190912 ======================
+
+	A.[Driver]
+	   
+
+	B.[Manual]
+	   
+
+	C.[APS Library]				From  V:2019082701 to V:2019090901
+	   1.[PCIe-833x]
+		MOD: Fix APS_get_field_bus_d_channel_input API return time become 4 times with IO access mode 2.
+		MOD: Fix EU-1008 or 1108 module can't see PDO information in MCP2 issue.
+	   2.[ALL]
+		NEW: Support for the maximum number of axes is 384 axes.
+	
+	D.[Utility]
+	   1.[MCP2]				From  V:2.1.19.08291 to V:2.1.19.09111
+	     [MCP2-MDB]				From  V:20190821 to V:20190905
+		MOD: Fix SDO form read write OD when OD is not in OD table.
+		MOD: Fix click any other tree view component that Field bus tree view does not display issue during starting field bus.
+		MOD: Fix open SDO form no display issue.
+		MOD: Revise MNET-4XMO database, remove ADCNC and Fast Index speed button.
+		MOD: PCI-82458 Fix import sampling data with PTBUFF condition pop "Format wrong for Sampling data" message box issue.
+
+	E.[Firmware]
+	   1.[PCIe-833x]			From V:2019073101 to V:2019090901
+		MOD: Fix GPM-4XMO set DO wrong value bug.
+		MOD: Modify restore function, if the IO slave is not ADLINK supported will not do restore value function.
+		NEW: EC_GetMdiStatus support oriental motor PEL and MEL define.
+		MOD: Fix Mitsubishi Mdi without Home and EMG.
+
+	F.[Other]
+	   1.[EMX-100]				From V:2019.08.12.01 to V:2019.09.09.01
+		MOD: Remove dump log file.
+		
+========================= [2019/8/29] Version : R1.0.15.190829 ======================
+
+	A.[Driver]
+	   1.[PCIe-833x]			From V:17.2.22.1 to V201908161 
+	   	MOD: Support DPRAM access through memory mapped.
+
+	B.[Manual]
+	   1.[General APS manual]	From V1.5 [2017.09.30] to V1.5 [2019.08.27]
+		NEW: Add PCIe-7856 related description
+		MOD: Revise manual about sampling source description  
+ 
+	   1.[PCIe-833x Manual]		From  V1.1 [2019.08.07] to V1.1 [2019.08.21]
+		NEW: Add card name define about PCIe-7856.
+
+	C.[APS Library]				From  V:2019081402 to V:2019082701
+	   1.[PCIe-7856]
+		NEW: Add new card PCIe-7856.
+		NEW: Add set sampling param value over range then return error
+	   2.[PCIe-833x]
+		MOD: Revise EU-4304 convert formula.
+	
+	D.[Utility]
+	   1.[MCP2]				From  V:2.1.19.08131 to V:2.1.19.08291
+	     [MCP2-MDB]				From  V:20190807 to V:20190821
+		NEW: Add sampling data import function for PCI-8254_8,PCIe-833x,AMP-204_8C
+		NEW: Support PCIe-7856
+		MOD: Fix PCI(e)-7856 Axis ID > 0 will keep waiting sampling data bug.
+		NEW: Add RDY logic and IO status for 4XMO module.
+
+	E.[Firmware]
+
+	F.[Other]
+	   1.[PCI(e)-7856]
+		MOD: Sample code update.
+
+========================= [2019/8/19] Version : R1.0.14.190819 ======================
+
+	A.[Driver]				V:17.2.22.1
+	   1.[PCI(e)-8154 & PCI(e)-8158]
+	   	MOD: Correct wrong version file.
+
+	B.[Manual]
+	    1.[PCIe-833x Manual]		From  V1.1 [2019.07.15] to V1.1 [2019.08.07]
+		MOD: Super link correction for table of contents.
+		MOD: Fix gear application description.
+		MOD: APS_set_axis_param() sample code description.
+
+	C.[APS Library]				From  V:2019.7.31.1 to V:2019081402
+	   1.[PCI-7856, MNET-4xMO]
+		NEW: Add two new functions: APS_absolute_arc_move_f(), APS_relative_arc_move_f().
+	   2.[PCIe-833x, Slave 4XMO module]	
+		NEW: Add new parameter for table comparator reuse.
+		NEW: Add DDA pulse generation control in APS_reset_command_counter().
+	   3.[Common]
+		MOD: Update C/C++, Vb, C#, BCB header files.
+	
+	D.[Utility]
+	   1.[MCP2]				From  V:2.1.19.07171 to V:2.1.19.08131
+	     [MCP2-MDB]				From  V:20190711 to V:20190807
+		MOD: Revise Alarm status to HAlarm status for slave 4XMO module.
+		MOD: Revise EMG logic operation with synch mode for slave 4XMO module.
+		MOD: Fix DIO speed button function error bug.
+		NEW: Add table comparator reuse button for slave 4XMO module.
+	   2.[PCI-8254_8 PID_optimizer]		
+		NEW: Avaliable to open with administrator access.
+
+	E.[Firmware]
+	   1.[AMP-204C/208C&PCI-8254/58 KERNEL] From  V:2018042301 to V:2019061401
+
+	F.[Other]
+	   1.[EMX-100 Library]			From  V:2019.05.28.01 to V:2019.08.12.01
+		MOD: Fix issue for driver automatically servo off.
+		MOD: Fix issue for 2nd device COM3 motion time-out and stop.
+
+========================= [2019/8/19] Version : R1.0.14.190819 ======================
+
+	A.[Driver]				V:17.2.22.1
+	   1.[PCI(e)-8154 & PCI(e)-8158]
+	   	MOD: Correct wrong version file.
+
+	B.[Manual]
+	    1.[PCIe-833x Manual]		From  V1.1 [2019.07.15] to V1.1 [2019.08.07]
+		MOD: Super link correction for table of contents.
+		MOD: Fix gear application description.
+		MOD: APS_set_axis_param() sample code description.
+
+	C.[APS Library]				From  V:2019.7.31.1 to V:2019081402
+	   1.[PCI-7856, MNET-4xMO]
+		NEW: Add two new functions: APS_absolute_arc_move_f(), APS_relative_arc_move_f().
+	   2.[PCIe-833x, Slave 4XMO module]	
+		NEW: Add new parameter for table comparator reuse.
+		NEW: Add DDA pulse generation control in APS_reset_command_counter().
+	   3.[Common]
+		MOD: Update C/C++, Vb, C#, BCB header files.
+	
+	D.[Utility]
+	   1.[MCP2]				From  V:2.1.19.07171 to V:2.1.19.08131
+	     [MCP2-MDB]				From  V:20190711 to V:20190807
+		MOD: Revise Alarm status to HAlarm status for slave 4XMO module.
+		MOD: Revise EMG logic operation with synch mode for slave 4XMO module.
+		MOD: Fix DIO speed button function error bug.
+		NEW: Add table comparator reuse button for slave 4XMO module.
+	   2.[PCI-8254_8 PID_optimizer]		
+		NEW: Avaliable to open with administrator access.
+
+	E.[Firmware]
+	   1.[AMP-204C/208C&PCI-8254/58 KERNEL] From  V:2018042301 to V:2019061401
+
+	F.[Other]
+	   1.[EMX-100 Library]			From  V:2019.05.28.01 to V:2019.08.12.01
+		MOD: Fix issue for driver automatically servo off.
+		MOD: Fix issue for 2nd device COM3 motion time-out and stop.
+
+========================= [2019/8/1] Version : R1.0.13.190801 ======================
+
+---------------------------   Revision for PCI-C154+    ------------------------- 
+        A.[Driver]
+	   1.PCI-C154                            V:17.2.22.1     
+
+        B.[Manual]
+            1.[APS Function Library User's Manual]  From  V1.1 [2019.07.15] to V1.1 [2019.07.30]      
+	      NEW: Update APS manual to revise IMDN description.
+         C.[Library]
+            1.[APS Library]                         From  V:2019.7.18.4 to V:2019.7.31.1 
+	      MOD: Fix compare trigger function fail.
+
+	D.[Kernel]                                  From  V:2019071801 to V:2019073101
+              MOD: Support AIO sub-module number 32 per slave.             	    
+	      
+        E.[Sample]
+	         
+	F.[FirmwareUpdate]			    V:1.18           
+             
+        G.[MCP2]                                    V:2.1.19.07171
+	     
+	H.[MCP2 MDB]				    V:20190711
+	      
+	I.[Others]
+========================= [2019/7/19] Version : R1.0.12.190719 ======================
+
+---------------------------   Revision for PCIe-833x    ------------------------- 
+        A.[Driver]
+	   1.PCIe-833x                             V:17.2.22.1     
+
+        B.[Manual]
+            1.[APS Function Library User's Manual]  From V1.1 [2019.07.11] to V1.1 [2019.07.15]	      
+	      NEW: Add APS_reset_command_counter description.
+         C.[Library]
+            1.[APS Library]                         From  V:2019.7.11.1 to V:2019.7.18.4
+	      MOD: Fix APS_stop_field_bus then call APS_start_field_bus will fail bug.
+
+	D.[Kernel]                                  From  V:2019071103 to V:2019071801
+              MOD: AO restore function can't restore the correct value for EU-6000 and EPS-6000.              	    
+	      NEW: Add new PDO define for table compare data reuse.
+        E.[Sample]
+	         
+	F.[FirmwareUpdate]			    From V:1.17 to V:1.18           
+             MOD: Fix muiti-card(PCI-8254,AMP-204C,C154+) with system initial fail then program crush bug.
+        G.[MCP2]                                    From V:2.1.19.07091 to V:2.1.19.07171
+	     MOD:Fix tree view click CardNo no icon display bug.
+	     MOD:Revise return error code of repeat movement for detail.
+	H.[MCP2 MDB]				    V:20190711
+	      
+	I.[Others]
+
+========================= [2019/7/12] Version : R1.0.11.190712 ======================
+
+---------------------------   Revision for PCIe-833x    ------------------------- 
+        A.[Driver]
+	   1.PCIe-833x                             V:17.2.22.1     
+
+        B.[Manual]
+            1.[APS Function Library User's Manual]  From V1.1 [2019.07.05] to V1.1 [2019.07.11]	      
+	      NEW: Add Board parameter PRB_ECAT_SYNC_OFFSET 0x20
+         C.[Library]
+            1.[APS Library]                         From  V:2019.7.04.1 to V:2019.7.11.1
+	      MOD: APS_load_param_from_file issue
+	      
+
+	D.[Kernel]                                  From V:2019070302 to V:2019071103
+              NEW: Add sync offset access function              	    
+
+        E.[Sample]
+	       
+	F.[FirmwareUpdate]			    V:1.17              
+ 
+        G.[MCP2]                                    From V:2.1.19.06281 to V:2.1.19.07091
+	      NEW:Support PCIe-8332/1
+	H.[MCP2 MDB]				    From V:20190625 to V:20190711
+	      
+	I.[Others]
+
+---------------------------   Revision for AMP-204_8C    ------------------------- 
+        A.[Library]
+            1.[APS Library]                         From V:2019.7.04.1to V:2019.7.11.1
+	      MOD:Fix APS_load_vmc_program and APS_save_vmc_program issue for x64 version(Access wrong IECx64.dll )
+	      
+	
+---------------------------   Revision for PCI-C154+    ------------------------- 
+        A.[Library]
+            1.[APS Library]                         From V:2019.7.04.1 to V:2019.7.11.1
+	      MOD:Fix APS initial fail for x64 dll issue.
+	      
+	
+========================= [2019/7/5] Version : R1.0.10.190705 ======================
+
+---------------------------   Revision for PCIe-833x    ------------------------- 
+        A.[Driver]
+	   1.PCIe-8338                             V:17.2.22.1
+              NEW: Support PCIe-8334 & PCIe-8332 or other PCIe-833x card
+	   2.PCIe-8334
+	      Remove unique file, then merge to PCIe-8338
+
+        B.[Manual]
+            1.[APS Function Library User's Manual]  V1.1 [2019.07.05]
+	      MOD: Delete PCIe-8334_8 Function Library V1.1
+	      NEW: Add PCIe-833x Function Library V1.1
+
+         C.[Library]
+            1.[APS Library]                         From V:2019.6.28.2 to V:2019.7.04.1
+	      NEW: Support PCIe-8332
+	      NEW: Add 2 board parameters 0x19 & 0x1A
+	      NEW: Depend on board parameters 0x19 & 0x1A, would have different servo on process
+
+	D.[Kernel]                                  From V: 2019062801 to V:2019070302
+              NEW: Add 2 board parameters 0x19 & 0x1A
+              NEW: Support PCIe-8332	    
+
+        E.[Sample]
+	       
+	F.[FirmwareUpdate]			    From V:1.16	     	to V:1.17
+              NEW: Support PCIe-8332
+ 
+        G.[MCP2]                                    V:2.1.19.06281
+
+	H.[MCP2 MDB]				    V:20190625
+	      
+	I.[Others]
+
+========================= [2019/6/28] Version : R1.0.9.19628 ======================
+
+---------------------------   Revision for PCIe-8334(8)    ------------------------- 
+        A.[Driver]
+	    1.PCIe-8338                             V:17.2.22.1
+	    2.PCIe-8334                             V:18.7.5.1
+
+        B.[Manual]
+            1.[APS Function Library User's Manual]  V1.1 [2019.04.29]
+
+         C.[Library]
+            1.[APS Library]                         From V:2019.5.20.1 to V:2019.6.28.2
+	      NEW: Support GPM-4XMO compare / trigger / latch function.
+	      MOD: SDO & ESC register r/w function modify.
+
+	D.[Kernel]                                  From V:2019052001 to V: 2019062801
+              NEW: Support GPM-4XMO compare / trigger / latch function.
+	      MOD: SDO & ESC register handshake channel modify.
+              MOD: Ecat loop : Motion loop from 1:4 -> 1:2.
+          			  
+        E.[Sample]
+	       
+	F.[FirmwareUpdate]			    V1.16	      
+ 
+        G.[MCP2]                                    From V:2.1.19.05211 to V:2.1.19.06281
+              NEW: Add get set slave state API and function to SDO form.
+	      NEW: Support GPM-4XMO compare / trigger / latch page.
+	      MOD: Fix multi-GPM-4XMO modules wrong axis with many slaves.
+	      MOD: Fix open board param. form page while disconnect field bus.
+
+	H.[MCP2 MDB]				    From V:20190425 to V:20190625
+	      
+	I.[Others]
+
+------------------------------------   EMX-100  ------------------------------------- 
+        A.[Manual]
+            1.[EMX-100 Function Library] 			V1.0 [2018.11.09]
+        B.[Library]	
+            1.[APS Library]                        		From V:2019.5.20.1 to V:2019.6.28.2
+              MOD: Fix load PRA_ALM_LOGIC issue
+	C.[Sample]
+	D.[MCP2]                                   		From V:2.1.19.05211 to V:2.1.19.06281
+	E.[Others]
+	    1.FAMC01.exe					From V:	2018082102 to V: 2018091701
+	    2.FAMC-01.dll					From V: 2018110901 to V: 2019052801
+	      MOD: Fix compare/trigger function not work with negative direction.
+
+========================= [2019/5/21] Version : R1.0.8.19521 ======================
+
+---------------------------   Revision for PCIe-8334(8)    ------------------------- 
+        A.[Driver]
+	    1.PCIe-8338                             V:17.2.22.1
+	    2.PCIe-8334                             V:18.7.5.1
+
+        B.[Manual]
+            1.[APS Function Library User's Manual]  From V1.1 [2019.04.24] to V1.1 [2019.04.29]
+ 
+        C.[Library]
+            1.[APS Library]                         From V:2019.5.8.1 to V:2019.5.20.1
+	      MOD: Revise APS_get_field_bus_analysis_topology() prototype in C# header
+	      MOD: Fix APS_get_field_bus_analysis_topology bug about keep original xml file when re start field bus bug,insert in cabel then reexcute API that change topology,
+	      MOD: Fix miss some OD list with SDO bug.
+
+	D.[Kernel]                                  From V:V:2019050803 to V:2019052001
+              MOD: Revise OD list handshake command for OD number and remove OD number limitation.
+          			  
+        E.[Sample]
+	       
+	F.[FirmwareUpdate]			    V1.16	      
+ 
+        G.[MCP2]                                    From V:2.1.19.05081 to V:2.1.19.05211
+              NEW: Add I64 and U64 datatype with SDO form.	      
+	      MOD: Fix 4XMO encoder direction definition (Inverse 0,Not inverse 1).
+	      MOD: Revise 4XMO ALM signal naming to HALM.
+	H.[MCP2 MDB]				    V:20190425
+	      
+	I.[Others]
+
+------------------------------------   EMX-100  ------------------------------------- 
+        A.[Manual]
+            1.[EMX-100 Function Library] 			V1.0 [2018.11.09]
+        B.[Library]	
+            1.[APS Library]                        		From V:2019.5.8.1 to V:2019.5.20.1
+	C.[Sample]
+	D.[MCP2]                                   		From V:2.1.19.05081 to V:2.1.19.05211
+	    MOD: Revise EMX-100 enable / disable combobox naming rule
+	E.[Others]
+	    1.FAMC SW update file 					show V: 2018082101
+	    2.FAMC01.exe						V: 2018082102
+	    3.FAMC-01.dll						V: 2018110901
+	    4.FAMC01_Config.ini
+------------------------------------   PCI-8254_8  ------------------------------------- 
+        A.[MCP2]						From V:2.1.19.05081 to V:2.1.19.05211
+	    MOD:1.Add dwell option to save to file function of ADCNC feeder function.   
+	    
+
+========================= [2019/5/9] Version : R1.0.7.190509 ======================
+---------------------   Revision for PCIe-8338   ------------------------- 
+        A.[Driver]
+	    1.PCIe-8338                             V:17.2.22.1
+	    2.PCIe-8334                             V:18.7.5.1
+
+        B.[Manual]
+            1.[APS Function Library User's Manual]  V1.1 [2019.04.24]
+ 
+        C.[Library]
+            1.[APS Library]                         From V:2019.5.3.1 to V:2019.5.8.1
+	      MOD: 1.Fix GPM-4XMO set and get DIO by port and channel with mode 0 and 2.
+	
+	D.[Kernel]                                  From V:2019041701to V:2019050803
+
+              MOD:Fix bug and add DIO support(mode0 & 2) for GPM-4XMO.
+         			  
+        E.[Sample]
+	       
+        F.[MCP2]                                    From V:2.1.19.04231 to V:2.1.19.05081
+	  MOD:Optimize ESC data refresh timer code.
+	  MOD:Update parser dll
+	  NEW:Module info structure member All_ModuleType.	  
+	  MOD:Update GPM-4XMO IO logic definition. 
+ 	      
+	G.[MCP2 MDB]				    V:20190425
+
+------------------------------------   EMX-100  ------------------------------------- 
+        A.[Manual]
+            1.[EMX-100 Function Library] 			V1.0 [2018.11.09]
+        B.[Library]	
+            1.[APS Library]                        		From V:2019.4.25.2 to V:2019.5.8.1
+	C.[Sample]
+	D.[MCP2]                                   		From V:2.1.19.04231 to V:2.1.19.05081
+	  NEW:Add Enable/Disable EMX-100 register function to Combobox
+	E.[Others]
+	    1.FAMC SW update file 					show V: 2018082101
+	    2.FAMC01.exe						V: 2018082102
+	    3.FAMC-01.dll						V: 2018110901
+	    4.FAMC01_Config.ini 
+
+========================= [2019/5/3] Version : R1.0.6.190503 ======================
+---------------------   Revision for PCI-(e)8154 & PCI(e)-8158    ------------------------- 
+        A.[Driver]
+	    1.PCI(e)-8154			    From V:160511	V:190430
+	    2.PCI(e)-8158			    From V:101109	V:190503
+
+        B.[Manual]
+            1.[APS Function Library User's Manual]  V1.1 [2019.04.24]
+ 
+        C.[Library]
+            1.[APS Library]                         From V:2019.4.25.2 to V:2019.5.3.1
+	      MOD: Fix APS_initial use driver mapped memory 
+                   cause access memory violation problem.
+         			  
+        D.[Sample]
+	       
+        G.[MCP2]                                    V:2.1.19.04231
+ 	      
+	H.[MCP2 MDB]				    V:20190425
+
+
+========================= [2019/4/25] Version : R1.0.5.190425 ======================
+
+---------------------------   Revision for PCIe-8334(8)    ------------------------- 
+        A.[Driver]
+	    1.PCIe-8338                             V:17.2.22.1
+	    2.PCIe-8334                             V:18.7.5.1
+
+        B.[Manual]
+            1.[APS Function Library User's Manual]  From V1.1 [2019.1.11] to V1.1 [2019.04.24]
+ 
+        C.[Library]
+            1.[APS Library]                         From V:2019.1.16.1 to V:2019.4.25.2
+	      MOD: Revise in servo on status that servo on again 
+		   that will change status from servo on -> servo off -> servo on
+              NEW: Support APS_get_field_bus_analysis_topology API
+	      NEW: Add member All_ModuleType[32] to PEC_MODULE_INFO structure.
+	      NEW: Add a customized ESI xml parser API to ApsXmoParser.lib
+
+	D.[Kernel]                                  From V:2019022001 to V:2019041701
+              NEW:Support GPM-4XMO DIO access mapping
+          			  
+        E.[Sample]
+	       
+	F.[FirmwareUpdate]			    V1.16	      
+ 
+        G.[MCP2]                                    V:2.1.19.02221 to V:2.1.19.04231
+              NEW: Support vendor ID,Kaifull 0x4B , MOONS' 0x168 to database.
+	      NEW: Support ESC monitor timer of SDO form.
+	      MOD: Fix get DI value in thread.
+	      MOD: Fix close 4XMO form error when open form then disconnect field bus then close form.
+	      MOD: Revise ADLINK string to GPM-4XMO.
+	      MOD: Revise GPM-4XMO logic name from inverse, not inverse to normal close and normal open.
+	      
+	H.[MCP2 MDB]				    V:201902221 to V:20190425
+	      MOD: For MCP2 revised things
+	I.[Others]
+
+------------------------------------   EMX-100  ------------------------------------- 
+        A.[Manual]
+            1.[EMX-100 Function Library] 			V1.0 [2018.11.09]
+        B.[Library]	
+            1.[APS Library]                        		From V:2019.1.16.1 to V:2019.4.25.2
+	      MOD:Fix APS_load_param_from_file issue for axis parameter 0x02,0x1D,0x80 and board parameter 0x51.
+	C.[Sample]
+	D.[MCP2]                                   		From V:2.1.18.11091 to V:2.1.19.04231
+	E.[Others]
+	    1.FAMC SW update file 					show V: 2018082101
+	    2.FAMC01.exe						V: 2018082102
+	    3.FAMC-01.dll						V: 2018110901
+	    4.FAMC01_Config.ini 
+
+========================= [2019/3/4] Version : R1.0.4.190304 ======================
+---------------------------   Revission for PCIe-8334(8)    ------------------------- 
+        A.[Driver]
+	    1.PCIe-8338                             V:17.2.22.1
+	    2.PCIe-8334                             V:18.7.5.1
+
+        B.[Manual]
+            1.[APS Function Library User's Manual]  From V1.1 [2018.12.13] to V1.1 [2019.1.11]
+ 
+        C.[Library]
+            1.[APS Library]                         From V:2018.12.13.1 to V:2019.1.16.1              
+	      MOD:Fix AO input 10V will return output 0V issue.
+              NEW:Add error code -1011 ERR_MissESIFileOrMissENIPath.	      
+
+	D.[Kernel]                                  From V:2018121001 to V:2019022001
+              NEW:Support 4XMO module.
+          			  
+        E.[Sample]
+	       
+	F.[FirmwareUpdate]			    V1.16	      
+ 
+        G.[MCP2]                                    V:V:2.1.18.12121 to V:2.1.19.02221
+              NEW: Support 4XMO module.
+	      MOD: Fix SDO read function error.
+	      MOD: Fix EU AIO resolution from 65536->65535.	      	
+	H.[MCP2 MDB]				    V:20181026 to V:201902221
+	      MOD: Remove IO access mode 1 -> reserve.	
+	I.[Others]
+
+
+========================= [2018/12/19] Version : R1.0.3.181219 ======================
+---------------------------   Revission for PCIe-8334(8)    ------------------------- 
+        A.[Driver]
+	    1.PCIe-8338                             V:17.2.22.1
+	    2.PCIe-8334                             V:18.7.5.1
+
+        B.[Manual]
+            1.[APS Function Library User's Manual]  V1.1 [2018.12.13]
+ 
+        C.[Library]
+            1.[APS Library]                         From V:2018.11.21.1 to V:2018.12.13.1              
+	      NEW:Add API APS_get_field_bus_ESC_register.
+              NEW:Add API APS_set_field_bus_ESC_register.
+	      NEW:Add API APS_get_system_loading.
+
+	D.[Kernel]                                  From V:2018112101 to V:2018121001
+              NEW:Add two handshake command for ESC error register
+          			  
+        E.[Sample]
+	       
+	F.[FirmwareUpdate]			    V1.16	      
+ 
+        G.[MCP2]                                    V:2.1.18.11211 to V:2.1.18.12121
+              NEW: New monitor page for ESC error register.
+	      MOD: Revise SDO tabsheet switch function.
+	H.[Others]
+
+========================= [2018/11/23] Version : R1.0.2.181123 ======================
+---------------------------   Revission for PCIe-8334(8)    ------------------------- 
+        A.[Driver]
+	    1.PCIe-8338                             V:17.2.22.1
+	    2.PCIe-8334                             V:18.7.5.1
+        B.[Manual]
+            1.[APS Function Library User's Manual]  V1.1 [2018.10.31] 
+        C.[Library]
+            1.[APS Library]                         From V:2018.11.12.1 to V:2018.11.21.1
+              MOD:Add handshake size for getting filed bus module info from 32 to 33
+	      NEW:Add verify data mechanism after kernel updating.
+	      MOD:Fix EU get wrong AI module data bug.
+	      MOD:Revise EU product code = 0x100,DIO module type (EU-1008 = 0x6,EU-1108 = 0x9)
+	D.[Kernel]                                  From V:2018111201 to V:2018112101
+              MOD:Support EU-6000 DIO to 32 modules, original is 16.
+	      MOD:Fix universal interface to align 32 modules. 
+	      MOD:Revised EU-6000 DIO module ID to new version.
+	      MOD:Support EU-6000 DIO to 32 modules, original is 16.          			  
+        E.[Sample]	       
+	F.[FirmwareUpdate]			    From V1.15 to V1.16
+	      MOD:Fix PCIe-833x download fail sometimes and return -45 error code to remind user to update again. 
+        G.[MCP2]                                    From V:2.1.18.10261 to V:2.1.18.11211
+              MOD:Revise PDO Sub_Module_info size from 32 to 33
+	      MOD:Fix start field bus system crush with over 2 slave condition.
+	      MOD:Revise EU DIO define APS
+	H.[Others]
+
+========================= [2018/11/12] Version : R1.0.1.181112 ======================
+------------------------------------   EMX-100  ------------------------------------- 
+        A.[Manual]
+            1.[APS Function Library User's Manual] 			V1.0 [2018.11.09]
+        B.[Library]	
+            1.[APS Library]                        			V:2018.11.09.1
+	C.[Sample]
+	D.[MCP2]                                   			V:2.1.18.11091
+	E.[Others]
+	    1.FAMC SW update file 					show V: 2018082101
+	    2.FAMC01.exe						V: 2018082102
+	    3.FAMC-01.dll						V: 2018110901
+	    4.FAMC01_Config.ini 
+
+========================= [2018/08/31] Version : R1.0.0.180831 =======================
+---------------------------------  1st version of APS kit  --------------------------- 
+	[APS Library] V:2018.8.16.2
+		NEW : Support PCI-8254(8),PCI-8144,PCI-8102,PCI-7856,PCI-8158A,PCI(e)-8154,PCI(e)-8158,AMP-204(8)_C,C154,PCIe-8338
+	[MCP2]V:2.1.18.08101
+		NEW : Support PCI-8254(8),PCI-8144,PCI-8102,PCI-7856,PCI-8158A,PCI(e)-8154,PCI(e)-8158,AMP-204(8)_C,C154,PCIe-8338
+	[MCP2 MDB]V:20180704
+		NEW : Support PCI-8254(8),PCI-8144,PCI-8102,PCI-7856,PCI-8158A,PCI(e)-8154,PCI(e)-8158,AMP-204(8)_C,C154,PCIe-8338
+	[Miscellaneous]
+		New: Add APS manual and naindividual product manuals.
+		New: Add sample code for PCI-8254(8),PCI-8144,PCI-8102,PCI-7856,PCI-8158A,PCI(e)-8154,PCI(e)-8158,AMP-204(8)_C,C154,PCIe-8334(8) 
+
+****************************************************************************************          

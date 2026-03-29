@@ -1,0 +1,15 @@
+LIBRARY Robot_kine
+EXPORTS
+Robot_kineInitialize
+Robot_kineInitializeWithHandlers
+Robot_kineTerminate
+Robot_kinePrintStackTrace
+mlxCaculate_Robot2_V_with_Robot1
+mlxCaculate_Robot2_V_with_Robot1_2
+mlxCaculate_Robot2_V_with_Robot1_continue
+mlxRobot_ikine
+mlxRobot_ikine_Tool
+mlxRobot_kine
+mlxRobot_kine_Tool
+mlxTrans_Robot_Camera
+

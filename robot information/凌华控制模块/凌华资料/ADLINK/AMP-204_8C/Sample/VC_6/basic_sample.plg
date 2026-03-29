@@ -1,0 +1,65 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: basic_sample - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x404 /fo"Debug/basic_sample.res" /d "_DEBUG" "C:\Program Files (x86)\ADLINK\PCI-8254_8\Sample\VC_6\basic_sample.rc"" 
+Creating temporary file "C:\Users\CZ\AppData\Local\Temp\RSPB46C.tmp" with contents
+[
+/nologo /MTd /W3 /Gm /GX /ZI /Od /I "../../../APS Library/Include" /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_MBCS" /FR"Debug/" /Fp"Debug/basic_sample.pch" /YX /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"C:\Program Files (x86)\ADLINK\PCI-8254_8\Sample\VC_6\Axis_Monitor.cpp"
+"C:\Program Files (x86)\ADLINK\PCI-8254_8\Sample\VC_6\basic_sample.cpp"
+"C:\Program Files (x86)\ADLINK\PCI-8254_8\Sample\VC_6\basic_sampleDlg.cpp"
+"C:\Program Files (x86)\ADLINK\PCI-8254_8\Sample\VC_6\CmpTrig.cpp"
+"C:\Program Files (x86)\ADLINK\PCI-8254_8\Sample\VC_6\Get_Version.cpp"
+"C:\Program Files (x86)\ADLINK\PCI-8254_8\Sample\VC_6\Motion.c"
+"C:\Program Files (x86)\ADLINK\PCI-8254_8\Sample\VC_6\PWM_VAO.cpp"
+]
+Creating command line "cl.exe @C:\Users\CZ\AppData\Local\Temp\RSPB46C.tmp" 
+Creating temporary file "C:\Users\CZ\AppData\Local\Temp\RSPB46D.tmp" with contents
+[
+/nologo /MTd /W3 /Gm /GX /ZI /Od /I "../../../APS Library/Include" /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_MBCS" /FR"Debug/" /Fp"Debug/basic_sample.pch" /Yc"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"C:\Program Files (x86)\ADLINK\PCI-8254_8\Sample\VC_6\StdAfx.cpp"
+]
+Creating command line "cl.exe @C:\Users\CZ\AppData\Local\Temp\RSPB46D.tmp" 
+Creating temporary file "C:\Users\CZ\AppData\Local\Temp\RSPB46E.tmp" with contents
+[
+APS168.lib /nologo /subsystem:windows /incremental:yes /pdb:"Debug/basic_sample.pdb" /debug /machine:I386 /out:"Debug/basic_sample.exe" /pdbtype:sept /libpath:"../../../APS Library" 
+".\Debug\Axis_Monitor.obj"
+".\Debug\basic_sample.obj"
+".\Debug\basic_sampleDlg.obj"
+".\Debug\CmpTrig.obj"
+".\Debug\Get_Version.obj"
+".\Debug\Motion.obj"
+".\Debug\PWM_VAO.obj"
+".\Debug\StdAfx.obj"
+".\Debug\basic_sample.res"
+]
+Creating command line "link.exe @C:\Users\CZ\AppData\Local\Temp\RSPB46E.tmp"
+<h3>Output Window</h3>
+Compiling resources...
+Compiling...
+StdAfx.cpp
+Compiling...
+Axis_Monitor.cpp
+basic_sample.cpp
+basic_sampleDlg.cpp
+CmpTrig.cpp
+Get_Version.cpp
+Motion.c
+PWM_VAO.cpp
+Linking...
+Creating command line "bscmake.exe /nologo /o"Debug/basic_sample.bsc"  ".\Debug\StdAfx.sbr" ".\Debug\Axis_Monitor.sbr" ".\Debug\basic_sample.sbr" ".\Debug\basic_sampleDlg.sbr" ".\Debug\CmpTrig.sbr" ".\Debug\Get_Version.sbr" ".\Debug\Motion.sbr" ".\Debug\PWM_VAO.sbr""
+Creating browse info file...
+<h3>Output Window</h3>
+
+
+
+<h3>Results</h3>
+basic_sample.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

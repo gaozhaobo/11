@@ -6,12 +6,14 @@
 #include<time.h>
 #include "opencv2/opencv.hpp"
 #include<math.h>
+#include <cmath>
 #include<Eigen/Dense>
 #include"Robot_kine.h"
 #include<thread>
 #include <string>
 #include <codecvt>
 #include <locale>
+#include <QDebug>
 using namespace std;
 
 double constexpr PI = 3.1415926;
@@ -27,6 +29,15 @@ MainWindow::MainWindow(int chose,int index_1, I32 *nums_1, double *p2r_1, double
     , ui(new Ui::MainWindow)  
 {
     ui->setupUi(this);
+    questRobotClient = new QuestRobotApiClient(this);
+    questRobotClient->setServer("http://127.0.0.1:5555");
+    questRobotClient->setPollingIntervalMs(50); // 20Hz
+    connect(questRobotClient, &QuestRobotApiClient::commandReceived,
+            this, &MainWindow::onQuestRobotCommandReceived);
+    connect(questRobotClient, &QuestRobotApiClient::statusMessage,
+            this, [](const QString &message){ qDebug() << message; });
+    questRobotClient->start();
+
     setLED(ui->label_37,1,16);//机械臂开关指示灯
     setLED(ui->label_43,1,16);//相机开关指示灯
     /*              标签数组映射用于显示编码器数值            */
@@ -61,6 +72,10 @@ MainWindow::MainWindow(int chose,int index_1, I32 *nums_1, double *p2r_1, double
 
 MainWindow::~MainWindow()
 {
+    if (questRobotClient)
+    {
+        questRobotClient->stop();
+    }
     delete ui;
 }
 
@@ -2692,6 +2707,75 @@ void MainWindow::on_pushButton_56_clicked()//夹钳2闭合
     return ;
 }
 
+void MainWindow::onQuestRobotCommandReceived(int robotIndex,
+                                             double x, double y, double z,
+                                             double qx, double qy, double qz, double qw,
+                                             qint64 timestamp)
+{
+    if (timestamp <= lastQuestCommandTimestamp)
+    {
+        return;
+    }
+    lastQuestCommandTimestamp = timestamp;
 
+    // 防止高频请求直接灌入控制卡（桥接20Hz时这里约12.5Hz执行）。
+    static qint64 lastAppliedTs = 0;
+    if (timestamp - lastAppliedTs < 80)
+    {
+        return;
+    }
+    lastAppliedTs = timestamp;
 
+    if (!myrobots.Get_switch_status())
+    {
+        qDebug() << "[QuestRobotBridge] robot power is off, command ignored.";
+        return;
+    }
+
+    if (robotIndex != 1 && robotIndex != 2)
+    {
+        robotIndex = 1;
+    }
+
+    double norm = std::sqrt(qx*qx + qy*qy + qz*qz + qw*qw);
+    if (norm < 1e-8)
+    {
+        qDebug() << "[QuestRobotBridge] invalid quaternion, command ignored.";
+        return;
+    }
+
+    qx /= norm;
+    qy /= norm;
+    qz /= norm;
+    qw /= norm;
+
+    // Quaternion -> rotation matrix.
+    const double r11 = 1.0 - 2.0 * (qy*qy + qz*qz);
+    const double r12 = 2.0 * (qx*qy - qz*qw);
+    const double r13 = 2.0 * (qx*qz + qy*qw);
+    const double r21 = 2.0 * (qx*qy + qz*qw);
+    const double r22 = 1.0 - 2.0 * (qx*qx + qz*qz);
+    const double r23 = 2.0 * (qy*qz - qx*qw);
+    const double r31 = 2.0 * (qx*qz - qy*qw);
+    const double r32 = 2.0 * (qy*qz + qx*qw);
+    const double r33 = 1.0 - 2.0 * (qx*qx + qy*qy);
+
+    // 和现有代码风格一致，直接构造4x4位姿矩阵给 MATLAB IK DLL。
+    mwArray targetPose(4,4,mxDOUBLE_CLASS);
+    double targetPoseData[16] =
+    {
+        r11, r12, r13, 0.0,
+        r21, r22, r23, 0.0,
+        r31, r32, r33, 0.0,
+        x,   y,   z,   1.0
+    };
+    targetPose.SetData(targetPoseData, 16);
+
+    // time参数给一个保守值（秒），避免突然大幅动作。
+    myrobots.Robot_ikine(robotIndex, targetPose, 0.25);
+
+    qDebug() << "[QuestRobotBridge] cmd ts=" << timestamp
+             << "robot=" << robotIndex
+             << "pose(mm)=(" << x << y << z << ")";
+}
 

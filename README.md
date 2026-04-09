@@ -91,6 +91,11 @@ Plays back recorded CSV files with timeline controls.
 | `L` | Toggle loop |
 | `H` | Hide control panel |
 
+## Quest3 to Robot Integration
+
+A bridge script is provided at `Server/quest_robot_bridge.py` for Quest-to-robot integration.
+It consumes `/api/stream/latest`, converts hand pose to robot target pose, and publishes commands to `/api/robot/command` for Qt polling via `/api/robot/latest`.
+
 ## Server Setup
 
 See [Server/README.md](Server/README.md) for detailed server documentation.

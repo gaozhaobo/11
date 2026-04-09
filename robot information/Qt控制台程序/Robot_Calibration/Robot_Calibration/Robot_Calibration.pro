@@ -1,4 +1,4 @@
-QT       += core gui
+QT       += core gui network
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -14,6 +14,7 @@ SOURCES += \
     minicamera.cpp \
     mycamera.cpp \
     portcommunicate.cpp \
+    quest_robot_api_client.cpp \
     robot_function.cpp
 
 HEADERS += \
@@ -39,6 +40,7 @@ HEADERS += \
     modbusport.h \
     mycamera.h \
     portcommunicate.h \
+    quest_robot_api_client.h \
     robot_function.h\
     modbusport.h\
 

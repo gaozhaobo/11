@@ -45,6 +45,7 @@ _latest_left_hand: Optional[Dict] = None
 _latest_right_hand: Optional[Dict] = None
 _latest_events: List[Dict] = []
 _latest_robot_command: Optional[Dict] = None
+_robot_accept_commands: bool = True
 
 
 # =============================================================================
@@ -355,7 +356,7 @@ def api_stream_hand_latest():
 @app.route('/api/robot/command', methods=['POST'])
 def api_robot_command():
     """Accept robot command produced by a bridge process."""
-    global _latest_robot_command
+    global _latest_robot_command, _robot_accept_commands
 
     data = request.get_json() or {}
     timestamp = data.get('timestamp')
@@ -373,6 +374,8 @@ def api_robot_command():
     }
 
     with _stream_lock:
+        if not _robot_accept_commands:
+            return jsonify({'status': 'ignored', 'reason': 'robot_control_disabled'}), 200
         _latest_robot_command = command
 
     return jsonify({'status': 'ok'}), 200
@@ -383,6 +386,44 @@ def api_robot_latest():
     """Expose the most recent robot command for Qt/robot runtime polling."""
     with _stream_lock:
         return jsonify(_latest_robot_command or {}), 200
+
+
+@app.route('/api/robot/control', methods=['GET', 'POST'])
+def api_robot_control():
+    """Get or set robot command forwarding controls."""
+    global _robot_accept_commands, _latest_robot_command
+
+    if request.method == 'GET':
+        with _stream_lock:
+            return jsonify({
+                'enabled': _robot_accept_commands,
+                'has_command': _latest_robot_command is not None
+            }), 200
+
+    data = request.get_json() or {}
+    action = data.get('action')
+
+    with _stream_lock:
+        if action == 'enable':
+            _robot_accept_commands = True
+        elif action == 'disable':
+            _robot_accept_commands = False
+        elif action == 'clear_latest':
+            _latest_robot_command = None
+        elif action == 'disable_and_clear':
+            _robot_accept_commands = False
+            _latest_robot_command = None
+        else:
+            return jsonify({
+                'status': 'invalid_action',
+                'valid_actions': ['enable', 'disable', 'clear_latest', 'disable_and_clear']
+            }), 400
+
+        return jsonify({
+            'status': 'ok',
+            'enabled': _robot_accept_commands,
+            'has_command': _latest_robot_command is not None
+        }), 200
 
 
 # =============================================================================

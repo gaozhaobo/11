@@ -2,6 +2,7 @@
 
 #include <QJsonDocument>
 #include <QJsonObject>
+#include <QDateTime>
 #include <QNetworkAccessManager>
 #include <QNetworkReply>
 #include <QNetworkRequest>
@@ -78,7 +79,9 @@ void QuestRobotApiClient::onReplyFinished(QNetworkReply *reply)
 
     const QJsonObject root = document.object();
     const qint64 timestamp = static_cast<qint64>(root.value("timestamp").toDouble(0));
-    if (timestamp <= 0 || timestamp == _lastTimestamp)
+    const qint64 nowMs = QDateTime::currentMSecsSinceEpoch();
+    constexpr qint64 kMaxCommandAgeMs = 1000; // reject stale commands (e.g. Qt restarted)
+    if (timestamp <= 0 || timestamp == _lastTimestamp || (nowMs - timestamp) > kMaxCommandAgeMs)
     {
         reply->deleteLater();
         return;

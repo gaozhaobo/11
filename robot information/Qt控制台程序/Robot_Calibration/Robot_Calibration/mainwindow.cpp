@@ -2766,14 +2766,18 @@ void MainWindow::onQuestRobotCommandReceived(int robotIndex,
     const double r32 = 2.0 * (qy*qz + qx*qw);
     const double r33 = 1.0 - 2.0 * (qx*qx + qy*qy);
 
-    // 和现有代码风格一致，直接构造4x4位姿矩阵给 MATLAB IK DLL。
+    // mwArray::SetData 按列主序读取缓冲区，这里按列主序组织 4x4 位姿矩阵:
+    // [ r11 r12 r13 0
+    //   r21 r22 r23 0
+    //   r31 r32 r33 0
+    //   x   y   z   1 ]
     mwArray targetPose(4,4,mxDOUBLE_CLASS);
     double targetPoseData[16] =
     {
-        r11, r12, r13, 0.0,
-        r21, r22, r23, 0.0,
-        r31, r32, r33, 0.0,
-        x,   y,   z,   1.0
+        r11, r21, r31, x,
+        r12, r22, r32, y,
+        r13, r23, r33, z,
+        0.0, 0.0, 0.0, 1.0
     };
     targetPose.SetData(targetPoseData, 16);
 

@@ -44,6 +44,7 @@ _latest_head: Optional[Dict] = None
 _latest_left_hand: Optional[Dict] = None
 _latest_right_hand: Optional[Dict] = None
 _latest_events: List[Dict] = []
+_latest_robot_command: Optional[Dict] = None
 
 
 # =============================================================================
@@ -343,6 +344,45 @@ def api_stream_hand_latest():
                 'left': _latest_left_hand,
                 'right': _latest_right_hand
             }), 200
+
+
+
+
+# =============================================================================
+# Robot Control Bridge Endpoints
+# =============================================================================
+
+@app.route('/api/robot/command', methods=['POST'])
+def api_robot_command():
+    """Accept robot command produced by a bridge process."""
+    global _latest_robot_command
+
+    data = request.get_json() or {}
+    timestamp = data.get('timestamp')
+    if timestamp is None:
+        timestamp = int(time.time() * 1000)
+
+    command = {
+        'timestamp': timestamp,
+        'source': data.get('source', 'quest_bridge'),
+        'mode': data.get('mode', 'ik_pose'),
+        'robot_index': data.get('robot_index', 1),
+        'target_pose': data.get('target_pose'),
+        'target_joints': data.get('target_joints'),
+        'meta': data.get('meta', {})
+    }
+
+    with _stream_lock:
+        _latest_robot_command = command
+
+    return jsonify({'status': 'ok'}), 200
+
+
+@app.route('/api/robot/latest', methods=['GET'])
+def api_robot_latest():
+    """Expose the most recent robot command for Qt/robot runtime polling."""
+    with _stream_lock:
+        return jsonify(_latest_robot_command or {}), 200
 
 
 # =============================================================================

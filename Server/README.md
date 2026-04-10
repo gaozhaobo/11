@@ -155,3 +155,48 @@ When recording is active, the server saves:
 - `uploads/{prefix}_head_stream.csv` - Head tracking
 - `uploads/{prefix}_left_hand_stream.csv` - Left hand tracking
 - `uploads/{prefix}_right_hand_stream.csv` - Right hand tracking
+
+
+## Quest ↔ Robot Bridge (new)
+
+This repo now includes a bridge script for Quest-to-robot linkage:
+
+```bash
+python quest_robot_bridge.py --server http://127.0.0.1:5555 --robot-index 1 --hand right --poll-hz 20 --config robot_pose_calibration.example.json
+```
+
+Bridge behavior:
+- Reads `/api/stream/latest` from Flask.
+- Converts Quest hand pose (meters) to robot pose (millimeters).
+- Applies simple workspace clamp + low-pass smoothing.
+- Publishes normalized robot command to `/api/robot/command`.
+- Qt/robot runtime can poll `/api/robot/latest` and pass pose into MATLAB IK DLL.
+
+### Robot Bridge APIs
+
+| Endpoint | Method | Description |
+|----------|--------|-------------|
+| `/api/robot/command` | POST | Store latest robot command from bridge |
+| `/api/robot/latest` | GET | Get latest robot command for Qt polling |
+
+### Suggested deployment order
+
+1. Start this Flask server (`python app.py`).
+2. Start `quest_robot_bridge.py` on the robot control PC.
+3. Run Quest app (`StreamingSender`) to send hand/head stream.
+4. Qt side now has a polling client (`quest_robot_api_client.*`) and a wired handler (`MainWindow::onQuestRobotCommandReceived`) that converts pose quaternion to 4x4 `mwArray` and calls `myrobots.Robot_ikine(...)`.
+5. Keep emergency stop and workspace limits enabled in Qt runtime.
+
+
+### Pose mapping details (absolute mapping)
+
+- Position source: Quest hand `joints[0].position` (Palm).
+- Orientation source: Quest hand `joints[1].rotation` (Wrist quaternion).
+- Pose mapping mode: **absolute mapping** to robot base frame.
+- Mapping math:
+  - `p_robot = R_map * p_quest + t_map`
+  - `R_robot = R_map * R_quest`
+  - `q_robot = quat(R_robot)`
+- `R_map` and `t_map` are loaded from `--config` JSON key `t_robot_from_quest`.
+
+The provided `robot_pose_calibration.example.json` keeps the old axis swap behavior by default (`x<-x, y<-z, z<-y`).

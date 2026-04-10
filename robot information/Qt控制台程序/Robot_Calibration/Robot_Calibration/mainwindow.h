@@ -16,6 +16,7 @@
 //#include<callpython.h>
 #include"minicamera.h"
 #include"Parameter_table.h"
+#include "quest_robot_api_client.h"
 
 using namespace cv;
 
@@ -284,10 +285,15 @@ private slots:
 
     void on_pushButton_56_clicked();//夹钳2闭合
 
+    void onQuestRobotCommandReceived(int robotIndex,
+                                     double x, double y, double z,
+                                     double qx, double qy, double qz, double qw,
+                                     qint64 timestamp);
 
 
 private:
     Ui::MainWindow *ui;
+    QuestRobotApiClient *questRobotClient;
+    qint64 lastQuestCommandTimestamp = 0;
 };
 #endif // MAINWINDOW_H
-

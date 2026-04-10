@@ -25,6 +25,9 @@
         .status-indicator { display: inline-block; width: 10px; height: 10px; border-radius: 50%; margin-right: 5px; }
         .status-on { background-color: #4CAF50; }
         .status-off { background-color: #f44336; }
+        .robot-panel { background: #eef7ff; padding: 15px; border-radius: 8px; margin-top: 10px; }
+        .robot-grid { display: grid; grid-template-columns: 220px 1fr; gap: 8px 12px; margin: 8px 0 12px 0; }
+        .mono { font-family: Consolas, Menlo, monospace; font-size: 0.92em; color: #1f3a5b; word-break: break-all; }
     </style>
 </head>
 <body>
@@ -67,6 +70,24 @@
         </div>
     </div>
     
+    <div class="section">
+        <h2>Robot Control Status</h2>
+        <p style="color: #666; font-size: 0.9em; margin-top: 0;">Monitor bridge-to-robot command freshness and toggle command forwarding.</p>
+        <div class="robot-panel">
+            <div class="robot-grid">
+                <div><strong>Robot Control:</strong></div><div id="robotControlEnabled">Unknown</div>
+                <div><strong>Command Freshness:</strong></div><div id="robotFreshness">Unknown</div>
+                <div><strong>Latest Timestamp:</strong></div><div id="robotTimestamp" class="mono">-</div>
+                <div><strong>Source / Mode:</strong></div><div id="robotSourceMode" class="mono">-</div>
+                <div><strong>Target Pose:</strong></div><div id="robotPose" class="mono">-</div>
+            </div>
+            <button id="robotEnableBtn">Enable Control</button>
+            <button id="robotDisableBtn">Disable Control</button>
+            <button id="robotClearBtn">Clear Latest Command</button>
+            <button id="robotSafeBtn">Disable + Clear</button>
+        </div>
+    </div>
+
     <div class="section">
         <h2>Quest 3 Recorded Files</h2>
         <p style="color: #666; font-size: 0.9em; margin-top: 0;">CSV files recorded locally on Quest and uploaded to server</p>
@@ -201,10 +222,48 @@
                 .catch(() => {});
         }
 
+        function formatPose(pose) {
+            if (!pose) return '-';
+            const keys = ['x', 'y', 'z', 'qx', 'qy', 'qz', 'qw'];
+            return keys.map(k => `${k}:${(pose[k] ?? 0).toFixed ? pose[k].toFixed(3) : pose[k]}`).join('  ');
+        }
+
+        function updateRobotPanel() {
+            Promise.all([
+                fetch('/api/robot/latest').then(r => r.json()),
+                fetch('/api/robot/control').then(r => r.json())
+            ]).then(([latest, control]) => {
+                const now = Date.now();
+                const ts = Number(latest.timestamp || 0);
+                const age = ts > 0 ? (now - ts) : Number.POSITIVE_INFINITY;
+                const fresh = ts > 0 && age <= 1000;
+
+                document.getElementById('robotControlEnabled').innerHTML =
+                    control.enabled
+                    ? '<span class="status-indicator status-on"></span>Enabled'
+                    : '<span class="status-indicator status-off"></span>Disabled';
+                document.getElementById('robotFreshness').textContent =
+                    ts > 0 ? (fresh ? `Fresh (${age} ms)` : `Stale (${age} ms)`) : 'No command';
+                document.getElementById('robotTimestamp').textContent = ts > 0 ? String(ts) : '-';
+                document.getElementById('robotSourceMode').textContent =
+                    latest.source ? `${latest.source} / ${latest.mode || 'unknown'}` : '-';
+                document.getElementById('robotPose').textContent = formatPose(latest.target_pose);
+            }).catch(() => {});
+        }
+
+        function robotControlAction(action) {
+            fetch('/api/robot/control', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ action })
+            }).then(() => updateRobotPanel());
+        }
+
         function pollData() {
             fetch('/api/data').then(r => r.json()).then(state => {
                 updateUI(state);
                 updateStreamStatus();
+                updateRobotPanel();
             });
         }
 
@@ -256,6 +315,10 @@
         document.getElementById('downloadHeadBtn').onclick = downloadHeadStream;
         document.getElementById('downloadLeftHandBtn').onclick = downloadLeftHandStream;
         document.getElementById('downloadRightHandBtn').onclick = downloadRightHandStream;
+        document.getElementById('robotEnableBtn').onclick = () => robotControlAction('enable');
+        document.getElementById('robotDisableBtn').onclick = () => robotControlAction('disable');
+        document.getElementById('robotClearBtn').onclick = () => robotControlAction('clear_latest');
+        document.getElementById('robotSafeBtn').onclick = () => robotControlAction('disable_and_clear');
 
         // Poll every second
         setInterval(pollData, 1000);

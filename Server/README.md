@@ -178,7 +178,10 @@ Bridge behavior:
 |----------|--------|-------------|
 | `/api/robot/command` | POST | Store latest robot command from bridge |
 | `/api/robot/latest` | GET | Get latest robot command for Qt polling |
+<<<<<<< codex/locate-robot-information-folder-phgj70
 | `/api/robot/control` | GET/POST | Get/set command forwarding state (`enable`,`disable`,`clear_latest`,`disable_and_clear`) |
+=======
+>>>>>>> main
 
 ### Suggested deployment order
 
